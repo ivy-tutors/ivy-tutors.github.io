@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Registration</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script>
+    let handler = (formID) => {
+      const values = document.getElementById(formID).childNodes;
+      let concat = []
+      for(let i = 0; i < values.length; i++)
+      {
+        if(values[i].selected)
+        {
+          concat.push(values[i].innerHTML);
+        }
+      }
+      return concat
+    }
+
+    window.addEventListener("load", function() {
+      const phone1 = document.getElementById('phoneInput');
+      const phone2 = document.getElementById('refererPhoneInput');
+
+      phone1.addEventListener('invalid', function (event) {
+        if (event.target.validity.patternMismatch) {
+          event.target.setCustomValidity('Please match the 123-123-1234 format.');
+        }
+      })
+
+      phone1.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+      })
+
+      phone2.addEventListener('invalid', function (event) {
+        if (event.target.validity.patternMismatch) {
+          event.target.setCustomValidity('Please match the 123-123-1234 format.');
+        }
+      })
+
+      phone2.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+      })
+
+      const select1 = document.getElementById('typesInput');
+      const select2 = document.getElementById('exploratoryCoursesInput');
+      const select3 = document.getElementById('advancedCoursesInput');
+      const select4 = document.getElementById('APCoursesInput');
+      const select5 = document.getElementById('IBCoursesInput');
+      const select6 = document.getElementById('CompetitionCoursesInput');
+      const select7 = document.getElementById('StandardizedCoursesInput');
+      const select8 = document.getElementById('CounselingCoursesInput');
+
+      select1.addEventListener('invalid', function (event) {
+        if (event.target.validity.valueMissing) {
+          event.target.setCustomValidity('Select values using Ctrl+Click.');
+        }
+      })
+
+      select1.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+      })
+
+      select2.addEventListener('invalid', function (event) {
+        if (event.target.validity.valueMissing) {
+          event.target.setCustomValidity('Select values using Ctrl+Click.');
+        }
+      })
+
+      select2.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+      })
+
+      select3.addEventListener('invalid', function (event) {
+        if (event.target.validity.valueMissing) {
+          event.target.setCustomValidity('Select values using Ctrl+Click.');
+        }
+      })
+
+      select3.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+      })
+
+      select4.addEventListener('invalid', function (event) {
+        if (event.target.validity.valueMissing) {
+          event.target.setCustomValidity('Select values using Ctrl+Click.');
+        }
+      })
+
+      select4.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+      })
+
+      select5.addEventListener('invalid', function (event) {
+        if (event.target.validity.valueMissing) {
+          event.target.setCustomValidity('Select values using Ctrl+Click.');
+        }
+      })
+
+      select5.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+      })
+      select6.addEventListener('invalid', function (event) {
+        if (event.target.validity.valueMissing) {
+          event.target.setCustomValidity('Select values using Ctrl+Click.');
+        }
+      })
+
+      select6.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+      })
+      select7.addEventListener('invalid', function (event) {
+        if (event.target.validity.valueMissing) {
+          event.target.setCustomValidity('Select values using Ctrl+Click.');
+        }
+      })
+
+      select7.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+      })
+      select8.addEventListener('invalid', function (event) {
+        if (event.target.validity.valueMissing) {
+          event.target.setCustomValidity('Select values using Ctrl+Click.');
+        }
+      })
+
+      select8.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+      })
+      const form = document.getElementById('my-form');
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        document.getElementById('registerButton').disabled = true;
+        const data = new FormData(form);
+        data.append('Exploratory', handler("exploratoryCoursesInput").toString().split(",").join(", "));
+        data.append('Advanced', handler("advancedCoursesInput").toString().split(",").join(", "));
+        data.append('AP', handler("APCoursesInput").toString().split(",").join(", "));
+        data.append('IB', handler("IBCoursesInput").toString().split(",").join(", "));
+        data.append('Competition', handler("CompetitionCoursesInput").toString().split(",").join(", "));
+        data.append('Standardized', handler("StandardizedCoursesInput").toString().split(",").join(", "));
+        data.append('Counseling', handler("CounselingCoursesInput").toString().split(",").join(", "));
+        const action = e.target.action;
+        try {
+          fetch(action, {
+          method: 'POST',
+          body: data,
+          })
+          .then(() => {
+            document.getElementById('emailInput').value = "";
+            document.getElementById('phoneInput').value = "";
+            document.getElementById('nameInput').value = "";
+            document.getElementById('refererEmailInput').value = "";
+            document.getElementById('refererPhoneInput').value = "";
+            document.getElementById('gradeInput').value = "";
+            document.getElementById('preferenceInput').value = "";
+
+            document.getElementById('sessionInput').value = "";
+            document.getElementById('typeInput').value = "";
+            document.getElementById('typesInput').value = "";
+
+            document.getElementById('exploratoryCoursesInput').value = "";
+            document.getElementById('advancedCoursesInput').value = "";
+            document.getElementById('APCoursesInput').value = "";
+            document.getElementById('IBCoursesInput').value = "";
+            document.getElementById('CompetitionCoursesInput').value = "";
+            document.getElementById('StandardizedCoursesInput').value = "";
+            document.getElementById('CounselingCoursesInput').value = "";
+            document.getElementById('response').innerHTML = "Success! We will be in touch soon with confirmation and further details.";
+            document.getElementById('response').style.color = "#4BB543";
+
+            setTimeout(() => {
+              document.getElementById('response').innerHTML = "";
+              document.getElementById('registerButton').disabled = false;
+            }, 5000);
+          })
+        } catch (e) 
+        {
+          document.getElementById('response').innerHTML = "An error occurred. Please try again.";
+          document.getElementById('response').style.color = "#FC100D";
+          setTimeout(() => {
+              document.getElementById('response').innerHTML = "";
+            }, 5000);
+        }
+        
+      });
+
+      const courses = document.getElementById('typesInput');
+      courses.addEventListener("change", function(e) {
+        e.preventDefault();
+        const types = ["exp",
+                       "adv",
+                       "apc",
+                       "ibc",
+                       "com",
+                       "sta",
+                       "col"];
+        const inputs = {
+          "exp": "exploratoryCoursesInput",
+          "adv": "advancedCoursesInput",
+          "apc": "APCoursesInput",
+          "ibc": "IBCoursesInput",
+          "com": "CompetitionCoursesInput",
+          "sta": "StandardizedCoursesInput",
+          "col": "CounselingCoursesInput"    }
+        for(let i = 0; i < types.length; i++)
+        {
+          document.getElementById(types[i]).hidden = true;
+          document.getElementById(inputs.exp).required = false;
+          document.getElementById(inputs.adv).required = false;
+          document.getElementById(inputs.apc).required = false;
+          document.getElementById(inputs.ibc).required = false;
+          document.getElementById(inputs.com).required = false;
+          document.getElementById(inputs.sta).required = false;
+          document.getElementById(inputs.col).required = false;
+        }
+        let selected = [];
+        let inputSelected = [];
+        const data = document.getElementById('typesInput').childNodes;
+        for(let i = 0; i < data.length; i++)
+        {
+          if(data[i].selected)
+          {
+            let val = data[i].innerHTML.split(" ").join("").substring(0,3).toLowerCase();
+            let res;
+            selected.push(val);
+            if (val == "exp")
+            {
+                res = inputs.exp;
+            }
+            else if (val == "adv")
+            {
+                res = inputs.adv;
+            }
+            else if (val == "apc")
+            {
+                res = inputs.apc;
+            }
+            else if (val == "ibc")
+            {
+                res = inputs.ibc;
+            }
+            else if (val == "com")
+            {
+                res = inputs.com;
+            }
+            else if (val == "sta")
+            {
+                res = inputs.sta;
+            }
+            else if (val == "col")
+            {
+                res = inputs.col;
+            }
+            inputSelected.push(res);
+          }
+        }
+        for(let i = 0; i < selected.length; i++)
+        {
+          document.getElementById(selected[i]).hidden = false;
+          document.getElementById(inputSelected[i]).required = true;
+        }
+      })
+    });
+
+</script>
+
+  <!-- =======================================================
+  * Template Name: Regna - v4.7.0
+  * Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div id="logo">
+        <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1><a href="index.html">Regna</a></h1>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <!-- <li><a class="nav-link scrollto active" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li> -->
+          <li><a class="nav-link scrollto" href="register.html">Register</a></li>
+          <li><a class="nav-link scrollto" href="referrals.html">Referrals</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Course Registration</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li>Course Registration</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
+          <div class="container">
+    
+            <div class="row gy-4">
+    
+              <div class="col-lg-12">
+                <div class="portfolio-info">
+                  <h3>Course Registration</h3>
+                  <p>
+                    Please fill out this form when you have looked over our various courses and services and are <b>fully committed</b> to attending courses. We encourage you to scroll through 
+                    the general <a href="course-info.html">course info</a>, 
+                    the list of 
+                    <a href="index.html#services">services and their prices</a>, 
+                    and our <a href="referrals.html">referral program</a> before filling out this form to get a 
+                    better idea of our pricing and curriculum. 
+                  </p>
+                  <p>
+                    Questions or concerns about our program? Reach us through <a href="index.html#contact">our contacts form</a> and we'd be happy to answer any of your questions!
+                  </p>
+                </div>
+
+                <div class="parent">
+                        <div class="col-lg-10 col-md-8">
+                          <div class="form registrations">
+              
+                            <form id="my-form"
+                                class="php-email-form"
+                                method="POST" 
+                                action="https://script.google.com/macros/s/AKfycbxiis0QxM5WSgfInb-Im8HEbU5IWB5sTZu_qN0gZJLYnY3vulBKW3Yt_mspqRaf70ZZ/exec"
+                              >
+                              <div class="form-group mt-3">
+                                <h2>Course Registration</h2>
+                                <p>Required fields are marked with a red asterisk. For selecting courses, press Ctrl+Click to select multiple values.</p>
+                              </div>
+                              <div class="form-group mt-3">
+                                <label for="nameInput" class="required-field">Student Name</label>
+                                <input type="text" name="Name" class="form-control" id="nameInput" placeholder="Name" required>
+                              </div>
+                              <div class="form-group mt-3">
+                                <table class="registerTable">
+                                  <thead>
+                                    <tr>
+                                      <td>
+                                        <label for="emailInput" class="required-field">Contact Email Address</label>
+                                        <input type="email" name="Email" class="form-control" id="emailInput" placeholder="Email" required>
+                                      </td>
+                                      <td>
+                                        <label for="phoneInput" class="required-field">Contact Phone Number</label>
+                                        <input type="tel" 
+                                               name="Phone" 
+                                               class="form-control" 
+                                               id="phoneInput" 
+                                               placeholder="123-456-7890"   
+                                               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                               required>
+                                      </td>
+                                      <td>
+                                        <label for="emailInput">Referer Email Address</label>
+                                        <input type="email" name="RefererEmail" class="form-control" id="refererEmailInput" placeholder="Referer Email" defaultValue="null@null.null">
+                                      </td>
+                                      <td>
+                                        <label for="phoneInput">Referer Phone Number</label>
+                                        <input type="tel" 
+                                               name="RefererPhone" 
+                                               class="form-control" 
+                                               id="refererPhoneInput" 
+                                               placeholder="123-456-7890" 
+                                               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                               defaultValue="000-000-0000"
+                                               >
+                                      </td>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div class="form-group mt-3">
+                                        <label for="gradeInput" class="required-field">Student Level</label>
+                                        <select class="form-control" id="gradeInput" name="StudentLevel" required defaultValue="">
+                                          <option hidden disabled selected value
+                                          class="defaultOption"> -- select an option -- </option>
+                                          <option>Pre-Middle Schooler</option>
+                                          <option>Middle School</option>
+                                          <option>High School</option>
+                                          <option>College</option>
+                                          <option>Other</option>
+                                        </select>
+                                        </div>                           
+                                      </td>
+                                      <td>
+                                        <div class="form-group mt-3">
+                                          <label for="preferenceInput" class="required-field">Course Preference</label>
+                                          <select class="form-control" id="preferenceInput" name="CoursePreference" required defaultValue="">
+                                            <option hidden disabled selected value
+                                            class="defaultOption"> -- select an option -- </option>
+                                            <option>One-on-One Only</option>
+                                            <option>Small Groups Only</option>
+                                            <option>Small Groups, but One-on-One is Okay</option>
+                                          </select>
+                                          </div>   
+                                      </td>
+                                      <td>
+                                        <div class="form-group mt-3">
+                                          <label for="sessionInput" class="required-field">Session Preference</label>
+                                          <select class="form-control" id="sessionInput" name="SessionPreference" required defaultValue="" >
+                                            <option hidden disabled selected value
+                                            class="defaultOption"> -- select an option -- </option>
+                                            <option>Fall (September - December)</option>
+                                            <option>Spring (January - June)</option>
+                                            <option>Summer (July - August)</option>
+                                          </select>
+                                          </div>   
+                                      </td>
+                                      <td>
+                                        <div class="form-group mt-3">
+                                          <label for="typeInput" class="required-field">Teaching Location</label>
+                                          <select class="form-control" id="typeInput" name="CourseType" required defaultValue="">
+                                            <option hidden disabled selected value
+                                            class="defaultOption"> -- select an option -- </option>
+                                            <option>In-Person (Harvard Square)</option>
+                                            <option>Virtual (Zoom)</option>
+                                          </select>
+                                          </div>   
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+        
+                              <div class="form-group mt-3">
+                                <label for="typesInput" class="required-field">Course Types</label>
+                                <select multiple class="form-control" id="typesInput" name="TypeChoices" required>
+                                  <option>Exploratory Courses (Middle-School)</option>
+                                  <option>Advanced Courses (High-School)</option>
+                                  <option>AP Courses</option>
+                                  <option>IB Courses</option>
+                                  <option>Competition Courses</option>
+                                  <option>Standardized Testing Courses</option>
+                                  <option>College Application Services</option>
+        
+                                </select>
+                              </div>
+        
+                              <div class="form-group mt-3" id="exp" hidden="true">
+                                <label for="exploratoryCoursesInput" class="required-field">Exploratory Course Choices</label>
+                                <select multiple class="form-control" id="exploratoryCoursesInput" name="ExploratoryCourseChoices">
+                                  <option>Exploratory Mathematics</option>
+                                  <option>Exploratory English Language</option>
+                                  <option>Exploratory Biology</option>
+                                  <option>Exploratory Chemistry</option>
+                                  <option>Exploratory Physics</option>
+                                  <option>Other</option>
+                                </select>
+                                </div>   
+        
+                                <div class="form-group mt-3" id="adv" hidden="true">
+                                  <label for="advancedCoursesInput" class="required-field">Advanced Course Choices</label>
+                                  <select multiple class="form-control" id="advancedCoursesInput" name="AdvancedCourseChoices">
+                                    <option>Advanced Mathematics</option>
+                                    <option>Advanced English Language</option>
+                                    <option>Advanced Biology</option>
+                                    <option>Advanced Chemistry</option>
+                                    <option>Advanced Physics</option>
+                                    <option>Other</option>
+                                  </select>
+                                  </div>  
+                                  
+                                  <div class="form-group mt-3" id="apc" hidden="true">
+                                    <label for="APCoursesInput" class="required-field">AP Course Choices</label>
+                                    <select multiple class="form-control" id="APCoursesInput" name="APCourseChoices">
+                                      <option>AP Calculus AB</option>
+                                      <option>AP Calculus BC</option>
+                                      <option>AP Computer Science Principles</option>
+                                      <option>AP Statistics</option>
+                                      <option>AP Computer Science A</option>
+                                      <option>AP Biology</option>
+                                      <option>AP Chemistry</option>
+                                      <option>AP Psychology</option>
+                                      <option>AP Environmental Science</option>
+                                      <option>AP Physics 1 & 2</option>
+                                      <option>AP Physics C: Mechanics</option>
+                                      <option>AP Physics C: Electromagnetism</option>
+                                      <option>AP US History</option>
+                                      <option>AP European History</option>
+                                      <option>AP World History</option>
+                                      <option>AP Human Geography</option>
+                                      <option>AP Microeconomics</option>
+                                      <option>AP Macroeconomics</option>
+                                      <option>AP US Government and Politics</option>
+                                      <option>AP Comparative Government and Politics</option>
+                                      <option>AP English Language and Composition</option>
+                                      <option>AP English Literature and Composition</option>
+                                      <option>AP Music Theory</option>
+                                      <option>Other</option>
+                                    </select>
+                                    </div>   
+        
+        
+                                    <div class="form-group mt-3" id="ibc" hidden="true">
+                                      <label for="IBCoursesInput" class="required-field">IB Course Choices</label>
+                                      <select multiple class="form-control" id="IBCoursesInput" name="IBCourseChoices">
+                                        <option>IB Economics</option>
+                                        <option>IB Geography</option>
+                                        <option>IB Global Politics</option>
+                                        <option>IB History</option>
+                                        <option>IB Psychology</option>
+                                        <option>IB Biology</option>
+                                        <option>IB Chemistry</option>
+                                        <option>IB Computer Science</option>
+                                        <option>IB Physics</option>
+                                        <option>IB Mathematics: Analysis and Approaches</option>
+                                        <option>IB Mathematics: Applications and Interpretations</option>
+                                        <option>IB Music</option>
+                                        <option>Other</option>
+                                      </select>
+                                      </div>   
+        
+                                      <div class="form-group mt-3" id="com" hidden="true">
+                                        <label for="CompetitionCoursesInput" class="required-field">Competition Course Choices</label>
+                                        <select multiple class="form-control" id="CompetitionCoursesInput" name="CompetitionCourseChoices">
+                                          <option>AMC8</option>
+                                          <option>AMC10</option>
+                                          <option>AMC12</option>
+                                          <option>AIME</option>
+                                          <option>USAJMO / USAMO</option>
+                                          <option>Olympiad Mathematics</option>
+                                          <option>USACO</option>
+                                          <option>Chemistry Olympiads</option>
+                                          <option>Physics Olympiads</option>
+                                          <option>Biology Olympiads</option>   
+                                          <option>Other</option>     
+                                        </select>
+                                        </div>   
+        
+                                        <div class="form-group mt-3" id="sta" hidden="true">
+                                          <label for="StandardizedCoursesInput" class="required-field">Standardized Test Course Choices</label>
+                                          <select multiple class="form-control" id="StandardizedCoursesInput" name="StandardizedCourseChoices">
+                                            <option>PSAT Prep</option>
+                                            <option>SAT Prep</option>
+                                            <option>ACT Prep</option>
+                                            <option>Other College Entrance Exam</option>
+                                            <option>ISEE Prep</option>
+                                            <option>SSAT Prep</option>
+                                            <option>Other High School Entrance Exam</option>
+                                            <option>TOEFL Prep</option>
+                                            <option>IELTS Prep</option>
+                                            <option>Other</option>
+                                          </select>
+                                          </div>   
+        
+                                          <div class="form-group mt-3" id="col" hidden="true">
+                                            <label for="CounselingCoursesInput" class="required-field">College Application Service Choices</label>
+                                            <select multiple class="form-control" id="CounselingCoursesInput" name="CounselingCourseChoices">
+                                              <option>College Counseling Services</option>
+                                              <option>College Essay Editing Services</option>
+                                              <option>Other</option>
+                                            </select>
+                                            </div>   
+        
+                        
+                              <div class="text-center form-group mt-3">
+                                <p id="response"></p>
+                              </div>
+              
+                                <!-- <input id="input3" name="Course" type="text" placeholder="Course" required>
+                                <input list="browsers" name="Exact">
+                                <datalist id="browsers">
+                                  <option value="AP Chemistry">
+                                  <option value="AP Physics">
+                                  <option value="AP Economics">
+                                  <option value="Opera">
+                                  <option value="Safari">
+                                </datalist> -->
+                                <div class="text-center mt-3"><button type="submit" id="registerButton">Register</button></div>
+                                <div class="mt-1"></div>
+                              </form>
+              
+              
+              
+                            <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                              <div class="form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                              </div>
+                              <div class="form-group mt-3">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                              </div>
+                              <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                              </div>
+                              <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                              </div>
+                              <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                              </div>
+                              <div class="text-center"><button type="submit">Send Message</button></div>
+                            </form> -->
+                          </div>
+                          <div class="mt-3"></div>
+                        </div>
+                      </div>
+                        <div class="mt-5"></div>
+                      </div>
+
+    
+            </div>
+    
+          </div>
+        </section><!-- End Portfolio Details Section -->
+    
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Ivy Tutors Academy</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
