@@ -44,6 +44,7 @@
     window.addEventListener("load", function() {
       const phone1 = document.getElementById('phoneInput');
       const phone2 = document.getElementById('refererPhoneInput');
+      const phone3 = document.getElementById('whatsApp');
 
       phone1.addEventListener('invalid', function (event) {
         if (event.target.validity.patternMismatch) {
@@ -62,6 +63,16 @@
       })
 
       phone2.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+      })
+
+      phone3.addEventListener('invalid', function (event) {
+        if (event.target.validity.patternMismatch) {
+          event.target.setCustomValidity('Please match the 123-123-1234 format.');
+        }
+      })
+
+      phone3.addEventListener('change', function (event) {
         event.target.setCustomValidity('');
       })
 
@@ -154,6 +165,33 @@
       form.addEventListener("submit", function(e) {
         e.preventDefault();
         document.getElementById('registerButton').disabled = true;
+        const types = ["exp",
+                       "adv",
+                       "apc",
+                       "ibc",
+                       "com",
+                       "sta",
+                       "col"];
+        const inputs = {
+          "exp": "exploratoryCoursesInput",
+          "adv": "advancedCoursesInput",
+          "apc": "APCoursesInput",
+          "ibc": "IBCoursesInput",
+          "com": "CompetitionCoursesInput",
+          "sta": "StandardizedCoursesInput",
+          "col": "CounselingCoursesInput"    }
+        for(let i = 0; i < types.length; i++)
+        {
+          document.getElementById(types[i]).hidden = true;
+          document.getElementById(inputs.exp).required = false;
+          document.getElementById(inputs.adv).required = false;
+          document.getElementById(inputs.apc).required = false;
+          document.getElementById(inputs.ibc).required = false;
+          document.getElementById(inputs.com).required = false;
+          document.getElementById(inputs.sta).required = false;
+          document.getElementById(inputs.col).required = false;
+        }
+        
         const data = new FormData(form);
         data.append('Exploratory', handler("exploratoryCoursesInput").toString().split(",").join(", "));
         data.append('Advanced', handler("advancedCoursesInput").toString().split(",").join(", "));
@@ -176,6 +214,11 @@
             document.getElementById('refererPhoneInput').value = "";
             document.getElementById('gradeInput').value = "";
             document.getElementById('preferenceInput').value = "";
+
+            document.getElementById('weChat').value = "";
+            document.getElementById('whatsApp').value = "";
+            document.getElementById('comPref').value = "";
+            document.getElementById('timeZones').value = "";
 
             document.getElementById('sessionInput').value = "";
             document.getElementById('typeInput').value = "";
@@ -416,15 +459,15 @@
                                                required>
                                       </td>
                                       <td>
-                                        <label for="emailInput">Referer Email Address</label>
-                                        <input type="email" name="RefererEmail" class="form-control" id="refererEmailInput" placeholder="Referer Email" defaultValue="null@null.null">
+                                        <label for="weChat">WeChat ID</label>
+                                        <input type="text" name="WeChatID" class="form-control" id="weChat" placeholder="WeChat ID" defaultValue="null">
                                       </td>
                                       <td>
-                                        <label for="phoneInput">Referer Phone Number</label>
+                                        <label for="whatsApp">WhatsApp Phone Number</label>
                                         <input type="tel" 
-                                               name="RefererPhone" 
+                                               name="WhatsApp" 
                                                class="form-control" 
-                                               id="refererPhoneInput" 
+                                               id="whatsApp" 
                                                placeholder="123-456-7890" 
                                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                                defaultValue="000-000-0000"
@@ -456,7 +499,7 @@
                                             class="defaultOption"> -- select an option -- </option>
                                             <option>One-on-One Only</option>
                                             <option>Small Groups Only</option>
-                                            <option>Small Groups, but One-on-One is Okay</option>
+                                            <option>Small Groups; One-on-One Okay</option>
                                           </select>
                                           </div>   
                                       </td>
@@ -482,6 +525,62 @@
                                             <option>Virtual (Zoom)</option>
                                           </select>
                                           </div>   
+                                      </td>
+                                    </tr>
+
+                                    <tr>
+                                      <td>
+                                        <div class="form-group mt-3">
+                                          <label for="timeZones" class="required-field">Time Zone</label>
+                                          <select class="form-control" id="timeZones" name="TimeZones" required>
+                                            <option hidden disabled selected value
+                                            class="defaultOption"> -- select an option -- </option>
+                                            <option>(GMT-5) Eastern Time</option>
+                                            <option>(GMT-6) Central Time</option>
+                                            <option>(GMT-7) Mountain Time</option>
+                                            <option>(GMT-8) Pacific Time</option>
+                                            <option>(GMT-9) Alaska</option>
+                                            <option>(GMT-10) Hawaii</option>
+                                            <option>(GMT+7) Bangkok</option>
+                                            <option>(GMT+8) Beijing, HK, Singapore</option>
+                                            <option>(GMT+9) Osaka, Tokyo</option>
+                                            <option>Other</option>
+                                            </select>
+                                        </div>                      
+                                      </td>
+                                      <td>
+                                        <div class="form-group mt-3">
+                                          <label for="comPref" class="required-field">Communication Preference</label>
+                                          <select class="form-control" id="comPref" name="communication" required>
+                                            <option hidden disabled selected value
+                                            class="defaultOption"> -- select an option -- </option>
+                                            <option>Email</option>
+                                            <option>Phone Call</option>
+                                            <option>Text</option>
+                                            <option>WeChat</option>
+                                            <option>WhatsApp</option>
+                                            <option>Other</option>
+                                          </select>
+                                        </div>       
+                                      </td>
+                                      <td>
+                                        <div class="form-group mt-3">
+                                          <label for="emailInput">Referer Email Address</label>
+                                          <input type="email" name="RefererEmail" class="form-control" id="refererEmailInput" placeholder="Referer Email" defaultValue="null@null.null">  
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="form-group mt-3">
+                                        <label for="phoneInput">Referer Phone Number</label>
+                                        <input type="tel" 
+                                               name="RefererPhone" 
+                                               class="form-control" 
+                                               id="refererPhoneInput" 
+                                               placeholder="123-456-7890" 
+                                               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                               defaultValue="000-000-0000"
+                                               >
+                                               </div>
                                       </td>
                                     </tr>
                                   </tbody>
