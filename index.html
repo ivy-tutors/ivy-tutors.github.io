@@ -28,7 +28,37 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
   <script>
+
     window.addEventListener("load", function() {
+      var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+    if (isMobile.any() != null)
+    {
+      document.getElementById('wordArt').style.display = "none";
+    } else {
+      document.getElementById('wordArt').style.display = "block";
+    }
+
+
       const form = document.getElementById('my-form');
       form.addEventListener("submit", function(e) {
         e.preventDefault();
@@ -132,7 +162,7 @@
     <section id="about">
       <div class="container" data-aos="fade-up">
         <div class="row about-container">
-
+          
           <div class="col-lg-7 content order-lg-1 order-2">
             <h2 class="title">Who We Are</h2>
             <p>
@@ -181,7 +211,7 @@
             </div>
           </div>
 
-          <div class="col-lg-5 background order-lg-2 order-1" data-aos="fade-left" data-aos-delay="100"></div>
+          <div class="col-lg-5 background order-lg-2 order-1" id="wordArt" data-aos="fade-left" data-aos-delay="100"></div>
         </div>
 
       </div>
