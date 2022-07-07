@@ -83,7 +83,7 @@
             document.getElementById('input1').value = "";
             document.getElementById('input2').value = "";
             // document.getElementById('input3').value = "";
-            document.getElementById('response').innerHTML = "Success! We'll be in touch soon.";
+            document.getElementById('response').innerHTML = "成功!";
             document.getElementById('response').style.color = "#4BB543";
             setTimeout(() => {
               document.getElementById('response').innerHTML = "";
@@ -92,7 +92,7 @@
           })
         } catch (e)
         {
-          document.getElementById('response').innerHTML = "An error occurred. Please try again.";
+          document.getElementById('response').innerHTML = "发生错误. 再试一次.";
           document.getElementById('response').style.color = "#FC100D";
           setTimeout(() => {
               document.getElementById('response').innerHTML = "";
@@ -125,9 +125,9 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">首页</a></li>
+          <li><a class="nav-link scrollto" href="#about">关于我们</a></li>
+          <li><a class="nav-link scrollto" href="#services">课程提供</a></li>
           <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
@@ -147,11 +147,9 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li> -->
-          <li><a class="nav-link scrollto" href="register.html">Register</a></li><li><a class="nav-link scrollto" href="referrals.html">Referrals</a></li>
-
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="register.html">注册报名</a></li><li><a class="nav-link scrollto" href="referrals.html">推荐同学</a></li>
+          <li><a class="nav-link scrollto" href="#contact">联系我们</a></li>
           <li><a class="nav-link scrollto" href="../index.html"><img src="/assets/img/americanChinese.png" /></a></li>
-
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -161,9 +159,9 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Welcome to the Academy</h1>
-      <h2>We are team of Ivy League students invested in pre-college education</h2>
-      <a href="#about" class="btn-get-started">Get Started</a>
+      <h1>欢迎来到学院</h1>
+      <h2>我们是一个专注致力大学入学前教育的常春藤盟校学生的强大团队</h2>
+      <a href="#about" class="btn-get-started">点击进入</a>
     </div>
   </section><!-- End Hero Section -->
 
@@ -175,50 +173,43 @@
         <div class="row about-container">
           
           <div class="col-lg-7 content order-lg-1 order-2">
-            <h2 class="title">Who We Are</h2>
+            <h2 class="title">关于我们</h2>
             <p>
-              A group of Ivy-League students majoring in fields from 
-              STEM to the humanities and the arts, the Ivy Tutor Academy is an organization 
-              of top-ranked students with a passion for sharing their industry
-              experience and knowledge. Started by a group of Harvard undergraduates, 
-              our services aim to empower all students who want to learn, regardless
-              of age or subject matter. To learn is exquisite, to master is divine.
+              Ivy Tutors Academy 是由一群主修从 STEM 到人文和艺术领域的常春藤联盟顶尖学生组成的组织，
+是由一群教学激情和強烈事业心的哈佛本科生发起. 我们热衷于分享我们的学习经验和知识技能，
+旨在充分帮助所有想要学习的学生开发培养和锻炼他们在大学里需要的各种技能，无论年龄或选
+课如何. 学以致用，精益求精！
             </p>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bi bi-briefcase"></i></div>
               <h4 class="title"><a href="">Top-Tier Talent</a></h4>
               <p class="description">
-                Our tutors range from FAANG interns to Wall Street analysts to 
-                published authors and medical researchers. For any of our course
-                offerings, we prioritize quality; not only will the tutor have 
-                exemplary records in that particular subject, but they will also 
-                have industry or academia experience as well to offer in your 
-                courses.
-              </p>
+                我们拥有強大的教师资源，从 FAANG 实习生到华尔街分析师，再到出版作者和医学研究人员等.对
+                于我们提供的任何课程，我们都优先考虑课程和教学质量；教师不仅将在该特定课程方面拥有绝
+                佳模范记录，而且他们还将具有行业或学术界的经验带到您的课程中, 激发学生的强烈的求知欲，
+                提高学生的学习能力和自信心.              </p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon"><i class="bi bi-card-checklist"></i></div>
-              <h4 class="title"><a href="">Proven Strategies</a></h4>
+              <h4 class="title"><a href="">成功的策略</a></h4>
               <p class="description">
-                All of our tutors are carefully vetted for previous expertise and 
-                teaching style. Instructors of our Academy have taught and tutored
-                dozens of students with exemplary results, with many 
-                previous students obtaining dramatic improvement in standardized 
-                test scores or competition results.
-              </p>
+                我们所有的教师都是经过仔细审查，了解他们以往的专业知识和教学风格. 我们学院的教师已经教
+                过和辅导过数几十名学生，成绩斐然，许多学生在标准化考试成绩上或比赛成绩上都有了明显的
+                提高.              </p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <div class="icon"><i class="bi bi-binoculars"></i></div>
-              <h4 class="title"><a href="">Continued Support and Quality</a></h4>
+              <h4 class="title"><a href="">一如既往的支持和高质量课程和教学的监控</a></h4>
               <p class="description">
-                Our main priority is quality. Each course is carefully monitored by a member of our quality 
-                control team, someone wholly independent from the tutor. Any potential
-                issues with course quality or course management will be addressed 
-                immediately.
-              </p>
+                我们的首要任务是提供高质量课程和教学.每门课程都由我们的质量控制团队成员仔细监控，该质
+                量控制团队完全独立于教师团体.如有课程质量或课程管理的任何潜在问题都将立即得到解决.</p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
             </div>
           </div>
 
@@ -232,26 +223,26 @@
     <section id="facts">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h3 class="section-title">Our Numbers in 2022</h3>
+          <h3 class="section-title">我们的 2022 年统计数据</h3>
           <p class="section-description">
-             As of 07/01/22
+            截至于2022 年 7 月 1 日前我们 2022 年的统计数字
           </p>
         </div>
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="66" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Course Offerings</p>
+            <p>课程设置数目</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="48" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Students</p>
+            <p>参加学生人数</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="1428" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Expected Tutoring Hours</p>
+            <p>期望辅导时间</p>
           </div>
 
           <!-- <div class="col-lg-3 col-6 text-center">
@@ -261,7 +252,7 @@
 
           <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Active Tutors</p>
+            <p>敬业活跃的教师</p>
           </div>
 
         </div>
@@ -273,20 +264,18 @@
     <section id="services">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h3 class="section-title">Services</h3>
+          <h3 class="section-title">提供课程范围</h3>
           <p class="section-description">
-            Listed are some course categories we offer. Please click on each category for more information.
-          </p>
+            我们列举了部分课程类别，请单击每个类别以获取更多信息          </p>
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href="exploratory-info.html"><i class="bi bi-binoculars"></i></a></div>
-              <h4 class="title"><a href="exploratory-info.html">Exploratory ELA (Grades 6-9)</a></h4>
+              <h4 class="title"><a href="exploratory-info.html">探索性英文写作和阅读 ELA课程 (6-9 年级）</a></h4>
               <p class="description">
-                Instead of memorizing vocabulary for a multiple choice quiz, students will be encouraged to pursue creative 
-                writing works, read current events articles, and get a leg-up in their
-                humanities education.
+                我们鼓励学生去追求创造性的写作作品并阅读时事文章，在我们的人文教学方法中培养英文閲读
+和写作能力，开发独立思考能力和语言表达能力, 而不是记忆词汇进行多项选择测验.
               </p>
             </div>
           </div>
@@ -294,11 +283,10 @@
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href="exploratory-info.html"><i class="bi bi-binoculars"></i></a></div>
-              <h4 class="title"><a href="exploratory-info.html">Exploratory Maths (Grades 6-9)</a></h4>
+              <h4 class="title"><a href="exploratory-info.html">探索性数学课程 (6-9 年级）</a></h4>
               <p class="description">
-                With a flexible, personalized lesson plan, students can either
-                get ahead in their mathematics or augment their current coursework 
-                our experienced tutors. 
+                通过灵活、个性化的课程计划，发掘学生的数学才能，学生既可以在数学方面取得领先，也可以
+在我们经验丰富的教师指导下挑战更高难度的题型.
               </p>
             </div>
           </div>
@@ -306,11 +294,10 @@
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href="exploratory-info.html"><i class="bi bi-binoculars"></i></a></div>
-              <h4 class="title"><a href="exploratory-info.html">Exploratory Sciences (Grades 6-9)</a></h4>
+              <h4 class="title"><a href="exploratory-info.html">探索性科学课程 (6-9 年级）</a></h4>
               <p class="description">
-                With offerings in Biology, Physics, Chemistry, and Psychology, these courses
-                allow students to have an appropriate primer for any science interest
-                they may maintain.
+                通过生物学、物理、化学和心理学方面的课程的学习，学生能够为他们感兴趣任何科学学科提供
+适当的入门知识.
               </p>
             </div>
           </div>
@@ -318,34 +305,31 @@
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href="advanced-info.html"><i class="bi bi-binoculars"></i></a></div>
-              <h4 class="title"><a href="advanced-info.html">Advanced ELA (Grades 9-12)</a></h4>
+              <h4 class="title"><a href="advanced-info.html">高级英文写作和阅读 ELA (9-12 年级）</a></h4>
               <p class="description">
-                Assuming some knowledge of fundamental English concepts, students will 
-                tackle more rigorous ELA aid geared towards high school audiences. 
-              </p>
+                课程适合于有一定英语基础的学生，在我们的人文教学方法中培养超强的英文閲读和写作能力，
+                开发独立思考能力和语言表达能力, 在我们经验丰富的教师指导下挑战更高难度的閲读和写作能力
+                .              </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href="advanced-info.html"><i class="bi bi-binoculars"></i></a></div>
-              <h4 class="title"><a href="advanced-info.html">Advanced Maths (Grades 9-12)</a></h4>
+              <h4 class="title"><a href="advanced-info.html">高级数学课程 (9-12 年级）</a></h4>
               <p class="description">
-                Delving into more complicated mathematics from advanced algebra 
-                to precalculus to calculus and beyond, our tutors are prepared to 
-                walk students through the complexities of mathematics.
-              </p>
+                深入研究从高级代数到初等微积分再到微积分等更复杂的数学，我们的教师将引导学生了解数学
+                的复杂性和奥秘.              </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href="advanced-info.html"><i class="bi bi-binoculars"></i></a></div>
-              <h4 class="title"><a href="advanced-info.html">Advanced Sciences (Grades 9-12)</a></h4>
+              <h4 class="title"><a href="advanced-info.html">高级科学课程 (9-12 年级）</a></h4>
               <p class="description">
-                With a more general focus than our AP/IB offerings, our science courses
-                allow for exploration into more advanced topics in Biology, Chemistry, 
-                Physics, and much more.
+                与我们全面系统的 AP/IB 课程相比，我们的高级科学课程更注重探索生物学、化学、物理学等更
+高级的主题.
               </p>
             </div>
           </div>
@@ -353,11 +337,10 @@
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href="ap-ib-info.html"><i class="bi bi-briefcase"></i></a></div>
-              <h4 class="title"><a href="ap-ib-info.html">AP Curriculum (Any)</a></h4>
+              <h4 class="title"><a href="ap-ib-info.html">AP课程 (任何)</a></h4>
               <p class="description">
-                With very few exceptions, we offer courses in all AP subjects. 
-                From AB/BC Calculus to English Language to Microeconomics, we will 
-                ensure your readiness for the AP exam and beyond.
+                除了极少数例外，我们提供所有 AP 科目的课程. 从 AB/BC 微积分到英语语言再到微观经济学，我
+们将确保您有足够的AP课程以及为AP课程的考试做好充分的准备.
               </p>
             </div>
           </div>
@@ -365,11 +348,10 @@
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href="ap-ib-info.html"><i class="bi bi-briefcase"></i></a></div>
-              <h4 class="title"><a href="ap-ib-info.html">IB Curriculum (Any)</a></h4>
+              <h4 class="title"><a href="ap-ib-info.html">IB课程 (任何)</a></h4>
               <p class="description">
-                Our tutors are heavily experienced with augmenting the IB curriculum,
-                working alongside a student's studies to give them an advantage
-                for the exam and beyond.
+                我们的教师在增加 IB 课程方面有着特别丰富的经验，在教师的指导下，学生的学习优势将得到充
+分地发挥并在考试中取得优异成绩.
               </p>
             </div>
           </div>
@@ -377,52 +359,46 @@
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href="competitions-info.html"><i class="bi bi-briefcase"></i></a></div>
-              <h4 class="title"><a href="competitions-info.html">Competitions (Any)</a></h4>
+              <h4 class="title"><a href="competitions-info.html">竞赛课程 (任何)</a></h4>
               <p class="description">
-                From the AMC series to USACO to Olympiad competitions, our tutors
-                can help students prepare for top-ranked places in these events.
-              </p>
+                从 AMC 系列到 USACO 再到奥林匹克竞赛，我们的教师可以帮助学生为这些赛事中的勇夺最高名
+                次做好坚实的准备.              </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href="college-counseling-info.html"><i class="bi bi-card-checklist"></i></a></div>
-              <h4 class="title"><a href="college-counseling-info.html">College Counseling (Grades 9-12)</a></h4>
+              <h4 class="title"><a href="college-counseling-info.html">大学入学咨询课程 (9-12 年级）</a></h4>
               <p class="description">
-                Our tutors are in-touch with what aspects of 
-                your application are particularly strong or weak. We provide advice for launching initiatives, strategies for applying to specific colleges,
-                and identifying awards or scholarships.
-              </p>
+                我们的教师会密切注意学生在申请大学申请表上的强项或弱项并就此建议一些特定大学申请的策
+                略，同时对学生的课外活动和某些奖项或奖学金提供建议.              </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href="college-essay-info.html"><i class="bi bi-card-checklist"></i></a></div>
-              <h4 class="title"><a href="college-essay-info.html">College Essay Aid (Grades 11-12)</a></h4>
+              <h4 class="title"><a href="college-essay-info.html">大学申请文书帮助 (11-12 年级)</a></h4>
               <p class="description">
-                Students will receive top-notch aid throughout the entire process: what makes a good college essay?
-                From brainstorming to outlining to finalizing, we do it all.
-              </p>
+                学生将在整个过程中获得超一流的帮助：一篇好的大学论文是什么？从头脑风暴到概述再到最终
+                确定，我们都做到了.              </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href="standardized-info.html"><i class="bi bi-card-checklist"></i></a></div>
-              <h4 class="title"><a href="standardized-info.html">Standardized Test Preparation (Any)</a></h4>
+              <h4 class="title"><a href="standardized-info.html">标准化考试准备课程 (任何)</a></h4>
               <p class="description">
-                From high school exams like the ISEE or SSAT or college exams like
-                the PSAT, SAT, or ACT, our tutors will prepare you for a score you 
-                desire, whether it be for admissions, awards, or scholarships.
-              </p>
+                从 ISEE 或 SSAT 等入学高中考试到 PSAT, SAT 或 ACT 等入学大学考试，无论是入学、奖励还是奖学
+                金，我们的教师将为您准备好您想要的分数.              </p>
             </div>
           </div>
       </div>
       <div class="col-lg-12 text-center md-3">
-        <a class="cta-btn align-middle" href="course-info.html">Course Format</a>
+        <a class="cta-btn align-middle" href="course-info.html">课程形式</a>
       </div>      <div class="col-lg-12 text-center md-3">
 
-        <a class="cta-btn align-middle" href="register.html">Ready to Register?</a>
+        <a class="cta-btn align-middle" href="register.html">开始注册</a>
       </div>
     </section><!-- End Services Section -->
 
@@ -622,9 +598,9 @@
     <section id="contact">
       <div class="container">
         <div class="section-header">
-          <h3 class="section-title">Contact</h3>
+          <h3 class="section-title">联系我们</h3>
           <p class="section-description">
-            Questions or concerns? Send us a message and one of our tutors will respond right away!
+            如有问题或疑问？请给我们留言，我们会尽快回复！
           </p>
         </div>
       </div>
@@ -681,14 +657,14 @@
                   action="https://script.google.com/macros/s/AKfycbyClXBJB0SMJ46TuN_hC1WGg9fkHlq0Ya3rDqaQxZ8NsY4yI6HMUT0jSaxlm0xDZq0I/exec"
                 >
                 <div class="form-group mt-3">
-                  <h2>Questions?</h2>
-                  <p>Place your name and email below and we'll get in touch!</p>
+                  <h2>如有问题？</h2>
+                  <p>请在下方填写您的姓名和电子邮件，我们会与您取得联系！</p>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="text" name="Name" class="form-control" id="input1" placeholder="Name" required>
+                  <input type="text" name="Name" class="form-control" id="input1" placeholder="姓名" required>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="email" name="Email" class="form-control" id="input2" placeholder="Email" required>
+                  <input type="email" name="Email" class="form-control" id="input2" placeholder="邮件地址" required>
                 </div>
                 <div class="text-center form-group mt-3">
                   <p id="response"></p>
@@ -703,7 +679,7 @@
                     <option value="Opera">
                     <option value="Safari">
                   </datalist> -->
-                  <div class="text-center mt-3"><button type="submit" id="contactButton">Send</button></div>
+                  <div class="text-center mt-3"><button type="submit" id="contactButton">发送</button></div>
                 </form>
 
 
