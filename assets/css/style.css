@@ -630,6 +630,7 @@ section {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/call-to-action-bg.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0;
+  height: 30em;
 }
 @media (max-width: 1024px) {
   #call-to-action {
@@ -769,9 +770,9 @@ section {
 #portfolio .portfolio-item .portfolio-info .details-link {
   right: 15px;
 }
-#portfolio .portfolio-item:hover img {
+/* #portfolio .portfolio-item:hover img {
   top: -30px;
-}
+} */
 #portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
   bottom: 0;
@@ -781,7 +782,8 @@ section {
 # Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details {
-  padding-top: 40px;
+  padding-top: 20px;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/portfolio-details-bg.jpg) fixed center center; */
 }
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
@@ -816,18 +818,81 @@ section {
   padding: 0;
   font-size: 15px;
 }
+.portfolio-details .portfolio-info select {
+  width: 6.3em;
+}
 .portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .portfolio-details .portfolio-description {
-  padding-top: 30px;
+  padding-top: -50px;
 }
 .portfolio-details .portfolio-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
+.portfolio-details table thead tr td .portfolio-description ul {
+  list-style: square;
+  padding: -5;
+  font-size: 15px;
+}
+.portfolio-details table thead tr td .portfolio-description ul li {
+  margin-top:-1.25em;
+}
 .portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+.portfolio-details-1 {
+  padding-top: 80px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/call-to-action-bg.jpg) fixed center center;
+}
+.portfolio-details-1 .portfolio-details-slider img {
+  width: 100%;
+}
+.portfolio-details-1 .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.portfolio-details-1 .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #2dc997;
+}
+.portfolio-details-1 .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #2dc997;
+}
+.portfolio-details-1 .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(102, 102, 102, 0.08);
+}
+.portfolio-details-1 .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.portfolio-details-1 .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+.portfolio-details-1 .portfolio-info ul li + li {
+  margin-top: 10px;
+}
+.portfolio-details-1 .portfolio-description {
+  padding-top: 30px;
+}
+.portfolio-details-1 .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.portfolio-details-1 .portfolio-description p {
   padding: 0;
 }
 
@@ -1073,3 +1138,87 @@ section {
   justify-content: center;
 }
   
+
+
+
+
+
+
+
+.removalButton {
+  border: 0; padding: 4px 8px; background-color: #c66; color: #fff; font-family: 'HelveticaNeue-Medium'; font-size: 12px; border-radius:3px;
+}
+
+.removalButton:hover {
+  background-color: #a44;
+}
+
+.itemImg {
+  width: 100%;
+}
+
+.itemName {
+  font-family: 'HelveticaNeue-Medium'; font-size:17px;
+}
+
+.itemDescription {
+  font-size: 14px;
+}
+
+.quantity {
+  width: 40%;
+}
+
+.subtotal {
+  text-align:right;
+}
+
+
+/* Totals section */
+ .totals .totals-item {
+	 float: right;
+	 clear: both;
+	 width: 100%;
+	 margin-bottom: 10px;
+}
+ .totals .totals-item label {
+	 float: left;
+	 clear: both;
+	 width: 79%;
+	 text-align: right;
+}
+ .totals .totals-item .totals-value {
+	 float: right;
+	 width: 21%;
+	 text-align: right;
+}
+ .totals .totals-item-total {
+	 font-family: '
+	HelveticaNeue-Medium'
+	, '
+	Helvetica Neue Medium'
+	;
+}
+ .checkout {
+	 float: right;
+	 border: 0;
+	 margin-top: 20px;
+	 padding: 6px 25px;
+	 background-color: #6b6;
+	 color: #fff;
+	 font-size: 25px;
+	 border-radius: 3px;
+}
+ .checkout:hover {
+	 background-color: #494;
+}
+
+/* Make more adjustments for phone */
+ @media screen and (max-width: 350px) {
+	 .totals .totals-item label {
+		 width: 60%;
+	}
+	 .totals .totals-item .totals-value {
+		 width: 40%;
+	}
+}

@@ -1,0 +1,881 @@
+{
+ "selection1": [
+  {
+   "name": "Harvard Crest T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvard-crest-t-shirt",
+   "price": "$24.99",
+   "description": "You'll be comfy and ready to go with this wear anywhere Harvard T-shirt.",
+   "specification_list": [
+    {
+     "name": "100% cotton"
+    },
+    {
+     "name": "Unisex"
+    },
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/crest_t_crimson_1.png?v=1625750444"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/crestGray.png?v=1568666605"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/crestNavty.png?v=1568666605"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Women1_2.jpg?v=1629215989"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Crest-Tee-Gray.jpg?v=1629215991"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HarvardCrestT-Shirt-NavyLifestyle.jpg?v=1629216269"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Arc T-shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvard-arc-t-shirt",
+   "price": "$23.99",
+   "description": "Click here for sizing chart",
+   "specification_list": [
+    {
+     "name": "100% preshrunk cotton"
+    },
+    {
+     "name": "Except grey: 90% cotton, 10% polyester"
+    },
+    {
+     "name": "Double-needle stitched for durability"
+    },
+    {
+     "name": "Unisex"
+    },
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/IMG_1678.jpg?v=1606772604"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Arc-Crimson-M_copy_f8bde3d5-4d04-4912-af9b-aa6be61c086a.jpg?v=1631119720"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/arc_11ce4659-67a1-455f-81b6-49772ca07499.png?v=1568666606"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Summer_Ian.jpg?v=1631119720"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/arc1.png?v=1568666606"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Arc-Black-M_copy.jpg?v=1631119720"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Dad T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvarddadt-shirt",
+   "price": "$19.99",
+   "description": "This is the perfect gift for any dad who is proud to show his support for his hard-working son or daughter away at college.",
+   "specification_list": [
+    {
+     "name": "100% preshrunk cotton"
+    },
+    {
+     "name": "Double-needle stitched for durability"
+    },
+    {
+     "name": "Official Harvard university Apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University Students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/dad.png?v=1569273505"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/IMG_4615.jpg?v=1562940022"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/dad.png?v=1569273505"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/IMG_4615.jpg?v=1562940022"
+    }
+   ]
+  },
+  {
+   "name": "Vintage Crew T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/vintagecrewt-shirt",
+   "price": "$23.99",
+   "description": "Strive for that classic look with the Vintage crew T-shirt.",
+   "specification_list": [
+    {
+     "name": "50% polyester (6.25% recycled), 38% cotton (6.25% organic), 12% rayon"
+    },
+    {
+     "name": "Low-impact yarn-dyed and fabric-washed"
+    },
+    {
+     "name": "Unisex"
+    },
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "All orders are designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/vintage-crew-min.jpg?v=1597726060"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A0403_9393a539-98d0-489a-a033-3dbbc52caa3d.jpg?v=1568689920"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/best_dressed_92_of_95.jpg?v=1566244826"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Harvard_Vintage_Crew_T-Shirt_-_W.jpg?v=1566244826"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/vintage-crew-min.jpg?v=1597726060"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A0403_9393a539-98d0-489a-a033-3dbbc52caa3d.jpg?v=1568689920"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/best_dressed_92_of_95.jpg?v=1566244826"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Harvard_Vintage_Crew_T-Shirt_-_W.jpg?v=1566244826"
+    }
+   ]
+  },
+  {
+   "name": "Hahvahd T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/hahvard-t-shirt",
+   "price": "$19.99",
+   "description": "Classic Harvard t-shirt with a classic Boston accent.",
+   "specification_list": [
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "Gildan Ultracotton Activewear"
+    },
+    {
+     "name": "100% preshrunk cotton"
+    },
+    {
+     "name": "Double-needle stitched for durability"
+    },
+    {
+     "name": "High quality--satisfaction guaranteed"
+    },
+    {
+     "name": "Unisex"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Hahvahd-min.jpg?v=1622748358"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/custom_resized_d43d495b-e945-4981-8b6b-d428fe536222.jpg?v=1622648742"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/IMG_4313.jpg?v=1622648742"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Hahvahd-min.jpg?v=1622748358"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/custom_resized_d43d495b-e945-4981-8b6b-d428fe536222.jpg?v=1622648742"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/IMG_4313.jpg?v=1622648742"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Victory Tee",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvardvictorytee",
+   "price": "$25.99",
+   "description": "The Harvard Victory is the classic fit everyone in your family has been looking for. Comfy and understated, this tee is the best way to show your spirit around campus.",
+   "specification_list": [
+    {
+     "name": "Official Harvard apparel"
+    },
+    {
+     "name": "All products designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/ed69d8e91237441e0bb0b93e154ac94b3ba45401.png?v=1597643594"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/ed69d8e91237441e0bb0b93e154ac94b3ba45401.png?v=1597643594"
+    }
+   ]
+  },
+  {
+   "name": "MIT Contemporary T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/mitcontemporaryt-shirt",
+   "price": "$16.99",
+   "description": "This comfortable MIT shirt is a perfect piece for your year-round wardrobe! Designed to be minimalist, this is a must have for any MIT fan or affiliate.",
+   "specification_list": [
+    {
+     "name": "Official MIT University Apparel"
+    },
+    {
+     "name": "4.2 oz., 100% combed and ringspun cotton"
+    },
+    {
+     "name": "High quality -- satisfaction guaranteed"
+    },
+    {
+     "name": "Double-needle stiched for durability"
+    },
+    {
+     "name": "Fitted at bicep"
+    },
+    {
+     "name": "Unisex standard fit"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/MIT-dark-grey-modern-contemporary-binary-logo-tshirt_grande_db59f247-43a4-424b-8d9e-5ecfb0b0443b.png?v=1556037961"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/MITt-shirt_copy_grande_1b2e81d0-a8af-40fe-8be1-305ab8596a9c.jpg?v=1556037961"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/graycontemporary2_grande_72be5a92-e27c-4d82-9623-03a8d623945c.jpg?v=1556037961"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/MIT_comtemporary_navy_heather_grande_27eda136-c494-496d-bfff-1fa033ec3358.jpg?v=1556037961"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/MIT-dark-grey-modern-contemporary-binary-logo-tshirt_grande_db59f247-43a4-424b-8d9e-5ecfb0b0443b.png?v=1556037961"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/MITt-shirt_copy_grande_1b2e81d0-a8af-40fe-8be1-305ab8596a9c.jpg?v=1556037961"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/graycontemporary2_grande_72be5a92-e27c-4d82-9623-03a8d623945c.jpg?v=1556037961"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/MIT_comtemporary_navy_heather_grande_27eda136-c494-496d-bfff-1fa033ec3358.jpg?v=1556037961"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Kennedy School of Government Tee",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvardkennedyschoolofgovernmenttee",
+   "price": "$15.99",
+   "description": "Show your spirit for HKS with this premium t-shirt.",
+   "specification_list": [
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "Gildan Ultracotton Activewear"
+    },
+    {
+     "name": "100% preshrunk cotton"
+    },
+    {
+     "name": "Except gray: 90% cotton, 10% polyester"
+    },
+    {
+     "name": "Double-needle stitched for durability"
+    },
+    {
+     "name": "High quality--satisfaction guaranteed"
+    },
+    {
+     "name": "Unisex"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Copy_of_7Z2A0555.jpg?v=1598038181"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Screen_Shot_2019-07-16_at_3.39.30_PM.png?v=1598038181"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Copy_of_7Z2A0593.jpg?v=1598038181"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Copy_of_7Z2A0555.jpg?v=1598038181"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Screen_Shot_2019-07-16_at_3.39.30_PM.png?v=1598038181"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Copy_of_7Z2A0593.jpg?v=1598038181"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Maroon Crest T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvardmarooncrestt-shirt",
+   "price": "$23.99",
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/5f3a9944e434029dacd975db471f26731e89b50d.png?v=1605714542"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/5f3a9944e434029dacd975db471f26731e89b50d.png?v=1605714542"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Grandpa T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvardgrandpat-shirt",
+   "price": "$19.99",
+   "description": "The perfect gift for a grandfather to express how proud he is of his hard-working grandchild away at college.",
+   "specification_list": [
+    {
+     "name": "Double-needle stitched for durability"
+    },
+    {
+     "name": "Unisex standard-fit"
+    },
+    {
+     "name": "Waist-length"
+    },
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "All orders packed and shipped by Harvard students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/grandpa-t-shirt-min.jpg?v=1499437183"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/custom_resized_3ada30ab-bc58-48c9-9801-acf2846fa1ca.jpg?v=1622648845"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/grandpa-t-shirt-min.jpg?v=1499437183"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/custom_resized_3ada30ab-bc58-48c9-9801-acf2846fa1ca.jpg?v=1622648845"
+    }
+   ]
+  },
+  {
+   "name": "Jenny Tee",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvardslubt-shirt",
+   "price": "$29.99",
+   "description": "Stay cool, comfy, and stylish in this light-weight, distressed t-shirt. Perfect for any Harvard occasion.",
+   "specification_list": [
+    {
+     "name": "Unisex"
+    },
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/ScreenShot2020-03-22at8.49.50AM.png?v=1598043723"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Z2A5567.jpg?v=1598043664"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Z2A5596.jpg?v=1598043664"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Z2A5673.jpg?v=1598043664"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/ScreenShot2020-03-22at8.49.50AM.png?v=1598043723"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Z2A5567.jpg?v=1598043664"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Z2A5596.jpg?v=1598043664"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Z2A5673.jpg?v=1598043664"
+    }
+   ]
+  },
+  {
+   "name": "MIT T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/mitt-shirt",
+   "price": "$16.99",
+   "specification_list": [
+    {
+     "name": "Official MIT University Apparel"
+    },
+    {
+     "name": "4.2 oz., 100% combed and ringspun cotton"
+    },
+    {
+     "name": "High quality -- satisfaction guaranteed"
+    },
+    {
+     "name": "Double-needle stiched for durability"
+    },
+    {
+     "name": "Fitted at bicep"
+    },
+    {
+     "name": "Unisex standard fit"
+    },
+    {
+     "name": "Waist-length"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/MIT_TShirt_-_Male_-_Grey_grande_652a5e43-ff5a-49da-b782-3c7fbd5338da.jpg?v=1602694597"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/MIT_T-Shirt_-_Grey_-_Female_grande_64c5dbec-d8d7-414a-94ab-4f3ea5153e62.jpg?v=1602694597"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/MIT_TShirt_-_Male_-_Grey_grande_652a5e43-ff5a-49da-b782-3c7fbd5338da.jpg?v=1602694597"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/MIT_T-Shirt_-_Grey_-_Female_grande_64c5dbec-d8d7-414a-94ab-4f3ea5153e62.jpg?v=1602694597"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Brother T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvardbrothert-shirt",
+   "price": "$19.99",
+   "description": "The perfect gift for a brother proud of his hard-working sibling away at college.",
+   "specification_list": [
+    {
+     "name": "100% Cotton"
+    },
+    {
+     "name": "Double-needle stitched for durability"
+    },
+    {
+     "name": "Unisex"
+    },
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/brother-min.jpg?v=1499437189"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/custom_resized_8dc91dfe-48eb-496e-ae97-33b52dd26b22.jpg?v=1622649136"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/brother-min.jpg?v=1499437189"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/custom_resized_8dc91dfe-48eb-496e-ae97-33b52dd26b22.jpg?v=1622649136"
+    }
+   ]
+  },
+  {
+   "name": "HGSE Crest T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvard-graduate-school-of-education-crest-t-shirt-2",
+   "price": "$19.99",
+   "description": "Click here for sizing chart",
+   "specification_list": [
+    {
+     "name": "100% Preshrunk Cotton"
+    },
+    {
+     "name": "Unisex"
+    },
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shiped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HGSE_Tee-red-min.jpg?v=1556037853"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HGSE_Tee-navy-min.jpg?v=1556037853"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HGSE_Tee-min.jpg?v=1556037853"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HARVARD_GRADUATE_SCHOOL_OF_EDUCATION_CREST_T-SHIRT_grande_b34b965c-e071-4493-8146-99546f8631f0.jpg?v=1556037853"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/M_GSE_Crest_Red_-_Vidal_grande_316f2820-c2be-4f64-8add-581a59fd557a.jpg?v=1556037853"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/W_Harvard_GSE_Crest_Red_-_Willa_1024x1024_grande_8310b79a-ef8b-409e-a6a5-63550f501207.jpg?v=1556037853"
+    }
+   ]
+  },
+  {
+   "name": "Apley Tee",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/apleytee",
+   "price": "$25.99",
+   "description": "A crimson classic and fall favorite that blends in perfectly with the greenery of Harvard Yard as leaves turn red and yellow. With old-school vintage logo print and a bright crimson shirt color, the Apley Tee can be the piece of Harvard scenery that you take home with you.",
+   "specification_list": [
+    {
+     "name": "Women’s T-Shirt"
+    },
+    {
+     "name": "100% Live-In Soft Cotton"
+    },
+    {
+     "name": "True to Size"
+    },
+    {
+     "name": "Athletic Fit: Runs Narrow with Some Room Around Arms and Shoulders"
+    },
+    {
+     "name": "Screen Printed Graphic"
+    },
+    {
+     "name": "Official Harvard and The League apparel"
+    },
+    {
+     "name": "All products designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/c76bed579300b7381033503b4c6f63de1ceadd81.png?v=1597643210"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A9311.jpg?v=1623945162"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Z2A5336.jpg?v=1623945162"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Z2A5369.jpg?v=1623945162"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/League-WomensSizeChart_2048x2048_acb9cec9-2943-4bf3-8b74-b01ed0b611f5.webp?v=1649423711"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/c76bed579300b7381033503b4c6f63de1ceadd81.png?v=1597643210"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A9311.jpg?v=1623945162"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Z2A5336.jpg?v=1623945162"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Z2A5369.jpg?v=1623945162"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/League-WomensSizeChart_2048x2048_acb9cec9-2943-4bf3-8b74-b01ed0b611f5.webp?v=1649423711"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Graduate School of Education Triblend T-shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvardgraduateschoolofeducationtriblendt-shirt",
+   "price": "$19.99",
+   "description": "More unique than the traditional T-shirt, this triblend is perfect for any HGSE student or fan.",
+   "specification_list": [
+    {
+     "name": "Unisex"
+    },
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Copy_of_7Z2A0507.jpg?v=1566246528"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Copy_of_7Z2A0502.jpg?v=1566246528"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Copy_of_7Z2A0507.jpg?v=1566246528"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Copy_of_7Z2A0502.jpg?v=1566246528"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Graduate School of Education Long Sleeve T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvardgraduateschoolofeducationlongsleevet-shirt",
+   "price": "$24.99",
+   "description": "Be comfortable in this Harvard Graduate School of Education long-sleeve tee.",
+   "specification_list": [
+    {
+     "name": "100% cotton"
+    },
+    {
+     "name": "Unisex"
+    },
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HGSE-long-sleeve-t-shirt-min.jpg?v=1499439453"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HGSE-long-sleeve-t-shirt-min.jpg?v=1499439453"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Medical School T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvard-medical-school-t-shirt-2",
+   "price": "$19.99",
+   "description": "Click here for sizing chart",
+   "specification_list": [
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "Gildan Ultracotton Activewear"
+    },
+    {
+     "name": "100% preshrunk cotton"
+    },
+    {
+     "name": "Except gray: 90% cotton, 10% polyester"
+    },
+    {
+     "name": "Double-needle stitched for durability"
+    },
+    {
+     "name": "High quality--satisfaction guaranteed"
+    },
+    {
+     "name": "Unisex"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HarvardMedicalSchoolT-Shirt.jpg?v=1619627227"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HarvardMedicalSchoolT-Shirt.jpg?v=1619627227"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Maroon Arc T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvardmaroonarct-shirt",
+   "price": "$23.99",
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/maroonarct.jpg?v=1606637820"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/maroonarct.jpg?v=1606637820"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Performance Long Sleeve Tee",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvardperformancelongsleevetee",
+   "price": "$39.99",
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A4749_0.5x.png?v=1638195609"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A6949.jpg?v=1638195609"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/ScreenShot2021-08-05at5.05.12PM.png?v=1638195605"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A7378.jpg?v=1641534808"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/custom_resized_bf190ef3-a360-4ca6-8848-2d2a9c2d36a0.png?v=1649098262"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A4749_0.5x.png?v=1638195609"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A6949.jpg?v=1638195609"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/ScreenShot2021-08-05at5.05.12PM.png?v=1638195605"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A7378.jpg?v=1641534808"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/custom_resized_bf190ef3-a360-4ca6-8848-2d2a9c2d36a0.png?v=1649098262"
+    }
+   ]
+  },
+  {
+   "name": "H Pocket Long Sleeve Tee",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/hpocketlongsleevetee",
+   "price": "$29.99",
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/e9546ea92134e4fbd7680a2ac201ccaffb1f0ec1.png?v=1646691943"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A0318.jpg?v=1646691943"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/e9546ea92134e4fbd7680a2ac201ccaffb1f0ec1.png?v=1646691943"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A0318.jpg?v=1646691943"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Performance Short Sleeve Tee",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvardperformanceshortsleevetee",
+   "price": "$34.99",
+   "description": "All orders designed, packaged, and shipped by Harvard University students",
+   "specification_list": [
+    {
+     "name": "Unisex"
+    },
+    {
+     "name": "75% Polyester, 13% Cotton, 12% Rayon"
+    },
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/ScreenShot2021-08-05at4.44.33PM.png?v=1656533950"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/custom_resized_80ba0256-096d-479e-9bfc-2f83074ccc22.png?v=1656533950"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Green.png?v=1656534988"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/LightGreyResized.png?v=1656534988"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/GreyPerf.png?v=1656534988"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HarvardPerformanceShortSleeveTee-Lifestyle.jpg?v=1656534984"
+    }
+   ]
+  },
+  {
+   "name": "New Harvard Law School Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/new-harvard-law-school-shirt",
+   "price": "$19.99",
+   "specification_list": [
+    {
+     "name": "90% Cotton"
+    },
+    {
+     "name": "10% Polyester"
+    },
+    {
+     "name": "Gildan Heavy Cotton"
+    },
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A4739_0.5x.png?v=1638141444"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A4739_0.5x.png?v=1638141444"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Skyline T-Shirt",
+   "url": "https://www.theharvardshop.com/collections/test-men/products/harvardskylinet-shirt",
+   "price": "$26.99",
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/ScreenShot2021-07-13at4.12.14PM.png?v=1646692416"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A0277.jpg?v=1646692416"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/ScreenShot2021-07-14at11.56.53AM.png?v=1646692413"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/ScreenShot2021-07-13at4.12.14PM.png?v=1646692416"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/7Z2A0277.jpg?v=1646692416"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/ScreenShot2021-07-14at11.56.53AM.png?v=1646692413"
+    }
+   ]
+  }
+ ]
+}

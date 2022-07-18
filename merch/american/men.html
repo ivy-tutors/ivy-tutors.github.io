@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q11D0YHHSV"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q11D0YHHSV');
+
+  $.ajax({
+    url: "../../data/run_results_mens_all.json",
+    dataType: "json",
+    success: function(data) {
+        let processed = data.selection1;
+        document.getElementById('number').innerHTML = data.selection1.length + " items offered"
+        for (let i = 0; i < processed.length; i++)
+        {
+            const item = document.createElement('div');
+            item.className = "col-lg-4 col-md-6 portfolio-item text-center";
+            item.id = "item " + i;
+
+            const link = document.createElement('a');
+            // change below link
+            link.href = "../items/men/" + i + ".html";;
+            link.style = "color: black";
+
+            const image = document.createElement('img');
+            try {
+                image.src = processed[i].images[0].image;
+            } catch {
+                image.src = "";
+            }
+            image.className = "img-fluid";
+            image.style = "height:200px";
+            image.alt = "";
+
+            const secondDiv = document.createElement('div');
+            secondDiv.className = "text-center";
+            secondDiv.style = "margin:.5cm";
+
+            const label = document.createElement('h4');
+            label.innerText = processed[i].name;
+
+            const PriceLabel = document.createElement('h6');
+            PriceLabel.innerText = processed[i].price;
+
+            secondDiv.appendChild(label);
+            secondDiv.appendChild(PriceLabel);
+            link.appendChild(image);
+            link.appendChild(secondDiv);
+            item.appendChild(link);
+            document.getElementById('product-list').appendChild(item)
+        }
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+        console.log('ERROR', textStatus, errorThrown);
+    }
+    });
+
+</script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mens</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon.ico" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Regna - v4.7.0
+  * Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div id="logo">
+        <a href="../../index.html"><img src="../../assets/img/logo.png" alt=""></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1><a href="index.html">Regna</a></h1>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="../../index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="../../index.html#services">Services</a></li>
+          <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
+          <li><a class="nav-link scrollto" href="../../register.html">Register</a></li><li><a class="nav-link scrollto" href="../../referrals.html">Referrals</a></li>
+
+          <li class="dropdown"><a href="../../merch.html" class="nav-link scrollto active"><span>Merch</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="best-sellers.html">Best Sellers</a></li>
+              <li><a href="new-arrivals.html">New Arrivals</a></li>
+              <li><a href="classic-tees.html">Classic Tees</a></li>
+              <li><a href="sweaters.html">Sweaters</a></li>
+              <li><a href="athletic-wear.html">Athletic Wear</a></li>
+              <li><a href="men.html">Men</a></li>
+              <li><a href="women.html">Women</a></li>
+              <li><a href="family-and-kids.html">Family and Kids</a></li>
+              <li><a href="banners.html">Banners</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="graduate-schools.html">Graduate Schools</a></li>
+              <li><a href="mit.html">MIT</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../../index.html#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="../../chinese/index.html"><img src="../..//assets/img/americanChinese.png" /></a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
+          <div class="container">
+    
+            <div class="row gy-4">
+    
+              <div class="col-lg-12">
+                <div class="portfolio-info">
+                  <!-- ======= Portfolio Section ======= -->
+                  <section id="portfolio" class="portfolio">
+                    <div class="container" data-aos="fade-up">
+                      <div class="section-header">
+                        <h3 class="section-title">Mens</h3>
+                        <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                      </div>
+
+                      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200" id="product-list">
+
+                        <!-- Products listed here -->
+
+                      </div>
+                      <p class="section-description text-center" id="number"></p>
+
+                    </div>
+                  </section>
+                </div>
+              </div>
+    
+            </div>
+    
+          </div>
+        </section><!-- End Portfolio Details Section -->
+    
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Ivy Tutors Academy</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/purecounter/purecounter.js"></script>
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/merch.js"></script>
+
+</body>
+
+</html>

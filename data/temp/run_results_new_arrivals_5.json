@@ -1,0 +1,694 @@
+{
+ "selection1": [
+  {
+   "name": "Harvard Graduate School of Education Mug",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardgraduateschoolofeducationmug",
+   "price": "$14.99",
+   "description": "Sip coffee in style with this HGSE mug.",
+   "specification_list": [
+    {
+     "name": "3 1/2'' Deep"
+    },
+    {
+     "name": "Features the Classic Graduate School of Education Crest"
+    },
+    {
+     "name": "Elegant and useful for everyday use"
+    },
+    {
+     "name": "Official Harvard University drinkware"
+    },
+    {
+     "name": "All products are designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HGSE-Mug-min_grande_59a8dccc-6ec6-437a-adff-782d24fc3779.jpg?v=1538078188"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HGSE_Mug_copy_grande_7569fb6d-5bf0-4bae-8755-26934025a7e6.jpg?v=1538078188"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HGSE-Mug-min_grande_59a8dccc-6ec6-437a-adff-782d24fc3779.jpg?v=1538078188"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/HGSE_Mug_copy_grande_7569fb6d-5bf0-4bae-8755-26934025a7e6.jpg?v=1538078188"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Silver Plated Cufflinks",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardsilverplatedcufflinks",
+   "price": "$54.99",
+   "description": "Our hand-stitched needlepoint cufflinks are a great way to add subtle style to your suit! The 3/4\" needlepoint design is set into a silver plated closure.",
+   "specification_list": [
+    {
+     "name": "Official Harvard university Apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/smith_branson_cufflinks.JPG?v=1547494870"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/smith_branson_cufflinks.JPG?v=1547494870"
+    }
+   ]
+  },
+  {
+   "name": "Stainless Steel Harvard Flask",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardoldfashionedsteelflask",
+   "price": "$24.99",
+   "description": "This Old Fashioned Flask is a traditional 6 ounce with a twist. These flasks are available in our popular translucent matte finish, adding a tasteful modern touch to a classic gift.",
+   "specification_list": [
+    {
+     "name": "Official Harvard University drinkware"
+    },
+    {
+     "name": "All products are designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/stainless_steel_flask.jpg?v=1532725260"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/stainless_steel_flask.jpg?v=1532725260"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Toddler Sweatpants",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardtoddlerbabysweatpants",
+   "price": "$22.49",
+   "description": "Have a toddler that loves to lounge around? Need a way to dress them and show off your school spirit? Look no further than these comfortable Harvard Toddler Sweatpants!",
+   "specification_list": [
+    {
+     "name": "Official Harvard university Apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/ToddlerSweatpants.png?v=1635088069"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/ToddlerSweatpants.png?v=1635088069"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Children's Cardigan Sweater",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardcardigansweater",
+   "price": "$29.99",
+   "description": "- All orders designed, packaged, and shipped by Harvard University students",
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/YOUTH23_4a5665c8-fd74-426d-a8d0-9b0048173183.png?v=1564172355"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/YOUTH23_4a5665c8-fd74-426d-a8d0-9b0048173183.png?v=1564172355"
+    }
+   ]
+  },
+  {
+   "name": "Crest Speckled Mug",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/crestspeckledmug",
+   "price": "$14.99",
+   "description": "A fresh take on the classic crest mugs, the Crest Speckled Mug adds a groovy touch to an otherwise plain cup of coffee.",
+   "specification_list": [
+    {
+     "name": "Crimson Ceramic with Glazed Finish"
+    },
+    {
+     "name": "Black Colored Rim"
+    },
+    {
+     "name": "Do not Microwave"
+    },
+    {
+     "name": "Official Harvard University Merchandise"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/redSpeck.png?v=1562940032"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/redSpeck.png?v=1562940032"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Crest Mug",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardcrestmug",
+   "price": "$9.99",
+   "description": "The classic Harvard mug in white and crimson looks great in any home or office. Show your spirit!",
+   "specification_list": [
+    {
+     "name": "Official Harvard product"
+    },
+    {
+     "name": "All products designed, packaged, and shipped by Harvard students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/crestMug.png?v=1562938249"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/crimCrestMug.png?v=1562938249"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/crestMug.png?v=1562938249"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/crimCrestMug.png?v=1562938249"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Silk Striped Tie",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardsilkstripedtie",
+   "price": "$79.99",
+   "description": "No man’s wardrobe would be complete without a selection of colourful ties. Woven from pure silk, our narrow ties are slip stitched and fully lined to ensure they drape properly when knotted. Add this tie, in the colours of Harvard University, to your chinos and blazer for a preppy look, or wear it to bring some character and classic style to your weekday suits.",
+   "specification_list": [
+    {
+     "name": "Official Harvard university Apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/tie.jpg?v=1548622546"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/tie.jpg?v=1548622546"
+    }
+   ]
+  },
+  {
+   "name": "Harvard 1636 Pin",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvard1636pin",
+   "price": "$4.99",
+   "description": "This Harvard 1636 Pin is the perfect gift for anyone who wants to display their Harvard pride in a classic and subtle way.",
+   "specification_list": [
+    {
+     "name": "Official Harvard University accessory"
+    },
+    {
+     "name": "All products are designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Harvard-1636-Pin-min_grande_bd496988-d6b4-486e-8cf4-6e97736f1be2.jpg?v=1508446509"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Harvard-1636-Pin-min_grande_bd496988-d6b4-486e-8cf4-6e97736f1be2.jpg?v=1508446509"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Pin",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardpin",
+   "price": "$4.99",
+   "description": "This Harvard Pin features the traditional Harvard arc, allowing anyone to display their Harvard pride in classic fashion.",
+   "specification_list": [
+    {
+     "name": "Official Harvard University accessory"
+    },
+    {
+     "name": "All products are designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/arcpin.png?v=1562958629"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/arcpin.png?v=1562958629"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Kennedy School Pin",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardkennedyschoolpin",
+   "price": "$4.99",
+   "description": "•All orders are designed, packaged and shipped by Harvard University students",
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/pin_hks_grande_73083383-94ab-4ada-9e0a-792696cb3f23.jpg?v=1508445036"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Harvard_Kennedy_School_Pin_grande_8d3e9b81-4dbd-4335-8057-b3a8693a7ddf.jpg?v=1508445038"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/pin_hks_grande_73083383-94ab-4ada-9e0a-792696cb3f23.jpg?v=1508445036"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Harvard_Kennedy_School_Pin_grande_8d3e9b81-4dbd-4335-8057-b3a8693a7ddf.jpg?v=1508445038"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Crimson H Pin",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardcrimsonhpin",
+   "price": "$4.99",
+   "description": "Wear this popular Harvard Crimson \"H\" Pin on your bag, hat or lapel to show your Harvard pride everywhere you go.",
+   "specification_list": [
+    {
+     "name": "Official Harvard University accessory"
+    },
+    {
+     "name": "All products are designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/pins_harvard_crimson_h_grande_10884e1b-6a15-4af1-9fe6-cd07960b6026.jpg?v=1508444750"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Harvard_Crimson_H_Pin_grande_14cb93fd-2438-403c-8ed6-324fdf441627.jpg?v=1508444753"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/pins_harvard_crimson_h_grande_10884e1b-6a15-4af1-9fe6-cd07960b6026.jpg?v=1508444750"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Harvard_Crimson_H_Pin_grande_14cb93fd-2438-403c-8ed6-324fdf441627.jpg?v=1508444753"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Business School Pin",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardbusinessschoolpin",
+   "price": "$4.99",
+   "description": "This Harvard Business School Pin is perfect for a visitor, student, or alumnus of the famous Harvard Business School.",
+   "specification_list": [
+    {
+     "name": "Official Harvard University accessory"
+    },
+    {
+     "name": "All products are designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Harvard_Business_School_Pin_copy_grande_798da600-6348-454a-8023-b9bac401cb36.jpg?v=1508443989"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/pins_business_school_HBS_grande_76f4ed6f-a1fd-4999-a394-65b07f3804b4.jpg?v=1508443991"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Harvard_Business_School_Pin_copy_grande_798da600-6348-454a-8023-b9bac401cb36.jpg?v=1508443989"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/pins_business_school_HBS_grande_76f4ed6f-a1fd-4999-a394-65b07f3804b4.jpg?v=1508443991"
+    }
+   ]
+  },
+  {
+   "name": "Harvard H Shield Pin",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardhshieldpin",
+   "price": "$4.99",
+   "description": "This subtle Harvard H Shield Pin is perfect for wearing as a lapel pin or on a bag or hat.",
+   "specification_list": [
+    {
+     "name": "Official Harvard University accessory"
+    },
+    {
+     "name": "All products are designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/pin_harvard_h_shield_grande_8afaef8e-2e8d-4525-9f3b-907f65e75cfd.jpg?v=1547398165"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Harvard_H_Shield_Pin_grande_309bc633-8af1-4cc5-9110-333911e8441b.jpg?v=1547398165"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/pin_harvard_h_shield_grande_8afaef8e-2e8d-4525-9f3b-907f65e75cfd.jpg?v=1547398165"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Harvard_H_Shield_Pin_grande_309bc633-8af1-4cc5-9110-333911e8441b.jpg?v=1547398165"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Varsity Sweater",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardvarsitysweater",
+   "price": "$109.00",
+   "description": "Inspired by classic varsity knits, this Hillflint sweater is crafted from our softest and highest-quality cotton. There’s no better or more fashionable way to show your Crimson spirit.",
+   "specification_list": [
+    {
+     "name": "Made by Hillflint exclusively for The Harvard Shop"
+    },
+    {
+     "name": "60%/40% Cotton/Acrylic Blend"
+    },
+    {
+     "name": "Unisex"
+    },
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Varsity-Sweater-min_grande_b6381ef0-ddb9-41a5-a344-f8cd7023417e.png?v=1560793997"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Finals-218.jpg?v=1560793997"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/4Z9A0753.jpg?v=1560793997"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Varsity-Sweater-min_grande_b6381ef0-ddb9-41a5-a344-f8cd7023417e.png?v=1560793997"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Finals-218.jpg?v=1560793997"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/4Z9A0753.jpg?v=1560793997"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Crest Pint Glass",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardcrestpintglass",
+   "price": "$16.99",
+   "description": "Enjoy a nice beverage with this Harvard Pint Glass!",
+   "specification_list": [
+    {
+     "name": "Official Harvard University drinkware"
+    },
+    {
+     "name": "All products are designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Crest_Pint_Glass-min_grande_5074a3bc-bbb9-423a-987c-6a071696d96b.jpg?v=1538615857"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Crest_Pint_Glass-2_grande_31a13ef1-1e93-42ce-a162-5c9df7eb3621.jpg?v=1538615857"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Crest_Pint_Glass-min_grande_5074a3bc-bbb9-423a-987c-6a071696d96b.jpg?v=1538615857"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Crest_Pint_Glass-2_grande_31a13ef1-1e93-42ce-a162-5c9df7eb3621.jpg?v=1538615857"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Bistro Mug",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardbistromug",
+   "price": "$14.99",
+   "description": "Drink with pride and style with this durable ceramic mug.",
+   "specification_list": [
+    {
+     "name": "Official Harvard University apparel"
+    },
+    {
+     "name": "All orders designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Bistro-Mug-min_grande_54c10c5a-d313-4d74-80da-52dbb6ea14c9.jpg?v=1543262703"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Bistro_Mug_grande_3a5b30ce-c683-4ab3-babc-82bf43e9777e.jpg?v=1543262703"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Bistro-Mug-min_grande_54c10c5a-d313-4d74-80da-52dbb6ea14c9.jpg?v=1543262703"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Bistro_Mug_grande_3a5b30ce-c683-4ab3-babc-82bf43e9777e.jpg?v=1543262703"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Crest Shot Glass",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardcrestshotglass",
+   "price": "$9.99",
+   "description": "Toss one back with this Harvard 1.5 oz shot glass. With its classic crest design, this shot glass will make a great addition to all Harvard enthusiasts' drink collection.",
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/1.jpg?v=1504183812"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Shot_Glass_grande_733b23b9-ebea-4aa5-a6ad-1fd86e683bd1.jpg?v=1504183812"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/1.jpg?v=1504183812"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Shot_Glass_grande_733b23b9-ebea-4aa5-a6ad-1fd86e683bd1.jpg?v=1504183812"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Crest Cordial Shooter",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardcrestcordialshooter",
+   "price": "$9.99",
+   "description": "Celebrate Harvard with a double shot! Remember Harvard as you kick off your night with a drink from this classic and sleek Harvard Cordial Shooter.",
+   "specification_list": [
+    {
+     "name": "Official Harvard University drinkware"
+    },
+    {
+     "name": "All products are designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/2x_Shooter_grande_1c3e4157-ecd0-4342-ac0b-88c0bf2eab78.jpg?v=1533134448"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Tall-Glass-min_grande_7efb75f2-f958-4909-872c-40779bc6226c.jpg?v=1533134448"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/2x_Shooter_grande_1c3e4157-ecd0-4342-ac0b-88c0bf2eab78.jpg?v=1533134448"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/Tall-Glass-min_grande_7efb75f2-f958-4909-872c-40779bc6226c.jpg?v=1533134448"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Vinyl Banner",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardvinylbanner",
+   "price": "$37.99",
+   "description": "Grommet with attached rop in each corner for hanging",
+   "specification_list": [
+    {
+     "name": "Official Harvard University supporter gear"
+    },
+    {
+     "name": "Please note that this product may take 7-10 days to ship.\nTailgate gear can not be returned."
+    },
+    {
+     "name": "Only ships to mainland USA"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810022HARV-001.jpg?v=1502832600"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810022HARV-002.jpg?v=1502832601"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810022HARV-003.jpg?v=1502832604"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810022HARV-001.jpg?v=1502832600"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810022HARV-002.jpg?v=1502832601"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810022HARV-003.jpg?v=1502832604"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Tailgate Feather Flag",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardtailgatefeatherflag",
+   "price": "$79.99",
+   "description": "Support your Harvard team with this easy to set up tailgating flag!",
+   "specification_list": [
+    {
+     "name": "High Quality, Full Color Dye Sublimated Flag"
+    },
+    {
+     "name": "Poles are constructed of a strong flexible carbon composite."
+    },
+    {
+     "name": "Option of spike base or cross base with water ballast."
+    },
+    {
+     "name": "Easy assembly/dissasembly."
+    },
+    {
+     "name": "Official Harvard University supporter gear"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810029HARV-002.jpg?v=1563304892"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810029HARV-003.jpg?v=1563304892"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810028HARV-001.jpg?v=1657126906"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810029HARV-001.jpg?v=1657127068"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810028HARV-002.jpg?v=1657127101"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810028HARV-003.jpg?v=1657127148"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810029HARV-002.jpg?v=1563304892"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810029HARV-003.jpg?v=1563304892"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810028HARV-001.jpg?v=1657126906"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810029HARV-001.jpg?v=1657127068"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810028HARV-002.jpg?v=1657127101"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810028HARV-003.jpg?v=1657127148"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Table Cover",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardtablecover",
+   "price": "$89.99",
+   "description": "Please note that this product may take 7-10 days to ship.\nTail gate gear can not be returned.\nOnly ships to mainland USA",
+   "specification_list": [
+    {
+     "name": "Covers 4 sides of the table, flame retardant, premium polyester poplin fabric, machine washable and wrinkle resistant."
+    },
+    {
+     "name": "Easily covers 6ft table."
+    },
+    {
+     "name": "Comes in multiple designs."
+    },
+    {
+     "name": "Official Harvard University supporter gear"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810026HARV-001.jpg?v=1503323233"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810026HARV-002.jpg?v=1503323233"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810026HARV-003.jpg?v=1503323233"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810026HARV-001.jpg?v=1503323233"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810026HARV-002.jpg?v=1503323233"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810026HARV-003.jpg?v=1503323233"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Flag",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardflag",
+   "price": "$25.99",
+   "description": "Multiple designs!",
+   "specification_list": [
+    {
+     "name": "Official Harvard University supporter gear"
+    },
+    {
+     "name": "Please note that this product may take 7-10 days to ship.\nTailgate gear can not be returned."
+    },
+    {
+     "name": "Only ships to mainland USA"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810003HARV-002.jpg?v=1563299946"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810003HARV-001.jpg?v=1563299946"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810003HARV-003.jpg?v=1563299946"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810003HARV-002.jpg?v=1563299946"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810003HARV-001.jpg?v=1563299946"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/810003HARV-003.jpg?v=1563299946"
+    }
+   ]
+  },
+  {
+   "name": "Harvard Crest Pin",
+   "url": "https://www.theharvardshop.com/collections/new-arrivals/products/harvardcrestpin",
+   "price": "$4.99",
+   "description": "This classic and regal Harvard pin looks great on a backpack, shirt, or bulletin board.",
+   "specification_list": [
+    {
+     "name": "Official Harvard product"
+    },
+    {
+     "name": "All products designed, packaged, and shipped by Harvard University students"
+    }
+   ],
+   "images": [
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/crest-pin-1_grande_600f4ecc-a8e0-40ab-8947-c4f5c8b6abd7.jpg?v=1548622446"
+    },
+    {
+     "image": "https://cdn.shopify.com/s/files/1/0084/9282/products/crest-pin-1_grande_600f4ecc-a8e0-40ab-8947-c4f5c8b6abd7.jpg?v=1548622446"
+    }
+   ]
+  }
+ ]
+}
