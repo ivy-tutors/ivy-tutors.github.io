@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q11D0YHHSV"></script>
+
+<script src="assets/js/jQuery_production.js"></script>
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q11D0YHHSV');
+</script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Shipping Information</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script>
+/* Set rates + misc */
+let taxRate = 0.0625;
+let shippingRate = 5.00; 
+let fadeTime = 300;
+
+let test = 
+[
+  {
+    "name": "product1",
+    "price": "$23.23",
+    "url": "https://s.cdpn.io/3/dingo-dog-bones.jpg",
+    "description": "safsdfsadfsdfa",
+    "color": "Crimson",
+    "size": "M"
+  },
+  {
+    "name": "product2",
+    "price": "$1231.12",
+    "url": "https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png",
+    "description": "asdvafafvfa",
+    "color": "Gray",
+    "size": "XXL"
+  }
+]
+let chosen_products
+try{
+chosen_products = JSON.parse(sessionStorage.shopping_cart);
+}
+catch (e) {
+chosen_products = [];
+}
+if (typeof chosen_products == 'string')
+{
+  chosen_products = [];
+}
+  /* Recalculate cart */
+function recalculateCart(isDomestic)
+{
+  let subtotal = 0;
+
+  /* Sum up row totals */
+  for (let i = 0; i < chosen_products.length; i++)
+  {
+    try {
+      console.log(document.getElementById('subtotal' + i).innerHTML.substring(1))
+    subtotal += 
+      parseFloat(document.getElementById('subtotal' + i).innerHTML.substring(1));
+    }
+    catch (e)
+    {}
+  }
+  if (isNaN(subtotal)) {subtotal = 0}
+  /* Calculate totals */
+
+  let tax;
+  let shipping;
+  let total;
+
+  if (isDomestic)
+  {
+    tax = subtotal * taxRate;
+    shipping = (subtotal > 0 ? Math.min(Math.max((0.15 * subtotal).toFixed(2), 5.00), 30.00) : 0);
+    total = subtotal + tax + shipping;
+  } else 
+  {
+    tax = subtotal * taxRate;
+    shipping = (subtotal > 0 ? Math.min(Math.max((0.60 * subtotal).toFixed(2), 40.00), 100.00) : 0);
+    total = subtotal + tax + shipping;
+  }
+  sessionStorage.tax = tax;
+  sessionStorage.shipping = shipping;
+  sessionStorage.total = total;
+
+  /* Update totals display */
+  $('.totals-value').fadeOut(fadeTime, function() {
+    $('#cart-subtotal').html("$" + subtotal.toFixed(2));
+    $('#cart-tax').html("$" +tax.toFixed(2));
+    $('#cart-shipping').html("$" +shipping.toFixed(2));
+    $('#cart-total').html("$" +total.toFixed(2));
+    if(total == 0){
+      $('#checkout').fadeOut(fadeTime);
+    }else{
+      $('#checkout').fadeIn(fadeTime);
+    }
+    $('.totals-value').fadeIn(fadeTime);
+  });
+}
+
+
+function named(name, size, color)
+{
+  let res = name;
+  if (color != "" && color != null && color != undefined)
+  {
+    res += ", " + color;
+  } 
+  if (size != "" && size != null && size != undefined)
+  {
+    res += ", " + size;
+  }
+  return res;
+}
+
+let rows = [];
+
+for (let i = 0; i < chosen_products.length; i++)
+  {
+    const productRow = document.createElement('tr');
+    productRow.id = i.toString();
+
+    const imgElt = document.createElement('td');
+
+    const img = document.createElement('img');
+    img.src = chosen_products[i].url;
+    img.className = "itemImg";
+
+    imgElt.appendChild(img);
+
+    const detailElt = document.createElement('td');
+
+    const titleDiv = document.createElement('div');
+    titleDiv.className = "itemName";
+    titleDiv.innerHTML = named(chosen_products[i].name, chosen_products[i].size, chosen_products[i].color)
+    
+    const detailsDiv = document.createElement('div');
+    detailsDiv.innerHTML = chosen_products[i].price + " x " + chosen_products[i].quantity;
+
+    detailElt.appendChild(titleDiv);
+    detailElt.appendChild(detailsDiv);
+
+
+    const subElt = document.createElement('td');
+    subElt.className = "subtotal";
+    subElt.innerHTML = "$" + parseFloat(chosen_products[i].subtotal.substring(1)).toFixed(2);
+    subElt.id = "subtotal" + i;
+
+    productRow.appendChild(imgElt);
+    productRow.appendChild(detailElt);
+    productRow.appendChild(subElt);
+    rows.push(productRow);
+  }
+
+let handler = (data) =>
+{
+  let value = "";
+  for(let i = 0; i < JSON.parse(data).length - 1; i++)
+  {
+    value += JSON.stringify(JSON.parse(data)[i]) + ", ";
+  }
+  value += JSON.stringify(JSON.parse(data)[JSON.parse(data).length - 1]);
+  return value;
+}
+
+
+
+window.addEventListener("load", function() 
+{
+  let cart = document.getElementById('items');
+  for (let i = 0; i < rows.length; i++)
+  {
+    cart.appendChild(rows[i])
+  }
+  if (cart.childElementCount == 0)
+    {
+      document.getElementById('submitButton').disabled = true;
+      const filler = document.createElement('tr');
+
+      const elt = document.createElement('td');
+      elt.colSpan = "6";
+      elt.innerHTML = "No items in cart!"
+      elt.style = "text-align: center; font-size: 20px;"
+
+      filler.appendChild(elt)
+
+      cart.appendChild(filler)
+    }
+  document.getElementById('submitButton').disabled = false;
+  recalculateCart(true);
+
+  document.getElementById('country').addEventListener('change', function() {
+    if (document.getElementById('country').value == "US")
+    {
+      document.getElementById('typeLabel').innerHTML = "Domestic Shipping";
+      recalculateCart(true);
+      
+    } else {
+      document.getElementById('typeLabel').innerHTML = "International Shipping";
+      recalculateCart(false);
+    }
+  });
+
+  document.getElementById('my-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('submitButton').disabled = true;
+
+    const data = new FormData(document.getElementById('my-form'));
+    data.append("first_name", document.getElementById('firstName').value);
+    data.append("last_name", document.getElementById('lastName').value);
+    data.append("tax", sessionStorage.tax.toFixed(2));
+    data.append("shipping", sessionStorage.shipping.toFixed(2));
+    data.append("total", sessionStorage.total.toFixed(2));
+    data.append("country", document.getElementById('country').innerText);
+    data.append("address_line_1", document.getElementById('firstAddress').value);
+    data.append("address_line_2", document.getElementById('secondAddress').value);
+    data.append("city_town", document.getElementById('cityName').value);
+    data.append("state_province_area", document.getElementById('area').value);
+    data.append("postal_zip_code", document.getElementById('postalCode').value.toString());
+    data.append("products_ordered", handler(sessionStorage.shopping_cart));
+
+
+    const action = e.target.action;
+    try {
+      fetch(action, {
+      method: 'POST',
+      body: data,
+      }).then()
+
+    } catch (e)
+    {
+      document.getElementById('response').innerHTML = "An error occurred. Please try again.";
+          document.getElementById('response').style.color = "#FC100D";
+          setTimeout(() => {
+              document.getElementById('response').innerHTML = "";
+            }, 5000);
+    }
+
+
+    document.getElementById('submitButton').disabled = false;
+  })
+
+});
+</script>
+
+  <!-- =======================================================
+  * Template Name: Regna - v4.7.0
+  * Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div id="logo">
+        <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1><a href="index.html">Regna</a></h1>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
+          <li><a class="nav-link scrollto" href="register.html">Register</a></li><li><a class="nav-link scrollto" href="referrals.html">Referrals</a></li>
+
+          <li class="dropdown"><a class='active' href="merch.html"><span>Merch</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/merch/american/best-sellers.html">Best Sellers</a></li>
+              <li><a href="/merch/american/new-arrivals.html">New Arrivals</a></li>
+              <li><a href="/merch/american/classic-tees.html">Classic Tees</a></li>
+              <li><a href="/merch/american/sweaters.html">Sweaters</a></li>
+              <li><a href="/merch/american/athletic-wear.html">Athletic Wear</a></li>
+              <li><a href="/merch/american/men.html">Men</a></li>
+              <li><a href="/merch/american/women.html">Women</a></li>
+              <li><a href="/merch/american/family-and-kids.html">Family and Kids</a></li>
+              <li><a href="/merch/american/banners.html">Banners</a></li>
+              <li><a href="/merch/american/accessories.html">Accessories</a></li>
+              <li><a href="/merch/american/graduate-schools.html">Graduate Schools</a></li>
+              <li><a href="/merch/american/mit.html">MIT</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="chinese/index.html"><img src="/assets/img/americanChinese.png" /></a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs" style="color:white">
+      
+    </section><!-- Breadcrumbs Section -->
+
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
+          <div class="container">
+    
+            <div class="row gy-4">
+    
+              <div class="col-lg-12">
+                <div class="parent">
+                        <div class="col-lg-6">
+                          <div class="form registrations">
+              
+                    
+                          <h2>Shipping Information</h2>            
+                          <p>Please fill out the shipping information below accurately. Unless otherwise stated, domestic addresses will be shipped in 2-8 business days while international addresses will be shipped in 8 business days.</p>                
+
+                          <form 
+                            class="php-email-form" 
+                            id="my-form"
+                            method="POST" 
+                            action="https://script.google.com/macros/s/AKfycbyk1HpDZb_d2MZQkZBTnACqm-4Sk6oeH0vLMpt5JeA88wRAOgeETD6ec43c3RYMgIrw/exec"
+                            >
+                            <table style="width:100%">
+                              <tbody>
+                                <td>
+                                  <div class="form-group mt-3">
+                                    <label for="firstName" class="required-field">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-group mt-3">
+                                    <label for="lastName" class="required-field">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                                  </div>
+                                </td>
+                              </tbody>
+                            </table>
+                            <div class="form-group mt-3">
+                            <label for="emailInput" class="required-field">Contact Email Address</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder="Email" name="email" required>
+                            </div>
+                            <div class="form-group mt-3">
+                              <label for="country" class="required-field">Country</label>
+                              <select id="country" name="country" class="form-control" required>
+                              <option hidden disabled selected value
+                                          class="defaultOption"> -- select an option -- </option>
+                              <option value="AF">Afghanistan</option>
+                              <option value="AX">Aland Islands</option>
+                              <option value="AL">Albania</option>
+                              <option value="DZ">Algeria</option>
+                              <option value="AS">American Samoa</option>
+                              <option value="AD">Andorra</option>
+                              <option value="AO">Angola</option>
+                              <option value="AI">Anguilla</option>
+                              <option value="AQ">Antarctica</option>
+                              <option value="AG">Antigua and Barbuda</option>
+                              <option value="AR">Argentina</option>
+                              <option value="AM">Armenia</option>
+                              <option value="AW">Aruba</option>
+                              <option value="AU">Australia</option>
+                              <option value="AT">Austria</option>
+                              <option value="AZ">Azerbaijan</option>
+                              <option value="BS">Bahamas</option>
+                              <option value="BH">Bahrain</option>
+                              <option value="BD">Bangladesh</option>
+                              <option value="BB">Barbados</option>
+                              <option value="BY">Belarus</option>
+                              <option value="BE">Belgium</option>
+                              <option value="BZ">Belize</option>
+                              <option value="BJ">Benin</option>
+                              <option value="BM">Bermuda</option>
+                              <option value="BT">Bhutan</option>
+                              <option value="BO">Bolivia</option>
+                              <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                              <option value="BA">Bosnia and Herzegovina</option>
+                              <option value="BW">Botswana</option>
+                              <option value="BV">Bouvet Island</option>
+                              <option value="BR">Brazil</option>
+                              <option value="IO">British Indian Ocean Territory</option>
+                              <option value="BN">Brunei Darussalam</option>
+                              <option value="BG">Bulgaria</option>
+                              <option value="BF">Burkina Faso</option>
+                              <option value="BI">Burundi</option>
+                              <option value="KH">Cambodia</option>
+                              <option value="CM">Cameroon</option>
+                              <option value="CA">Canada</option>
+                              <option value="CV">Cape Verde</option>
+                              <option value="KY">Cayman Islands</option>
+                              <option value="CF">Central African Republic</option>
+                              <option value="TD">Chad</option>
+                              <option value="CL">Chile</option>
+                              <option value="CN">China</option>
+                              <option value="CX">Christmas Island</option>
+                              <option value="CC">Cocos (Keeling) Islands</option>
+                              <option value="CO">Colombia</option>
+                              <option value="KM">Comoros</option>
+                              <option value="CG">Congo</option>
+                              <option value="CD">Congo, Democratic Republic of the Congo</option>
+                              <option value="CK">Cook Islands</option>
+                              <option value="CR">Costa Rica</option>
+                              <option value="CI">Cote D'Ivoire</option>
+                              <option value="HR">Croatia</option>
+                              <option value="CU">Cuba</option>
+                              <option value="CW">Curacao</option>
+                              <option value="CY">Cyprus</option>
+                              <option value="CZ">Czech Republic</option>
+                              <option value="DK">Denmark</option>
+                              <option value="DJ">Djibouti</option>
+                              <option value="DM">Dominica</option>
+                              <option value="DO">Dominican Republic</option>
+                              <option value="EC">Ecuador</option>
+                              <option value="EG">Egypt</option>
+                              <option value="SV">El Salvador</option>
+                              <option value="GQ">Equatorial Guinea</option>
+                              <option value="ER">Eritrea</option>
+                              <option value="EE">Estonia</option>
+                              <option value="ET">Ethiopia</option>
+                              <option value="FK">Falkland Islands (Malvinas)</option>
+                              <option value="FO">Faroe Islands</option>
+                              <option value="FJ">Fiji</option>
+                              <option value="FI">Finland</option>
+                              <option value="FR">France</option>
+                              <option value="GF">French Guiana</option>
+                              <option value="PF">French Polynesia</option>
+                              <option value="TF">French Southern Territories</option>
+                              <option value="GA">Gabon</option>
+                              <option value="GM">Gambia</option>
+                              <option value="GE">Georgia</option>
+                              <option value="DE">Germany</option>
+                              <option value="GH">Ghana</option>
+                              <option value="GI">Gibraltar</option>
+                              <option value="GR">Greece</option>
+                              <option value="GL">Greenland</option>
+                              <option value="GD">Grenada</option>
+                              <option value="GP">Guadeloupe</option>
+                              <option value="GU">Guam</option>
+                              <option value="GT">Guatemala</option>
+                              <option value="GG">Guernsey</option>
+                              <option value="GN">Guinea</option>
+                              <option value="GW">Guinea-Bissau</option>
+                              <option value="GY">Guyana</option>
+                              <option value="HT">Haiti</option>
+                              <option value="HM">Heard Island and Mcdonald Islands</option>
+                              <option value="VA">Holy See (Vatican City State)</option>
+                              <option value="HN">Honduras</option>
+                              <option value="HK">Hong Kong</option>
+                              <option value="HU">Hungary</option>
+                              <option value="IS">Iceland</option>
+                              <option value="IN">India</option>
+                              <option value="ID">Indonesia</option>
+                              <option value="IR">Iran, Islamic Republic of</option>
+                              <option value="IQ">Iraq</option>
+                              <option value="IE">Ireland</option>
+                              <option value="IM">Isle of Man</option>
+                              <option value="IL">Israel</option>
+                              <option value="IT">Italy</option>
+                              <option value="JM">Jamaica</option>
+                              <option value="JP">Japan</option>
+                              <option value="JE">Jersey</option>
+                              <option value="JO">Jordan</option>
+                              <option value="KZ">Kazakhstan</option>
+                              <option value="KE">Kenya</option>
+                              <option value="KI">Kiribati</option>
+                              <option value="KP">Korea, Democratic People's Republic of</option>
+                              <option value="KR">Korea, Republic of</option>
+                              <option value="XK">Kosovo</option>
+                              <option value="KW">Kuwait</option>
+                              <option value="KG">Kyrgyzstan</option>
+                              <option value="LA">Lao People's Democratic Republic</option>
+                              <option value="LV">Latvia</option>
+                              <option value="LB">Lebanon</option>
+                              <option value="LS">Lesotho</option>
+                              <option value="LR">Liberia</option>
+                              <option value="LY">Libyan Arab Jamahiriya</option>
+                              <option value="LI">Liechtenstein</option>
+                              <option value="LT">Lithuania</option>
+                              <option value="LU">Luxembourg</option>
+                              <option value="MO">Macao</option>
+                              <option value="MK">Macedonia, the Former Yugoslav Republic of</option>
+                              <option value="MG">Madagascar</option>
+                              <option value="MW">Malawi</option>
+                              <option value="MY">Malaysia</option>
+                              <option value="MV">Maldives</option>
+                              <option value="ML">Mali</option>
+                              <option value="MT">Malta</option>
+                              <option value="MH">Marshall Islands</option>
+                              <option value="MQ">Martinique</option>
+                              <option value="MR">Mauritania</option>
+                              <option value="MU">Mauritius</option>
+                              <option value="YT">Mayotte</option>
+                              <option value="MX">Mexico</option>
+                              <option value="FM">Micronesia, Federated States of</option>
+                              <option value="MD">Moldova, Republic of</option>
+                              <option value="MC">Monaco</option>
+                              <option value="MN">Mongolia</option>
+                              <option value="ME">Montenegro</option>
+                              <option value="MS">Montserrat</option>
+                              <option value="MA">Morocco</option>
+                              <option value="MZ">Mozambique</option>
+                              <option value="MM">Myanmar</option>
+                              <option value="NA">Namibia</option>
+                              <option value="NR">Nauru</option>
+                              <option value="NP">Nepal</option>
+                              <option value="NL">Netherlands</option>
+                              <option value="AN">Netherlands Antilles</option>
+                              <option value="NC">New Caledonia</option>
+                              <option value="NZ">New Zealand</option>
+                              <option value="NI">Nicaragua</option>
+                              <option value="NE">Niger</option>
+                              <option value="NG">Nigeria</option>
+                              <option value="NU">Niue</option>
+                              <option value="NF">Norfolk Island</option>
+                              <option value="MP">Northern Mariana Islands</option>
+                              <option value="NO">Norway</option>
+                              <option value="OM">Oman</option>
+                              <option value="PK">Pakistan</option>
+                              <option value="PW">Palau</option>
+                              <option value="PS">Palestinian Territory, Occupied</option>
+                              <option value="PA">Panama</option>
+                              <option value="PG">Papua New Guinea</option>
+                              <option value="PY">Paraguay</option>
+                              <option value="PE">Peru</option>
+                              <option value="PH">Philippines</option>
+                              <option value="PN">Pitcairn</option>
+                              <option value="PL">Poland</option>
+                              <option value="PT">Portugal</option>
+                              <option value="PR">Puerto Rico</option>
+                              <option value="QA">Qatar</option>
+                              <option value="RE">Reunion</option>
+                              <option value="RO">Romania</option>
+                              <option value="RU">Russian Federation</option>
+                              <option value="RW">Rwanda</option>
+                              <option value="BL">Saint Barthelemy</option>
+                              <option value="SH">Saint Helena</option>
+                              <option value="KN">Saint Kitts and Nevis</option>
+                              <option value="LC">Saint Lucia</option>
+                              <option value="MF">Saint Martin</option>
+                              <option value="PM">Saint Pierre and Miquelon</option>
+                              <option value="VC">Saint Vincent and the Grenadines</option>
+                              <option value="WS">Samoa</option>
+                              <option value="SM">San Marino</option>
+                              <option value="ST">Sao Tome and Principe</option>
+                              <option value="SA">Saudi Arabia</option>
+                              <option value="SN">Senegal</option>
+                              <option value="RS">Serbia</option>
+                              <option value="CS">Serbia and Montenegro</option>
+                              <option value="SC">Seychelles</option>
+                              <option value="SL">Sierra Leone</option>
+                              <option value="SG">Singapore</option>
+                              <option value="SX">Sint Maarten</option>
+                              <option value="SK">Slovakia</option>
+                              <option value="SI">Slovenia</option>
+                              <option value="SB">Solomon Islands</option>
+                              <option value="SO">Somalia</option>
+                              <option value="ZA">South Africa</option>
+                              <option value="GS">South Georgia and the South Sandwich Islands</option>
+                              <option value="SS">South Sudan</option>
+                              <option value="ES">Spain</option>
+                              <option value="LK">Sri Lanka</option>
+                              <option value="SD">Sudan</option>
+                              <option value="SR">Suriname</option>
+                              <option value="SJ">Svalbard and Jan Mayen</option>
+                              <option value="SZ">Swaziland</option>
+                              <option value="SE">Sweden</option>
+                              <option value="CH">Switzerland</option>
+                              <option value="SY">Syrian Arab Republic</option>
+                              <option value="TW">Taiwan, Province of China</option>
+                              <option value="TJ">Tajikistan</option>
+                              <option value="TZ">Tanzania, United Republic of</option>
+                              <option value="TH">Thailand</option>
+                              <option value="TL">Timor-Leste</option>
+                              <option value="TG">Togo</option>
+                              <option value="TK">Tokelau</option>
+                              <option value="TO">Tonga</option>
+                              <option value="TT">Trinidad and Tobago</option>
+                              <option value="TN">Tunisia</option>
+                              <option value="TR">Turkey</option>
+                              <option value="TM">Turkmenistan</option>
+                              <option value="TC">Turks and Caicos Islands</option>
+                              <option value="TV">Tuvalu</option>
+                              <option value="UG">Uganda</option>
+                              <option value="UA">Ukraine</option>
+                              <option value="AE">United Arab Emirates</option>
+                              <option value="GB">United Kingdom</option>
+                              <option value="US">United States</option>
+                              <option value="UM">United States Minor Outlying Islands</option>
+                              <option value="UY">Uruguay</option>
+                              <option value="UZ">Uzbekistan</option>
+                              <option value="VU">Vanuatu</option>
+                              <option value="VE">Venezuela</option>
+                              <option value="VN">Viet Nam</option>
+                              <option value="VG">Virgin Islands, British</option>
+                              <option value="VI">Virgin Islands, U.s.</option>
+                              <option value="WF">Wallis and Futuna</option>
+                              <option value="EH">Western Sahara</option>
+                              <option value="YE">Yemen</option>
+                              <option value="ZM">Zambia</option>
+                              <option value="ZW">Zimbabwe</option>
+                              </select>
+                            </div>
+                          
+                            <table style="width:100%">
+                              <tbody>
+                                <td>
+                                  <div class="form-group mt-3">
+                                    <label for="firstAddress" class="required-field">Address Line 1</label>
+                                    <input type="text" class="form-control" id="firstAddress" placeholder="Address Line 1" required>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-group mt-3">
+                                    <label for="secondAddress">Address Line 2</label>
+                                    <input type="text" class="form-control" id="secondAddress" placeholder="Address Line 2">
+                                  </div>
+                                </td>
+                              </tbody>
+                            </table>
+
+                            <table style="width:100%">
+                              <tbody>
+                                <td>
+                                  <div class="form-group mt-3">
+                                    <label for="cityName" class="required-field">City / Town</label>
+                                    <input type="text" class="form-control" id="cityName" placeholder="City / Town" required>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-group mt-3">
+                                    <label for="area" class="required-field">State / Province / Area</label>
+                                    <input type="text" class="form-control" id="area" placeholder="State / Province / Area">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-group mt-3">
+                                    <label for="postalCode" class="required-field">Postal Code / Zip Code</label>
+                                    <input type="text" class="form-control" id="postalCode" placeholder="Postal Code / Zip Code">
+                                  </div>
+                                </td>
+                              </tbody>
+                            </table>
+                            
+                            
+
+
+
+                          </div>
+                          <div class="mt-3"></div>
+                        </div>
+
+                        <div class="col-lg-1 col-md-8">
+                          
+                        </div>
+
+
+                        <div class="col-lg-5 col-md-8">
+                          <div class="form registrations">
+              
+                    
+                          <h2>Items</h2>
+                            <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th scope="col" style="width:10%">Image</th>
+                                  <th scope="col" style="width:78%">Product</th>
+                                  <th scope="col" style="width:12%; text-align:right">Total</th>
+                                </tr>
+                              </thead>
+                              <tbody id="items">
+                                
+                              </tbody>
+                            </table>
+                            <div class="totals">
+                              <div class="totals-item">
+                                <label>Subtotal</label>
+                                <div class="totals-value" id="cart-subtotal">0.00</div>
+                              </div>
+                              <div class="totals-item">
+                                <label>Tax (6.25%)</label>
+                                <div class="totals-value" id="cart-tax">0.00</div>
+                              </div>
+                              <div class="totals-item">
+                                <label id="typeLabel">Domestic Shipping</label>
+                                <div class="totals-value" id="cart-shipping">0.00</div>
+                              </div>
+                              <div class="totals-item totals-item-total">
+                                <label>Grand Total</label>
+                                <div class="totals-value" id="cart-total">0.00</div>
+                              </div>
+                            </div>
+                            <p id="response" style="text-align:right;"></p>
+                            <div class="mt-3" style="text-align:right"><button id="submitButton" type="submit" style="background: #2dc997;
+                              border: 0;
+                              padding: 10px 24px;
+                              color: #fff;
+                              transition: 0.4s;">Continue</button></div>
+                            
+                          </form>
+                            
+
+                          </div>
+                          <div class="mt-3"></div>
+                        </div>
+                      </div>
+                        <div class="mt-5"></div>
+                      </div>
+
+    
+            </div>
+    
+          </div>
+        </section><!-- End Portfolio Details Section -->
+    
+
+  </main><!-- End #main -->
+  <footer id="footer">
+    <div class="copyright">
+      &copy; Copyright <strong>Ivy Tutors Academy</strong>. All Rights Reserved
+    </div>
+  
+  </footer>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

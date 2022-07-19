@@ -18,7 +18,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Registration</title>
+  <title>Shopping Cart</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -42,8 +42,8 @@
 
   <script>
 /* Set rates + misc */
-let taxRate = 0.05;
-let shippingRate = 15.00; 
+let taxRate = 0.0625;
+let shippingRate = 5.00; 
 let fadeTime = 300;
 
 let test = 
@@ -95,7 +95,7 @@ function recalculateCart()
   if (isNaN(subtotal)) {subtotal = 0}
   /* Calculate totals */
   let tax = subtotal * taxRate;
-  let shipping = (subtotal > 0 ? shippingRate : 0);
+  let shipping = (subtotal > 0 ? Math.min(Math.max((0.15 * subtotal).toFixed(2), 5.00), 30.00) : 0);
   let total = subtotal + tax + shipping;
   
   /* Update totals display */
@@ -400,11 +400,11 @@ window.addEventListener("load", function()
                                 <div class="totals-value" id="cart-subtotal">0.00</div>
                               </div>
                               <div class="totals-item">
-                                <label>Tax (5%)</label>
+                                <label>Est. Tax (6.25%)</label>
                                 <div class="totals-value" id="cart-tax">0.00</div>
                               </div>
                               <div class="totals-item">
-                                <label>Shipping</label>
+                                <label>Est. Domestic Shipping</label>
                                 <div class="totals-value" id="cart-shipping">0.00</div>
                               </div>
                               <div class="totals-item totals-item-total">
