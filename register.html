@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q11D0YHHSV');
+</script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ivy Tutors Academy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script>
+    const sheetId = '10G5Uq7SmKaecovprszSjS_2iPaGg0ZDg8gT1KDAHLCY';
+    const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
+    const sheetName = 'ParticipantIDs';
+    const query = encodeURIComponent('Select *')
+    const url = `${base}&sheet=${sheetName}&tq=${query}`
+    const data = []
+    const init = new Promise((resolve, reject) => {
+      fetch(url)
+        .then(res => res.text())
+        .then(rep => {
+            const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+            const rowNum = jsonData.table.rows.length;
+            console.log(rowNum)
+            console.log(jsonData)
+            for(let i = 0; i < rowNum; i++)
+            {
+              data.push(jsonData.table.rows[i].c[2].v)
+            }
+            resolve(data);
+        }
+        )
+    })
+
+    window.addEventListener('load', function () {
+      init.then(() => {
+        const form = document.getElementById('my-form');
+        form.addEventListener("submit", function(e) {
+          e.preventDefault();
+          document.getElementById('registerButton').disabled = true;
+          
+          function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+          }
+
+          let id = parseInt(getRandomArbitrary(100000, 1000000))
+          
+          while (data.indexOf(id) != -1)
+          {
+            id = parseInt(getRandomArbitrary(100000, 1000000))
+          }
+          const formdata = new FormData(document.getElementById('my-form'));
+          formdata.append('Participant_ID', id.toString());
+          formdata.append('Registration_Date', new Date() + "");
+          document.getElementById('nameInput').innerText = "";
+          document.getElementById('emailInput').innerText = "";
+          const action = e.target.action;
+          console.log(formdata.getAll('Registration_Date'))
+          try {
+            fetch(action, {
+            method: 'POST',
+            body: formdata,
+            mode: "no-cors"
+            })
+            .then(() => {
+              document.getElementById('response').innerHTML = "Success! Check your email for your participant ID.";
+              document.getElementById('response').style.color = "#4BB543";
+
+              setTimeout(() => {
+                document.getElementById('response').innerHTML = "";
+              }, 5000);
+              setTimeout(() => {
+                document.getElementById('registerButton').disabled = false;
+                window.location.href = "/";
+              }, 7000);
+            })
+        } catch (e) 
+        {
+          document.getElementById('response').innerHTML = "An error occurred. Please reload the page and try again.";
+          document.getElementById('response').style.color = "#FC100D";
+          setTimeout(() => {
+              document.getElementById('response').innerHTML = "";
+            }, 5000);
+        }
+        
+      });
+      })
+      
+    })
+  </script>
+</head>
+
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div id="logo">
+        <img src="assets/img/logo.png" alt="">
+      </div>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <div class="parent" style="width:50%">
+        <div class="col-lg-10 col-md-8">
+          <div class="form registrations">
+  
+            <form id="my-form"
+                class="php-email-form"
+                method="POST" 
+                action="https://script.google.com/macros/s/AKfycbwzT1otSD-vglSomrx2darN9SFga6WBS96116yPoI0L7xewHTunE5iHU6Bu51-Ym9ek/exec"
+              >
+              <div class="form-group mt-3">
+                <h2 style="color:black">Course Registration</h2>
+                <p>Input your name and email. Your private participant ID will be emailed to you.</p>
+              </div>
+              <table style="width:100%">
+                <thead style="width:100%">
+                  <tr style="width:100%">
+                    <td style="width:50%">
+                      <div class="form-group mt-3">
+                        <label for="nameInput" class="required-field">Student Name</label>
+                        <input type="text" name="Name" class="form-control" id="nameInput" placeholder="Name" required>
+                      </div>
+                    </td>
+                    <td style="width:50%">
+                      <div class="form-group mt-3">
+                        <label for="emailInput" class="required-field">Email</label>
+                        <input type="email" name="Email" class="form-control" id="emailInput" placeholder="Email" required>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+              </table>
+            
+              <div class="text-center mt-3"><button type="submit" id="registerButton">Register</button></div>
+              <div class="mt-1"></div>
+              </form>
+              <div class="text-center form-group mt-3">
+                <p id="response"></p>
+              </div>
+  
+          </div>
+          <div class="mt-3"></div>
+        </div>
+      </div>
+        
+     </div>
+  </section>
+
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

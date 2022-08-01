@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q11D0YHHSV');
+</script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ivy Tutors Academy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src="/assets/js/jQuery_local.js"></script>
+
+  <script>
+    const sheetId = '10G5Uq7SmKaecovprszSjS_2iPaGg0ZDg8gT1KDAHLCY';
+    const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
+    const sheetName = 'ParticipantIDs';
+    const query = encodeURIComponent('Select *')
+    const url = `${base}&sheet=${sheetName}&tq=${query}`
+    const data = []
+    const init = new Promise((resolve, reject) => {
+      fetch(url)
+        .then(res => res.text())
+        .then(rep => {
+            const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+            const rowNum = jsonData.table.rows.length;
+            for(let i = 0; i < rowNum; i++)
+            {
+              data.push(jsonData.table.rows[i].c[2].v)
+            }
+            resolve(data);
+        }
+        )
+    })
+
+
+    window.addEventListener('load', function () {
+      if (parseInt(sessionStorage.userID) <= 999999 && parseInt(sessionStorage.userID) >= 100000)
+      {} else {
+        $(document).ready(function(){
+          $("#errorModal").modal('show');
+        });
+      }
+      document.getElementById('leaderboardButton').addEventListener('click', function() {
+        window.location.href = '/leaderboard.html';
+      })
+      
+      init.then(() => {
+        const form = document.getElementById('my-form');
+        form.addEventListener("submit", function(e) {
+          e.preventDefault();
+          document.getElementById('registerButton').disabled = true;
+        
+          const formdata = new FormData(document.getElementById('my-form'));
+          formdata.append('Participant_ID', sessionStorage.userID);
+          formdata.append('Time', document.getElementById('total').innerText.substring(7));
+          for (let i = 1; i <= 15; i++)
+          {
+            formdata.append('p' + i, localStorage.getItem('p' + i));
+          }
+
+          const action = e.target.action;
+          try {
+            fetch(action, {
+            method: 'POST',
+            body: formdata,
+            mode: "no-cors"
+            })
+            .then(() => {
+              document.getElementById('response').innerHTML = "Saved!";
+              document.getElementById('response').style.color = "#4BB543";
+
+              setTimeout(() => {
+                document.getElementById('response').innerHTML = "";
+                document.getElementById('registerButton').disabled = false;
+              }, 3000);
+            })
+        } catch (e) 
+        {
+          document.getElementById('response').innerHTML = "An error occurred. Please try again.";
+          document.getElementById('response').style.color = "#FC100D";
+          setTimeout(() => {
+              document.getElementById('response').innerHTML = "";
+            }, 5000);
+        }
+        
+      });
+      }).then(() => {
+        for(let i = 0; i < 3; i++)
+        {
+          let row = document.createElement('tr');
+          for (let j = 0; j < 5; j++)
+          {
+            let button = document.createElement('td');
+            button.style = "text-align:center;vertical-align: middle;";
+            let buttonlink = document.createElement('a');
+            buttonlink.href = `/problems/${i * 5 + j}.html`
+            let buttonItem = document.createElement('button');
+            buttonItem.className = "btn-get-started"
+            buttonItem.style = "color: black"
+            buttonItem.innerText = "Problem " + (i * 5 + j + 1)
+
+            buttonlink.appendChild(buttonItem)
+            button.appendChild(buttonlink)
+            row.appendChild(button)
+
+            let time = document.createElement('td');
+            time.style = "text-align:center;vertical-align: middle;";
+            time.id = "time" + (i * 5 + j);
+            if (localStorage.getItem('p' + (i * 5 + j) + 'time') != undefined && localStorage.getItem('p' + (i * 5 + j) + 'time') != '')
+            {
+              time.innerText = localStorage.getItem('p' + (i * 5 + j) + 'time');
+            } 
+            else
+            {
+              time.innerText = 10000 + "ms";
+            }
+
+            row.appendChild(time)
+          }
+          document.getElementById('body').appendChild(row)
+        }  
+      }).then(() => {
+        let sum = 0;
+        for(let i = 0; i < 15; i++)
+        {
+          sum += parseInt(document.getElementById('time' + i).innerText.substring(0,document.getElementById('time' + i).innerText.length-2))
+        }
+        document.getElementById('total').innerText = "Total: " + sum + "ms";
+        localStorage.total = sum
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div id="logo">
+        <img src="assets/img/logo.png" alt="">
+      </div>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Your Results</h1>
+      <h5>Would you like to revisit the problems? Click the button below to save your progress.</h5>
+      <h5>Unsolved problems are automatically listed as 10000.</h5>
+      <table class="table table-striped table-dark" style="width:25%">
+        <thead>
+          <tr>
+            <th scope="col" width="10%" style="text-align:center">Problem</th>
+            <th scope="col" width="10%" style="text-align:center">Time</th>
+            <th scope="col" width="10%" style="text-align:center">Problem</th>
+            <th scope="col" width="10%" style="text-align:center">Time</th>
+            <th scope="col" width="10%" style="text-align:center">Problem</th>
+            <th scope="col" width="10%" style="text-align:center">Time</th>
+            <th scope="col" width="10%" style="text-align:center">Problem</th>
+            <th scope="col" width="10%" style="text-align:center">Time</th>
+            <th scope="col" width="10%" style="text-align:center">Problem</th>
+            <th scope="col" width="10%" style="text-align:center">Time</th>
+          </tr>
+        </thead>
+        <tbody id="body">
+        </tbody>
+      </table>
+      <p id="total" style="font-weight:bold; color:aqua"></p>
+      <form
+        id="my-form"
+        class="php-email-form"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbye2JkfNyRBUcPG2F2QIh4IODYlUQnXS5QQHLnBOa9gtcPHebwuth4mGIlxXdVLqrtf/exec"
+        >
+        <button class="btn-get-started" type="submit" id="registerButton" style="color:black">Save</button>
+        <p id="response"></p>
+        <button class="btn-get-started" type="submit" id="leaderboardButton" style="color:black">Leaderboard</button>
+        
+      </form>
+     </div>
+  </section>
+
+  <div class="modal fade" id="errorModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="errorModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="errorModalTitle">Login Expired</h5>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            To prevent unauthorized access, please return to the home page 
+            and input your participant ID.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a href="../index.html"><button class="btn-get-started">Go to Home</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q11D0YHHSV');
+</script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ivy Tutors Academy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src="/assets/js/jQuery_local.js"></script>
+
+<script>
+    const sheetId = '1fkIubLu8CLWsSmmwKmWX5ML-ICMcc4vnSVrf2u4Kb8o';
+    const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
+    const sheetName = 'Rankings';
+    const query = encodeURIComponent('Select *')
+    const url = `${base}&sheet=${sheetName}&tq=${query}`
+    let data = []
+    const init = new Promise((resolve, reject) => {
+      fetch(url)
+        .then(res => res.text())
+        .then(rep => {
+            const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+            const rowNum = jsonData.table.rows.length;
+            for(let i = 0; i < rowNum; i++)
+            {
+              data.push([jsonData.table.rows[i].c[1].v, jsonData.table.rows[i].c[2].v])
+            }
+            resolve(data);
+        }
+        )
+    })
+
+    const fixer = (arr) => {
+      let temp = arr;
+      for (let i = temp.length - 1; i > 0; i--)
+      {
+        if (isNaN(parseInt(temp[i][1].substring(0, temp[i][1].length - 2))))
+        {
+          temp.splice(i,1);
+        }
+      }
+      for (let i = 0; i < temp.length; i++)
+      {
+        for (let j = temp.length - 1; j > i; j--)
+        {
+          if (temp[i][0] == temp[j][0])
+          {
+            if (parseInt(temp[j][1].substring(0, temp[j][1].length - 2)) < parseInt(temp[i][1].substring(0, temp[i][1].length - 2)))
+            {
+              [temp[i], temp[j]] = [temp[j], temp[i]]
+            }
+            temp.splice(j,1);
+          }
+        }
+      }
+      for(let i = 0; i < temp.length; i++)
+      {
+        for(let j = 0; j < temp.length - 1; j++)
+        {
+          if (parseInt(temp[j][1].substring(0, temp[j][1].length - 2)) > parseInt(temp[j + 1][1].substring(0, temp[j + 1][1].length - 2)))
+          {
+            [temp[j], temp[j + 1]] = [temp[j + 1], temp[j]]
+          } 
+        }
+      }
+      return temp
+    }
+
+    window.addEventListener('load', function () {
+      if (parseInt(sessionStorage.userID) <= 999999 && parseInt(sessionStorage.userID) >= 100000)
+      { } else {
+        document.getElementById('registerButton').innerText = "Go Home"
+        // $(document).ready(function(){
+        //   $("#errorModal").modal('show');
+        // });
+      }
+      
+      init.then(() => {
+        data = fixer(data);
+        for (let i = 0; i < 5; i++)
+        {
+          let row = document.createElement('tr')
+          for (let j = 0; j < 3; j++)
+          {
+            let rankLabel = document.createElement('td')
+            rankLabel.innerText = i + j * 5 + 1
+
+            let ID = document.createElement('td')
+            try {
+              ID.innerText = data[i + j * 5][0]
+            } catch {
+              ID.innerText = ""
+            }
+
+            let timeLabel = document.createElement('td')
+            try {
+              timeLabel.innerText = data[i + j * 5][1]
+            } catch {
+              timeLabel.innerText = ""
+            }
+
+            let space = document.createElement('td')
+
+            row.appendChild(rankLabel)
+            row.appendChild(ID)
+            row.appendChild(timeLabel)
+            row.appendChild(space)
+          }
+          document.getElementById('body').appendChild(row)
+        }
+        document.getElementById('registerButton').addEventListener('click', function () {
+          window.location.href = '/';
+        })
+      }).then(() => {
+        let index
+        for (let i = 0; i < data.length; i++)
+        {
+          if (data[i][0] == parseInt(sessionStorage.userID))
+          {
+            index = i;
+          }
+        }
+        if (isNaN(index))
+        {
+          document.getElementById('rank').hidden = true;
+          document.getElementById('yourRank').hidden = true;
+        } else {
+          document.getElementById('rank').innerText = "Rank " + (index + 1)
+        }
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div id="logo">
+        <img src="assets/img/logo.png" alt="">
+      </div>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Leaderboard</h1>
+      <h5 id="yourRank" style="margin-bottom:-1em">Your Rank: <p id="rank"></p></h5>
+      <table class="table table-striped table-dark" style="width:25%;">
+        <thead>
+          <tr>
+            <th scope="col" width="3%" style="text-align:center">Rank</th>
+            <th scope="col" width="20%" style="text-align:center">ID</th>
+            <th scope="col" width="8%" style="text-align:center">Time</th>
+            <th scope="col" width="2%" style="text-align:center"></th>
+            <th scope="col" width="3%" style="text-align:center">Rank</th>
+            <th scope="col" width="20%" style="text-align:center">ID</th>
+            <th scope="col" width="8%" style="text-align:center">Time</th>
+            <th scope="col" width="2%" style="text-align:center"></th>
+            <th scope="col" width="3%" style="text-align:center">Rank</th>
+            <th scope="col" width="20%" style="text-align:center">ID</th>
+            <th scope="col" width="8%" style="text-align:center">Time</th>
+            <th scope="col" width="2%" style="text-align:center"></th>
+          </tr>
+        </thead>
+        <tbody id="body">
+        </tbody>
+      </table>
+      <p id="total" style="font-weight:bold; color:aqua"></p>
+      <form
+        id="my-form"
+        class="php-email-form"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbye2JkfNyRBUcPG2F2QIh4IODYlUQnXS5QQHLnBOa9gtcPHebwuth4mGIlxXdVLqrtf/exec"
+        >
+        <a href="index.html"><button class="btn-get-started" type="submit" id="registerButton" style="color:black">Log Out</button></a>
+        <p id="response"></p>
+      </form>
+     </div>
+  </section>
+
+  <!-- <div class="modal fade" id="errorModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="errorModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="errorModalTitle">Login Expired</h5>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            To prevent unauthorized access, please return to the home page 
+            and input your participant ID.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a href="../index.html"><button class="btn-get-started">Go to Home</button></a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

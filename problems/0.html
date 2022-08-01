@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q11D0YHHSV');
+</script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ivy Tutors Academy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/img/favicon.ico" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <script src="../assets/js/jQuery_local.js"></script>
+
+  <script>
+    const sheetId = '10G5Uq7SmKaecovprszSjS_2iPaGg0ZDg8gT1KDAHLCY';
+    const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
+    const sheetName = 'Problems';
+    const query = encodeURIComponent('Select *')
+    const url = `${base}&sheet=${sheetName}&tq=${query}`
+    const data = []
+    const init = new Promise((resolve, reject) => {
+      fetch(url)
+        .then(res => res.text())
+        .then(rep => {
+            const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+            const rowNum = jsonData.table.rows.length;
+            for(let i = 1; i < rowNum; i++)
+            {
+              data.push(jsonData.table.rows[i].c)
+            }
+            resolve(data);
+        }
+      )
+    })
+
+    window.addEventListener('load', function () {
+      let index = window.location.pathname.split("/").pop().split(".")[0];
+      let saved = localStorage.getItem('p' + (parseInt(index)+1))
+      if (typeof saved == 'string' && saved != '')
+      {
+        document.getElementById('userInput').innerText = saved;
+      }
+
+      document.getElementById('next').innerText = "Problem " + (parseInt(index) + 2)
+      init.then(value => {
+        let index = window.location.pathname.split("/").pop().split(".")[0];
+        sessionStorage.desc = value[index][0].v.trim();
+        sessionStorage.example = value[index][1].v.trim();
+        sessionStorage.assertions = value[index][2].v.trim().replace(/[^A-Za-z 0-9 \n\.,\?""!@#\$%\^&\*\(\)-_=\+;:<>\/\\\|\}\{\[\]`~]*/g, '');
+      }).then(() => {
+        let desc = document.createElement('p');
+        desc.innerText = sessionStorage.desc;
+
+        let examples = document.createElement('pre')
+        examples.innerText = sessionStorage.example;
+
+        document.getElementById('body').appendChild(desc)
+        document.getElementById('body').appendChild(document.createElement('br'))
+        document.getElementById('body').appendChild(examples)
+      })
+      if (parseInt(sessionStorage.userID) <= 999999 && parseInt(sessionStorage.userID) >= 100000)
+      {
+        $(document).ready(function(){
+          $("#exampleModal").modal('show');
+        });
+      } else {
+        $(document).ready(function(){
+          $("#errorModal").modal('show');
+        });
+        document.getElementById('exampleModal').hidden = true;
+      }
+      
+
+      document.getElementById('btn-form').addEventListener('click', function(){
+        localStorage.input = document.getElementById('userInput').innerText.replace(/[^A-Za-z 0-9 \n\.,\?""!@#\$%\^&\*\(\)-_=\+;:<>\/\\\|\}\{\[\]`~]*/g, '');
+        document.getElementById('btn-form').disabled = true;
+        setTimeout(() => {
+          document.getElementById('btn-form').disabled = false;
+        }, 3000);
+      })
+
+      document.getElementById('back').addEventListener('click', function(){
+        let problemIndex = parseInt(window.location.pathname.split("/").pop().split(".")[0]) + 1;
+        localStorage.setItem('p' + problemIndex, document.getElementById('userInput').innerText.replace(/[^A-Za-z 0-9 \n\.,\?""!@#\$%\^&\*\(\)-_=\+;:<>\/\\\|\}\{\[\]`~]*/g, ''));
+        window.location.href = "/"
+      })
+
+
+      document.getElementById('next').addEventListener('click', function(){
+        let problemIndex = parseInt(window.location.pathname.split("/").pop().split(".")[0]) + 1;
+        localStorage.setItem('p' + problemIndex, document.getElementById('userInput').innerText.replace(/[^A-Za-z 0-9 \n\.,\?""!@#\$%\^&\*\(\)-_=\+;:<>\/\\\|\}\{\[\]`~]*/g, ''));
+        let next = parseInt(window.location.pathname.split("/").pop().split(".")[0]) + 1;
+        window.location.href = `/problems/${next}.html`
+        let index = window.location.pathname.split("/").pop().split(".")[0];
+        localStorage.setItem("p" + index + 'time', document.getElementById('timeTaken').innerText); 
+      })
+    })
+  </script>
+
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div id="logo">
+        <img src="../assets/img/logo.png" alt="">
+      </div>
+    </div>
+  </header>
+
+  <section id="hero-1">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      
+      <button type="button" class="btn-get-started" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Display Problem
+      </button>
+
+      <iframe src="https://trinket.io/embed/python/afd7d63a80" width="60%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen id="code"></iframe>
+
+        <span 
+          class="input rounded border-0" 
+          role="textbox" 
+          spellcheck="false"
+          id="userInput"
+          style="text-align:left; width:30%; background-color: white; font-size:12px; font-family: 'Courier New', Courier, monospace; margin-top: 2%; margin-bottom: 2%;"
+          contenteditable>   
+          Submission Code
+        </span>
+   
+
+          <button class="btn-get-started" pys-onClick="sub" type="submit" id="btn-form">Submit</button>
+          <table>
+            <thead>
+              <tr>
+                <td>
+                  <button class="btn-get-started" type="submit" id="back">To Login</button>
+                </td>
+                <td>
+                  <button class="btn-get-started" type="submit" id="next"></button>
+                </td>
+              </tr>
+            </thead>
+          </table>
+      <div>
+        <p id="errorResponse" style="color:red; font-weight: bold;"></p>
+      </div>
+      <div>
+        <p id="successResponse" style="color:green; font-weight: bold;"></p>
+      </div>
+      <div>
+        <p id="timeTaken" style="color:aquamarine; font-weight: bold;"></p>
+      </div>
+      <py-script>
+        from js import localStorage
+        from js import sessionStorage
+
+        def sub(*args, **kwargs):
+          error_result = Element('errorResponse')
+          success_result = Element('successResponse')
+          time_result = Element('timeTaken')
+          userInput = localStorage.input
+
+          testing = sessionStorage.assertions
+          try:
+            start = time.time()
+            exec(userInput + '\n' + testing)
+            duration = (time.time() - start) * 1000
+          except SyntaxError:
+            error_result.write("Syntax Error!")
+            raise
+          except AssertionError as warning:
+            error_result.write(warning)
+            raise
+          except NameError:
+            error_result.write("Name Error!")
+            raise
+          except TypeError:
+            error_result.write("Type Error!")
+            raise
+          except:
+            error_result.write("Something Failed.")
+            raise
+          else:
+            success_result.write("Correct!")
+            time_result.write(f"{duration:.0f}" + "ms")
+      </py-script>
+
+    </div>
+  </section>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalTitle">Assigned Problem</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="body">
+          <p>Define a function labelled <b>my_function</b> that satisfies the behavior below. Unless otherwise stated, you may assume that the required number of inputs are always provided, data values will not overflow, and a solution will always exist.</p><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="errorModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="errorModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="errorModalTitle">Login Expired</h5>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            To prevent unauthorized access, please return to the home page 
+            and input your participant ID.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a href="../index.html"><button class="btn-get-started">Go to Home</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/purecounter/purecounter.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
