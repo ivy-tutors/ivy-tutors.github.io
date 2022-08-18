@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q11D0YHHSV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q11D0YHHSV');
+</script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ivy Tutors Academy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script>
+
+    window.addEventListener("load", function() {
+      const form = document.getElementById('my-form');
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        document.getElementById('contactButton').disabled = true;
+        const data = new FormData(form);
+        const action = e.target.action;
+        try {
+          fetch(action, {
+          method: 'POST',
+          body: data,
+          })
+          .then(() => {
+            document.getElementById('input1').value = "";
+            document.getElementById('input2').value = "";
+            // document.getElementById('input3').value = "";
+            document.getElementById('response').innerHTML = "Success! We'll be in touch soon.";
+            document.getElementById('response').style.color = "#4BB543";
+            setTimeout(() => {
+              document.getElementById('response').innerHTML = "";
+              document.getElementById('contactButton').disabled = false;
+            }, 5000);
+          })
+        } catch (e)
+        {
+          document.getElementById('response').innerHTML = "An error occurred. Please try again.";
+          document.getElementById('response').style.color = "#FC100D";
+          setTimeout(() => {
+              document.getElementById('response').innerHTML = "";
+            }, 5000);
+        }
+        
+      });
+    });
+</script>
+
+  <!-- =======================================================
+  * Template Name: Regna - v4.7.0
+  * Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div id="logo">
+        <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="index.html">The Ivy Academy</a></h1> -->
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Welcome to the Academy</h1>
+      <h2>We are a team of Ivy League students invested in providing pre-college educational opportunities.</h2>
+      <a href="#services" class="btn-get-started">Get Started</a>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title">Fall 2022 Offerings</h3>
+          <p class="section-description">
+            Below are the applications for Fall 2022. Application deadlines are described. All courses are open to students from any grade.
+          </p>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><a href="https://tripetto.app/run/PE0IADRRPO"><i class="bi bi-card-checklist"></i></a></div>
+              <h4 class="title"><a href="https://tripetto.app/run/PE0IADRRPO">College Counseling Seminars</a></h4>
+              <a href="https://tripetto.app/run/PE0IADRRPO"><p class="description" style="color:black">
+                Curious about how to best prepare for college applications? Whether you're in 9th grade or a rising senior, these workshops will be helpful for you!
+                <br><b>Application Deadline: 9/28/22 EOD</b>
+              </p></a>
+            </div>
+          </div>        
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><a href="https://tripetto.app/run/891B1JUZX4"><i class="bi bi-binoculars"></i></a></div>
+              <h4 class="title"><a href="https://tripetto.app/run/891B1JUZX4">Pre-Professional Workshops</a></h4>
+              <a href="https://tripetto.app/run/891B1JUZX4"><p class="description" style="color:black">
+                Curious about pre-med, business, advanced math, coding, or journalism? Investigate those interests in our three-hour workshop series!
+                <br><b>Application Deadline: 10/6/22 EOD</b>
+              </p></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="box">
+              <div class="icon"><a href="https://tripetto.app/run/L18KXL3YOL"><i class="bi bi-briefcase"></i></a></div>
+              <h4 class="title"><a href="https://tripetto.app/run/L18KXL3YOL">Pre-Professional Courses</a></h4>
+              <a href="https://tripetto.app/run/L18KXL3YOL"><p class="description" style="color:black">
+                Interested in a deeper dive past the workshops? Join the pre-professional courses! Official certificates will be awarded upon completion. 
+                <br><b>Application Deadline: 10/20/22 EOD</b>
+              </p></a>
+            </div>
+          </div>  
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <!-- <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title">Portfolio</h3>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Portfolio Section -->
+
+
+
+    <!-- ======= Team Section ======= -->
+    <!-- <section id="team">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title">Team</h3>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="pic"><img src="assets/img/team-1.jpg" alt=""></div>
+              <h4>Walter White</h4>
+              <span>Chief Executive Officer</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="pic"><img src="assets/img/team-2.jpg" alt=""></div>
+              <h4>Sarah Jhinson</h4>
+              <span>Product Manager</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="pic"><img src="assets/img/team-3.jpg" alt=""></div>
+              <h4>William Anderson</h4>
+              <span>CTO</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="pic"><img src="assets/img/team-4.jpg" alt=""></div>
+              <h4>Amanda Jepson</h4>
+              <span>Accountant</span>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Team Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Ivy Tutors Academy</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
