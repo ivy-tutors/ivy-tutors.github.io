@@ -39,39 +39,9 @@
   <script>
 
     window.addEventListener("load", function() {
-      const form = document.getElementById('my-form');
-      form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        document.getElementById('contactButton').disabled = true;
-        const data = new FormData(form);
-        const action = e.target.action;
-        try {
-          fetch(action, {
-          method: 'POST',
-          body: data,
-          })
-          .then(() => {
-            document.getElementById('input1').value = "";
-            document.getElementById('input2').value = "";
-            // document.getElementById('input3').value = "";
-            document.getElementById('response').innerHTML = "Success! We'll be in touch soon.";
-            document.getElementById('response').style.color = "#4BB543";
-            setTimeout(() => {
-              document.getElementById('response').innerHTML = "";
-              document.getElementById('contactButton').disabled = false;
-            }, 5000);
-          })
-        } catch (e)
-        {
-          document.getElementById('response').innerHTML = "An error occurred. Please try again.";
-          document.getElementById('response').style.color = "#FC100D";
-          setTimeout(() => {
-              document.getElementById('response').innerHTML = "";
-            }, 5000);
-        }
-        
-      });
+
     });
+    
 </script>
 
   <!-- =======================================================
@@ -115,7 +85,7 @@
         <div class="section-header">
           <h3 class="section-title">Fall 2022 Offerings</h3>
           <p class="section-description">
-            Below are the applications for Fall 2022. Application deadlines are described. All courses are open to students from any grade.
+            Below are the various courses open for students for Fall 2022. Application deadlines are included. All courses are open to students from any grade.
           </p>
         </div>
         
@@ -152,6 +122,39 @@
             </div>
           </div>  
       </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="box">
+            <div class="icon"><a href="https://tripetto.app/run/47215Q9ZYO"><i class="bi bi-binoculars"></i></a></div>
+            <h4 class="title"><a href="https://tripetto.app/run/47215Q9ZYO">Group Tutoring</a></h4>
+            <a href="https://tripetto.app/run/47215Q9ZYO"><p class="description" style="color:black">
+              Would you like to learn popular subjects in STEM in a group setting? Exceptionally-performing students will be invited on campus to shadow current students.
+              <br><b>Application Deadline: 10/1/22 EOD</b>
+            </p></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="box">
+            <div class="icon"><a href="https://tripetto.app/run/O020D4MNZE"><i class="bi bi-binoculars"></i></a></div>
+            <h4 class="title"><a href="https://tripetto.app/run/O020D4MNZE">Private Tutoring</a></h4>
+            <a href="https://tripetto.app/run/O020D4MNZE"><p class="description" style="color:black">
+              Interested in personalized attention for any of your school subjects, from STEM to the humanities to the arts? Register for these courses here. 
+              <br><b>Application Deadline: None</b>
+            </p></a>
+          </div>
+        </div>  
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="box">
+            <div class="icon"><a href="https://tripetto.app/run/C6UHGXNEZ6"><i class="bi bi-binoculars"></i></a></div>
+            <h4 class="title"><a href="https://tripetto.app/run/C6UHGXNEZ6">Private College Counseling</a></h4>
+            <a href="https://tripetto.app/run/C6UHGXNEZ6"><p class="description" style="color:black">
+              Would you like our counselors to focus on your college application, emphasize your strengths, and minimize your weaknesses? We can help. 
+              <br><b>Application Deadline: None</b>
+            </p></a>
+          </div>
+        </div>  
+    </div>
     </section><!-- End Services Section -->
 
 
