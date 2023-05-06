@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ivy Tutors Academy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files -->
+  <link href="assets/css/variables-red.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: HeroBiz
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <script>
+    const sheetId = '19Qh9hxczN0mcGvW7cWp9oN3xmRFeDqHJKsnp1jsoqzs';
+    const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
+    const sheetName = 'UserLogin';
+    const query = encodeURIComponent('Select *')
+    const url = `${base}&sheet=${sheetName}&tq=${query}`
+    const data = []
+    const init = new Promise((resolve, reject) => {
+        fetch(url)
+        .then(res => res.text())
+        .then(rep => {
+            const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+            const rowNum = jsonData.table.rows.length;
+            for(let i = 0; i < rowNum; i++)
+            {
+                data.push(jsonData.table.rows[i])
+            }
+            resolve(data);
+        }
+        )
+    })
+
+    function hashCode(str) {
+        let hash = 0;
+        for (let i = 0, len = str.length; i < len; i++) {
+            let chr = str.charCodeAt(i);
+            hash = (hash << 5) - hash + chr;
+            hash |= 0; // Convert to 32bit integer
+        }
+        return hash;
+    }
+
+    window.addEventListener('load', function() {
+        init.then(() => {
+            let emails = []
+            let usernames = []
+            for(let i = 0; i < data.length; i++)
+            {
+                usernames.push(data[i].c[5].v)
+                emails.push(data[i].c[3].v)
+            }
+            let reg_form = document.getElementById('registration_form')
+            let reg_button = document.getElementById('reg_button')
+            reg_form.addEventListener("submit", function(e){
+                e.preventDefault()
+                reg_button.disabled = true
+                try {
+                    let inputs = ['username', 'password', 'school', 'country', 'sname', 'pname', 'email', 'glevel']
+                    for(let i = 0; i < inputs.length; i++){
+                        if (document.getElementById(inputs[i]).value == ''){
+                            throw new Error("Empty") 
+                        }
+                    }
+                    if(emails.includes(document.getElementById('email').value.trim(),0)){
+                        throw new Error("Exists")
+                    }
+                    if(usernames.includes(document.getElementById('username').value.trim(),0)){
+                        throw new Error("Username")
+                    }
+                    let UID = Math.floor(Math.random() * 1000000000)
+                    const data = new FormData(reg_form)
+                    data.append('Student Name', document.getElementById('sname').value.trim())
+                    data.append('Parent Name', document.getElementById('pname').value.trim())
+                    data.append('Email Contact', hashCode(document.getElementById('email').value.trim()))
+                    data.append('Grade Level', document.getElementById('glevel').value.trim())
+                    data.append('Username', document.getElementById('username').value.trim())
+                    data.append('School', document.getElementById('school').value.trim())
+                    data.append('Country', document.getElementById('country').value.trim())
+                    data.append('Password', hashCode(document.getElementById('password').value))
+                    data.append('UID', UID)
+                    
+                    const action = e.target.action;
+                    fetch(action, {
+                        method: 'POST',
+                        body: data,
+                    })
+                    .then(() => {
+                        document.location.href = "login.html"
+                    })
+
+                } catch (error) {
+                    if (error.message == "Empty"){
+                        document.getElementById('errTxt').hidden = false
+                        reg_button.disabled = false
+                    } else if (error.message == "Exists"){
+                        document.getElementById('existsTxt').hidden = false
+                        reg_button.disabled = false
+                    } else if (error.message == "Username"){
+                        document.getElementById('userTxt').hidden = false
+                        reg_button.disabled = false
+                    } else {
+                        console.log(error)
+                        reg_button.disabled = false
+                    }
+                    
+                }
+                
+                
+            })
+
+        })
+        
+    })
+    
+
+  </script>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Ivy Tutors Academy<span>.</span></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="index.html#faq">FAQ</a></li>
+          <li><a class="nav-link scrollto" href="chatbot.html">Tutor Chat</a></li>
+          <li class="dropdown"><a href="my-portal.html"><span>My Portal</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="course-request.html">Request a Course</a></li>
+              <li><a href="request.html">Request a Specific Tutor</a></li>
+              <li><a href="specialized-request.html">Request a Specialized Course</a></li>            
+            </ul>          
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav><!-- .navbar -->
+
+      <a class="btn-getstarted scrollto" href="login.html">Log In</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main>
+
+    <section id="hero-animated" class="hero-animated d-flex align-items-center">
+        <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+          <table>
+            <thead>
+                <td style="width:60%">
+                    <img src="assets/img/hero-carousel/hero-carousel-1.svg" style="width:100%;height:100%">
+                </td>
+                <td style="width:40%">
+                    <div style="width:100%">
+                        <div class="card border-danger">
+                            <div class="card-header bg-danger text-white">
+                                <h4>Register</h4>
+                            </div>
+                            <div class="card-body">
+                                <form id="registration_form"
+                                    method="POST"
+                                    action="https://script.google.com/macros/s/AKfycby0NbL6Porys9iTd9fTDyMdDh0yfldg6ZcJpfmZNRhWNs11mcvJ0SA_S-Yb7gg1Cq8/exec">
+                                    <table style="width:100%">
+                                        <tr style="width:100%">
+                                            <td style="width:45%">
+                                                <div class="form-group">
+                                                    <label for="username" style="text-align:left">Username:</label>
+                                                    <input type="text" class="form-control" id="username" name="username">
+                                                </div>
+                                            </td>
+                                            <td style="width:10%"></td>
+                                            <td style="width:45%">
+                                                <div class="form-group">
+                                                    <label for="password">Password:</label>
+                                                    <input type="password" class="form-control" id="password" name="password">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                    <br/>
+                                    
+                                    <table style="width:100%">
+                                        <tr style="width:100%">
+                                            <td style="width:45%">
+                                                <div class="form-group">
+                                                    <label for="sname">Student Name:</label>
+                                                    <input type="text" class="form-control" id="sname" name="sname">
+                                                </div>
+                                            </td>
+                                            <td style="width:10%"></td>
+                                            <td style="width:45%">
+                                                <div class="form-group">
+                                                    <label for="pname">Parent/Guardian Name:</label>
+                                                    <input type="text" class="form-control" id="pname" name="pname">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <br/>
+
+                                    <table style="width:100%">
+                                        <tr style="width:100%">
+                                            <td style="width:45%">
+                                                <div class="form-group">
+                                                    <label for="school" style="text-align:left">School Name:</label>
+                                                    <input type="text" class="form-control" id="school" name="school">
+                                                </div>
+                                            </td>
+                                            <td style="width:10%"></td>
+                                            <td style="width:45%">
+                                                <div class="form-group">
+                                                    <label for="country">Country:</label>
+                                                    <input type="text" class="form-control" id="country" name="country">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                    <br/>
+
+                                    <table style="width:100%">
+                                        <tr style="width:100%">
+                                            <td style="width:45%">
+                                                <div class="form-group">
+                                                    <label for="email">Email Contact:</label>
+                                                    <input type="email" class="form-control" id="email" name="email">
+                                                </div>
+                                            </td>
+                                            <td style="width:10%"></td>
+                                            <td style="width:45%">
+                                                <div class="form-group">
+                                                    <label for="glevel">General Grade Level:</label>
+                                                    <input type="text" class="form-control" id="glevel" name="glevel">
+                                                </div>                                                  
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div id="userTxt" hidden>
+                                        <br>
+                                        <i>An account with this username exists. Try another!</i>
+                                    </div>
+                                    <div id="existsTxt" hidden>
+                                        <br>
+                                        <i>An account with this email exists. Forgot your password? Click <a href="forgot-password.html">here.</a></i>
+                                    </div>
+                                    <div id="errTxt" hidden>
+                                        <br>
+                                        <i>Please enter values in all locations!</i>
+                                    </div>
+                                    <br/>
+                                    <button type="submit" id="reg_button" class="btn btn-danger btn-block">Register</button>
+                                </br><br/>
+                                    <div>
+                                        <i>Already have an account? <a href="login.html">Log In!</a></i>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </thead>
+          </table>
+            
+                
+        </div>
+      </section>
+
+  </main>
+
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

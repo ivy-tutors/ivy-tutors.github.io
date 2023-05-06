@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ivy Tutors Academy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files -->
+  <link href="assets/css/variables-red.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: HeroBiz
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script>
+    if (sessionStorage.ITAUID == undefined && localStorage.ITAUID == undefined){
+        document.location.href = "login.html"
+    }   
+    if (sessionStorage.ITAeID == undefined && localStorage.ITAeID == undefined){
+        document.location.href = "login.html"
+    }   
+    if (sessionStorage.tname == undefined){
+        document.location.href = 'request.html'
+    }
+    window.addEventListener('load', () => {
+      document.getElementById('signout').addEventListener('click', (e) => {
+        e.preventDefault()
+        localStorage.removeItem('ITAUID')
+        sessionStorage.removeItem('ITAUID')
+        localStorage.removeItem('ITAeID')
+        sessionStorage.removeItem('ITAeID')
+        document.location.href = "login.html"
+      })
+    })
+  </script>
+
+
+  <script>
+    window.addEventListener('load', () => {
+        document.getElementById('tname').value = sessionStorage.getItem('tname')
+
+        let reg_form = document.getElementById('registration_form')
+        reg_form.addEventListener("submit", function(e){
+            e.preventDefault()
+            reg_button.disabled = true
+            try {
+                let inputs = ['tname', 'course', 'difficulty', 'hours', 'hpw', 'nstudent', 'bid']
+                for(let i = 0; i < inputs.length; i++){
+                    if (document.getElementById(inputs[i]).value == ''){
+                        throw new Error("Empty") 
+                    }
+                }
+                let UID
+                if(sessionStorage.ITAUID != undefined){
+                    UID = sessionStorage.ITAUID
+                } else {
+                    UID = localStorage.ITAUID
+                }
+                if(sessionStorage.ITAeID != undefined){
+                  email = sessionStorage.ITAeID
+                } else {
+                  email = localStorage.ITAeID
+                }
+                
+                const data = new FormData(reg_form)
+                data.append('Requested Tutor', document.getElementById('tname').value.trim())
+                data.append('Course Name', document.getElementById('course').value.trim())
+                data.append('Description', "N/A")
+                data.append('Total Hours', document.getElementById('hours').value.trim())
+                data.append('Difficulty', document.getElementById('difficulty').value.trim())
+                data.append('Hours Per Week', document.getElementById('hpw').value.trim())
+                data.append('Number of Students', document.getElementById('nstudent').value.trim())
+                data.append('Bid per Student per Hour', document.getElementById('bid').value)
+                data.append('UID', UID)
+                data.append('Email', email)
+                data.append('Flag', 'Standard')
+                
+                const action = e.target.action;
+                fetch(action, {
+                    method: 'POST',
+                    body: data,
+                })
+                .then(() => {
+                    sessionStorage.removeItem('tname')
+                    document.getElementById('succTxt').hidden = false
+                    setTimeout(() => {document.location.href = 'my-portal.html'}, 5000)
+                })
+
+            } catch (error) {
+                if (error.message == "Empty"){
+                    document.getElementById('errTxt').hidden = false
+                    reg_button.disabled = false
+                } else {
+                    console.log(error)
+                    reg_button.disabled = false
+                }
+                
+            }
+            
+            
+        })
+    })
+  </script>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Ivy Tutors Academy<span>.</span></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="index.html#faq">FAQ</a></li>
+          <li class="dropdown"><a href="my-portal.html"><span>My Portal</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="course-request.html">Request a Course</a></li>
+              <li><a href="request.html">Request a Specific Tutor</a></li>
+              <li><a href="specialized-request.html">Request a Specialized Course</a></li>            
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav><!-- .navbar -->
+
+      <a class="btn-getstarted scrollto" href="login.html" id="signout">Sign Out</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main>
+
+    <section id="hero-animated" class="hero-animated d-flex align-items-center">
+        <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+          <table>
+            <thead>
+                <td style="width:60%">
+                    <img src="assets/img/hero-carousel/hero-carousel-1.svg" style="width:100%;height:100%">
+                </td>
+                <td style="width:40%">
+                    <div style="width:100%">
+                        <div class="card border-danger">
+                            <div class="card-header bg-danger text-white">
+                                <h4>Request</h4>
+                            </div>
+                            <div class="card-body">
+                                <form id="registration_form"
+                                    method="POST"
+                                    action="https://script.google.com/macros/s/AKfycbw8L3MtPmIipujqHPHfLsGXhlucjwYeeVcnEVdcsQ3M1v_xFaUABbxghbyh2qp5Ei_Crg/exec">
+                                    <table style="width:100%">
+                                        <tr style="width:100%">
+                                            <td style="width:100%">
+                                                <div class="form-group">
+                                                    <label for="tname" style="text-align:left">Tutor Name</label>
+                                                    <input type="text" class="form-control" id="tname" name="tname" readonly>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                    <br/>
+
+                                    <table style="width:100%">
+                                      <tr style="width:100%">
+                                          <td style="width:45%">
+                                              <div class="form-group">
+                                                  <label for="course" style="text-align:left">Course Name</label>
+                                                  <input type="text" class="form-control" id="course" name="course">
+                                              </div>
+                                          </td>
+                                          <td style="width:10%"></td>
+                                          <td style="width:45%">
+                                            <div class="form-group">
+                                                <label for="difficulty" style="text-align:left">Difficulty</label>
+                                                <select class='form-control' id="difficulty" name="difficulty">
+                                                  <option selected hidden disabled></option>
+                                                  <option value="Standard">Standard</option>
+                                                  <option value="Intermediate (AP / IB)">Intermediate (AP / IB)</option>
+                                                  <option value="Advanced">Advanced</option>
+                                                </select>
+                                                
+                                            </div>
+                                        </td>
+                                        
+                                      </tr>
+                                  </table>
+                                  
+                                  <br/>
+                                    
+                                    <table style="width:100%">
+                                        <tr style="width:100%">
+                                            <td style="width:45%">
+                                                <div class="form-group">
+                                                    <label for="hours">Expected # of Hours Total</label>
+                                                    <input type="number" class="form-control" id="hours" name="hours">
+                                                </div>
+                                            </td>
+                                            <td style="width:10%"></td>
+                                            <td style="width:45%">
+                                                <div class="form-group">
+                                                    <label for="hpw">Hours Per Week</label>
+                                                    <input type="number" class="form-control" id="hpw" name="hpw">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <br/>
+                                    
+                                    <table style="width:100%">
+                                        <tr style="width:100%">
+                                            <td style="width:45%">
+                                                <div class="form-group">
+                                                    <label for="nstudent">Number of Students in Group</label>
+                                                    <input type="number" class="form-control" id="nstudent" name="nstudent">
+                                                </div>
+                                            </td>
+                                            <td style="width:10%"></td>
+                                            <td style="width:45%">
+                                                <div class="form-group">
+                                                    <label for="bid">Per-Student Bid per Hour (USD)</label>
+                                                    <input type="number" class="form-control" id="bid" name="bid">
+                                                </div>                                                  
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div id="errTxt" hidden>
+                                        <br>
+                                        <i>Please enter values in all locations!</i>
+                                    </div>
+                                    <div id="succTxt" hidden>
+                                        <br>
+                                        <i>Success! We will be in contact shortly. Redirecting to your portal page...</i>
+                                    </div>
+                                    <br/>
+                                    <button type="submit" id="reg_button" class="btn btn-danger btn-block">Request</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </thead>
+          </table>
+            
+                
+        </div>
+      </section>
+
+
+          <!-- ======= F.A.Q Section ======= -->
+    <section class="faq">
+        <div class="container-fluid" >
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+  
+              <div class="content px-xl-7">
+                <h3><strong>Questions</strong></h3>
+              </div>
+  
+              <div class="accordion accordion-flush px-xl-7" id="faqlist">
+  
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                      <i class="bi bi-question-circle question-icon"></i>
+                      Why is the tutor name not changeable?
+                    </button>
+                  </h3>
+                  <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                    <div class="accordion-body">
+                      This page is only navigatable once you select a tutor. If you would like to change tutors, please select another tutor <a href="request.html">here</a>! If you don't have a preference for which tutor you'd like, you can request a general course <a href="course-request.html">here</a>!
+                    </div>
+                  </div>
+                </div><!-- # Faq item-->
+  
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                      <i class="bi bi-question-circle question-icon"></i>
+                      What should I put for course name and difficulty?
+                    </button>
+                  </h3>
+                  <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                    <div class="accordion-body">
+                      Whatever course you would like to take! For instance, put "AP Calculus AB" or "AP Computer Science". For difficulty, standard courses are typical middle school or high school course material. Intermediate courses are introductory college-level material on-par with the AP and IB exams, respectively. Advanced courses are rare and assume a high degree of mastery with the subject.
+                    </div>
+                  </div>
+                </div><!-- # Faq item-->
+  
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                      <i class="bi bi-question-circle question-icon"></i>
+                      What is the expected number of hours total?
+                    </button>
+                  </h3>
+                  <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                    <div class="accordion-body">
+                      This is the anticipated number of total tutoring hours you expect the course to take. Most of our courses run for about 20 hours, although this number changes drastically for student to student.
+                    </div>
+                  </div>
+                </div><!-- # Faq item-->
+  
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
+                      <i class="bi bi-question-circle question-icon"></i>
+                      What is the hours per week?
+                    </button>
+                  </h3>
+                  <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                    <div class="accordion-body">
+                      <i class="bi bi-question-circle question-icon"></i>
+                      This is the total number of tutoring hours you want to take per week. Most of our courses do 1 or 2 hours per week, split across 1 hour sessions. Of course, this is customizable as well!
+                    </div>
+                  </div>
+                </div><!-- # Faq item-->
+  
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
+                      <i class="bi bi-question-circle question-icon"></i>
+                      What is the number of students per group?
+                    </button>
+                  </h3>
+                  <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                    <div class="accordion-body">
+                      If you are looking for a 1 on 1 course, just put 1. If you would like to request a group course to take with you and your friends, input however many students you anticipate being in the course! Group courses can benefit from collaboration and much cheaper hourly prices. Be sure to take classes with friends!
+                    </div>
+                  </div>
+                </div><!-- # Faq item-->
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-6">
+                        <i class="bi bi-question-circle question-icon"></i>
+                        What is the per-student bid per hour?
+                      </button>
+                    </h3>
+                    <div id="faq-content-6" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                      <div class="accordion-body">
+                        The bid per hour is how much you are willing to pay <i>per student</i> for the tutoring on an hourly basis in USD. As the tutors need to 
+                        account for not only their time, but also costs of practice problems, curriculum preparation, and the like, the average 
+                        accepted bids may seem expensive, especially during busy periods in the year. The average bids accepted by the tutors are closely monitored and 
+                        will not usually exceed typical market rates for tutoring. Since the bid is per student, however, we do recommend finding a small group of students if the bids
+                        are currently expensive--it is much cheaper on a per-student basis to create a class of 5 students than it is to create a 1-1 specialized course.
+                      </div>
+                    </div>
+                  </div><!-- # Faq item-->
+
+  
+              </div>
+  
+            </div>
+  
+            <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/faq.jpg");'>&nbsp;</div>
+          </div>
+  
+        </div>
+      </section><!-- End F.A.Q Section -->
+  
+  </main>
+
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
