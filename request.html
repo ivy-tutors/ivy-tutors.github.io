@@ -30,6 +30,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
   <link href="assets/css/chat.css" rel="stylesheet">
 
   <!-- =======================================================
@@ -102,8 +103,16 @@
         )
     })
 
+    let details = navigator.userAgent;
+  
+    let regexp = /android|iphone|kindle|ipad/i;
+    
+    let isMobileDevice = regexp.test(details);
 
     window.addEventListener('load', function() {
+      if(isMobileDevice){
+        document.getElementById('title').hidden = true
+      }
       document.getElementById('search').addEventListener('input', (event) => {
           search()
       })
@@ -129,8 +138,12 @@
             backImg.setAttribute('src', cardInfo[5].v)
             backImg.className = 'img-fluid'
             backImg.setAttribute('alt', '')
-            backImg.setAttribute('style', 'width: 296px; height:296px; object-fit:cover')
-
+            if (isMobileDevice){
+              backImg.setAttribute('style', 'width: 500%')
+            } else {
+              backImg.setAttribute('style', 'width: 296px; height:296px; object-fit:cover')
+            }
+            
             imgDiv.appendChild(backImg)
             innerDiv.appendChild(imgDiv)
 
@@ -161,7 +174,12 @@
             uniLabel.innerText = cardInfo[8].v
 
             let topicLabel = document.createElement('p')
-            topicLabel.innerText = cardInfo[6].v
+            if (isMobileDevice){
+              topicLabel.innerText = cardInfo[6].v.split(", ").slice(0,2).join(', ') + '...'
+            } else {
+              topicLabel.innerText = cardInfo[6].v
+            }
+            
 
             infoDiv.appendChild(modalLink)
             infoDiv.appendChild(uniLabel)
@@ -296,7 +314,7 @@
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Ivy Tutors Academy<span>.</span></h1>
+        <h1 id="title">Ivy Tutors Academy<span>.</span></h1>
       </a>
 
       <nav id="navbar" class="navbar">
@@ -329,7 +347,7 @@
         Search by college, name, or course subject. Want to just request a course with any tutor? Do so <a href="course-request.html">here</a>.
       </p>
       <div class="d-flex">
-        <input type='text' id='search' class="form-control search-form" placeholder="Search by name, college, or subject..." style="border:3px solid #A51C30">
+        <input type='text' id='search' class="form-control search-form" placeholder="Search by name, college, or subject..." style="border:3px solid #A51C30; width:min(100vw, 400px)">
       </div>
     </div>
   </section>

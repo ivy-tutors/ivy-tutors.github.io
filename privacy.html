@@ -31,6 +31,20 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <script>
+    let details = navigator.userAgent;
+  
+    let regexp = /android|iphone|kindle|ipad/i;
+    
+    let isMobileDevice = regexp.test(details);
+    
+    window.addEventListener('load', () => {
+      if(isMobileDevice){
+        document.getElementById('title').hidden = true
+      }
+    })
+  </script>
+
   <!-- =======================================================
   * Template Name: HeroBiz
   * Updated: Mar 10 2023 with Bootstrap v5.2.3
@@ -49,7 +63,7 @@
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Ivy Tutors Academy<span>.</span></h1>
+        <h1 id="title">Ivy Tutors Academy<span>.</span></h1>
       </a>
 
       <nav id="navbar" class="navbar">

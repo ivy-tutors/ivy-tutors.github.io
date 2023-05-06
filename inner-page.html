@@ -37,6 +37,20 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <script>
+    let details = navigator.userAgent;
+  
+    let regexp = /android|iphone|kindle|ipad/i;
+    
+    let isMobileDevice = regexp.test(details);
+    
+    window.addEventListener('load', () => {
+      if(isMobileDevice){
+        document.getElementById('title').hidden = true
+      }
+    })
+  </script>
+
   <!-- =======================================================
   * Template Name: HeroBiz
   * Updated: Mar 10 2023 with Bootstrap v5.2.3
