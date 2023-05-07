@@ -124,6 +124,7 @@
                     data.append('Country', document.getElementById('country').value.trim())
                     data.append('Password', hashCode(document.getElementById('password').value))
                     data.append('UID', UID)
+                    data.append('Time', new Date().toUTCString())
                     
                     const action = e.target.action;
                     fetch(action, {
@@ -184,7 +185,8 @@
             <ul>
               <li><a href="course-request.html">Request a Course</a></li>
               <li><a href="request.html">Request a Specific Tutor</a></li>
-              <li><a href="specialized-request.html">Request a Specialized Course</a></li>            
+              <li><a href="specialized-request.html">Request a Specialized Course</a></li>
+              <li><a href="masterclass.html">Join a Masterclass</a></li>               
             </ul>          
           </li>
         </ul>

@@ -80,13 +80,27 @@
         }
     }
   </script>
+
+  <script>
+    let isEnrolled = function (enrollmentData, courseID, userID) {
+      let count = 0
+      for(let i = 0; i < enrollmentData.length; i++){
+        if(enrollmentData[i].c[1].v == courseID && enrollmentData[i].c[2].v == userID){
+          count += 1
+        }
+      }
+      return (count % 2 == 1)
+    }
+  </script>
   
   <script>
-    const sheetId = '19Qh9hxczN0mcGvW7cWp9oN3xmRFeDqHJKsnp1jsoqzs';
+    const sheetId = '1C2eUc9Mx1fuh7AN16HCkZuqZvJ51k8Br9z7fp-oTU-w';
     const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
-    const sheetName = 'TutorInformation';
+    const sheetName = 'Class Schedule';
+    const courseEnrollments = 'MasterClassRequest'
     const query = encodeURIComponent('Select *')
     const url = `${base}&sheet=${sheetName}&tq=${query}`
+    const enrollmentUrl = `${base}&sheet=${courseEnrollments}&tq=${query}`
     const data = []
     const init = new Promise((resolve, reject) => {
         fetch(url)
@@ -99,6 +113,22 @@
                 data.push(jsonData.table.rows[i])
             }
             resolve(data);
+        }
+        )
+    })
+
+    const enrollmentdata = []
+    const enrollments = new Promise((resolve, reject) => {
+        fetch(enrollmentUrl)
+        .then(res => res.text())
+        .then(rep => {
+            const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+            const rowNum = jsonData.table.rows.length;
+            for(let i = 0; i < rowNum; i++)
+            {
+              enrollmentdata.push(jsonData.table.rows[i])
+            }
+            resolve(enrollmentdata);
         }
         )
     })
@@ -116,17 +146,27 @@
       document.getElementById('search').addEventListener('input', (event) => {
           search()
       })
-        init.then(() => {
+        init.then(() => { enrollments.then(() => {
+          console.log(data)
+          console.log(enrollmentdata)
+          let UID
+          if(sessionStorage.ITAUID != undefined){
+              UID = sessionStorage.ITAUID
+          } else {
+              UID = localStorage.ITAUID
+          }
           let tutorDiv = document.getElementById('info')
           for(let i = 0; i < data.length; i++){
             // Create card
             cardInfo = data[i].c
+            let enrollmentflag = isEnrolled(enrollmentdata, data[i].c[2].v, UID)
 
             let containerDiv = document.createElement('div')
             containerDiv.setAttribute('class', 'col-xl-3 col-md-4 tutor')
             containerDiv.setAttribute('data-aos', 'zoom-in')
             containerDiv.setAttribute('data-aos-delay', '200')
-            containerDiv.setAttribute('searchable', cardInfo[1].v + ' ' + cardInfo[8].v + ' ' + cardInfo[6].v)
+            containerDiv.setAttribute('searchable', cardInfo[0].v)
+            containerDiv.id
 
             let innerDiv = document.createElement('div')
             innerDiv.setAttribute('class', 'service-item')
@@ -135,7 +175,7 @@
             imgDiv.setAttribute('class', 'img')
 
             let backImg = document.createElement('img')
-            backImg.setAttribute('src', cardInfo[5].v)
+            backImg.setAttribute('src', cardInfo[1].v)
             backImg.className = 'img-fluid'
             backImg.setAttribute('alt', '')
             if (isMobileDevice){
@@ -166,20 +206,15 @@
             modalLink.setAttribute('data-bs-target', '#m' + i)
 
             let nameLabel = document.createElement('h3')
-            nameLabel.innerText = cardInfo[1].v
+            nameLabel.innerText = cardInfo[0].v
 
             modalLink.appendChild(nameLabel)
 
             let uniLabel = document.createElement('h5')
-            uniLabel.innerText = cardInfo[8].v
+            uniLabel.innerText = cardInfo[3].v
 
             let topicLabel = document.createElement('p')
-            if (isMobileDevice){
-              topicLabel.innerText = cardInfo[6].v.split(", ").slice(0,2).join(', ') + '...'
-            } else {
-              topicLabel.innerText = cardInfo[6].v
-            }
-            
+            topicLabel.innerText = cardInfo[4].v
 
             infoDiv.appendChild(modalLink)
             infoDiv.appendChild(uniLabel)
@@ -218,27 +253,32 @@
             textDiv.className = "ct-4 pt-lg-0"
 
             let nameLabel2 = document.createElement('h3')
-            nameLabel2.innerText = cardInfo[1].v
+            nameLabel2.innerText = cardInfo[0].v
 
             let uniLabel2 = document.createElement('h5')
-            uniLabel2.innerText = 'University:'
+            uniLabel2.innerText = 'Head Tutor:'
             let uniLabel3 = document.createElement('p')
-            uniLabel3.innerText = cardInfo[8].v
+            uniLabel3.innerText = cardInfo[3].v
 
             let concLabel = document.createElement('h5')
-            concLabel.innerText = 'Major / Concentration'
+            concLabel.innerText = 'University:'
             let concLabel2 = document.createElement('p')
-            concLabel2.innerText = cardInfo[4].v // check this
+            concLabel2.innerText = cardInfo[4].v
 
             let bioLabel = document.createElement('h5')
-            bioLabel.innerText = 'Tutor Biography:'
+            bioLabel.innerText = 'Course Timing:'
             let bioLabel2 = document.createElement('p')
-            bioLabel2.innerText = cardInfo[7].v
+            bioLabel2.innerHTML = cardInfo[5].v + '<br>' + cardInfo[6].v
+
+            let descLabel = document.createElement('h5')
+            descLabel.innerText = 'Course Description:'
+            let descLabel2 = document.createElement('p')
+            descLabel2.innerHTML = cardInfo[7].v
 
             let br = document.createElement('br')
 
             let profimg = document.createElement('img')
-            profimg.src = cardInfo[5].v
+            profimg.src = cardInfo[8].v
             profimg.className = "float-end imgshadow" 
             profimg.setAttribute('alt',"") 
             profimg.style="width:150px; height:150px; margin: 5px"
@@ -255,6 +295,9 @@
 
             textDiv.appendChild(bioLabel)
             textDiv.appendChild(bioLabel2)
+
+            textDiv.appendChild(descLabel)
+            textDiv.appendChild(descLabel2)
 
             let fillerDiv = document.createElement('div')
             fillerDiv.style="text-align: left;" 
@@ -280,23 +323,86 @@
             cont.style = 'color:#fff; background-color:#A51C30'
             cont.innerText = 'Request'
             cont.addEventListener('click', () => {
-              sessionStorage.setItem('tname', data[i].c[1].v + ', ' + data[i].c[8].v)
-              window.location.href = 'request-form.html'
+              cont.disabled = true
+              if(sessionStorage.ITAeID != undefined){
+                email = sessionStorage.ITAeID
+              } else {
+                email = localStorage.ITAeID
+              }
+              const subdata = new FormData()
+              subdata.append('Course Name', data[i].c[0].v)
+              subdata.append('Course ID', data[i].c[2].v)
+              subdata.append('UID', UID)
+              subdata.append('Email', email)
+              subdata.append('Type', 'Registration')
+              subdata.append('Time', new Date().toUTCString())
+              
+              const action = 'https://script.google.com/macros/s/AKfycbwyvmo5pYhTdihtEa0H-vEoSt__-EKCJj2sJPSgfZxM6B91jNHGYgqf16E_pWTEI8piTQ/exec';
+              fetch(action, {
+                  method: 'POST',
+                  body: subdata,
+              })
+              .then(() => {
+                cont.hidden = true
+                canc.hidden = false
+                cont.disabled = false
+              })
             })
+
+            let canc = document.createElement('button')
+            canc.setAttribute('type', "button")
+            canc.className = "btn" 
+            canc.style = 'color:#fff; background-color:#000'
+            canc.innerText = 'Cancel'
+            canc.addEventListener('click', () => {
+              canc.disabled = true
+              if(sessionStorage.ITAeID != undefined){
+                email = sessionStorage.ITAeID
+              } else {
+                email = localStorage.ITAeID
+              }
+              const subdata = new FormData()
+              subdata.append('Course Name', data[i].c[0].v)
+              subdata.append('Course ID', data[i].c[2].v)
+              subdata.append('UID', UID)
+              subdata.append('Email', email)
+              subdata.append('Type', 'Cancellation')
+              
+              const action = 'https://script.google.com/macros/s/AKfycbwyvmo5pYhTdihtEa0H-vEoSt__-EKCJj2sJPSgfZxM6B91jNHGYgqf16E_pWTEI8piTQ/exec';
+              fetch(action, {
+                  method: 'POST',
+                  body: subdata,
+              })
+              .then(() => {
+                cont.hidden = false
+                canc.hidden = true
+                canc.disabled = false
+              })
+            })
+
+            if (enrollmentflag) {
+              cont.hidden = true
+              canc.hidden = false
+            } else {
+              cont.hidden = false
+              canc.hidden = true
+            }
 
             footerDiv.appendChild(close)
             footerDiv.appendChild(cont)
+            footerDiv.appendChild(canc)
 
             contentDiv.appendChild(footerDiv)
             secondModalDiv.appendChild(contentDiv)
             modalDiv.appendChild(secondModalDiv)
             document.body.appendChild(modalDiv)
 
-
           }
 
 
         })
+
+      })
         
     })
     
@@ -343,18 +449,22 @@
 
   <section id="hero-animated" class="hero-animated-2 d-flex align-items-center">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+      
       <div class="section-header">
-        <h2>Search for a Specific <span>Mentor</span>.</h2>
-        <p>Search by college, name, or course subject. Want to just request a course with any tutor? Do so <a href="course-request.html">here</a>.</p>
+        <h2>Join a <span>Masterclass</span>.</h2>
+        <p>
+          Starting at $20 USD per hour, explore carefully curated courses in computer science, pre-med, pre-law, leadership, and so much more, all taught by high-ranking mentors.
+          Want to request a standard course? Do so <a href="course-request.html">here</a>.</p>
       </div>
       <div class="d-flex">
-        <input type='text' id='search' class="form-control search-form" placeholder="Search by name, college, or subject..." style="border:3px solid #A51C30; width:min(100vw, 400px)">
+        <input type='text' id='search' class="form-control search-form" placeholder="Search by subject..." style="border:3px solid #A51C30; width:min(100vw, 400px)">
       </div>
     </div>
   </section>
-  <div class="text-center" id="fail" hidden>
-    <p><i>No tutors found!</i> Try a different search.</p>
-</div>
+    <div class="text-center" id="fail" hidden>
+      <p><i>No courses found!</i> Try a different search.</p>
+    </div>
+
       <!-- ======= Services Section ======= -->
       <section class="services">
         <div class="container" data-aos="fade-up">
