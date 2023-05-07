@@ -91,6 +91,20 @@
       }
       return (count % 2 == 1)
     }
+
+    let numEnrolled = function (enrollmentData, courseID) {
+      let count = 0
+      for(let i = 0; i < enrollmentData.length; i++){
+        if(enrollmentData[i].c[1].v == courseID){
+          if(enrollmentData[i].c[4].v == 'Registration'){
+            count += 1
+          } else if (enrollmentData[i].c[4].v == 'Cancellation'){
+            count -= 1
+          }
+        }
+      }
+      return count
+    }
   </script>
   
   <script>
@@ -147,8 +161,6 @@
           search()
       })
         init.then(() => { enrollments.then(() => {
-          console.log(data)
-          console.log(enrollmentdata)
           let UID
           if(sessionStorage.ITAUID != undefined){
               UID = sessionStorage.ITAUID
@@ -216,9 +228,25 @@
             let topicLabel = document.createElement('p')
             topicLabel.innerText = cardInfo[4].v
 
+            let lbreak = document.createElement('br')
+
+            let enrollLabel = document.createElement('p')
+            let nenrol = numEnrolled(enrollmentdata, data[i].c[2].v)
+            let enrolVal
+            if(nenrol < 10){
+              enrolVal = '<p style="color:#006400">Low</p>'
+            } else if (nenrol < 30){
+              enrolVal = '<p style="color:#d4af37">Average</p>'
+            } else {
+              enrolVal = '<p style="color:#a51c30">High</p>'
+            }
+            enrollLabel.innerHTML = '<i>Current Enrollment: </i><br>' + enrolVal
+
             infoDiv.appendChild(modalLink)
             infoDiv.appendChild(uniLabel)
             infoDiv.appendChild(topicLabel)
+            infoDiv.appendChild(lbreak)
+            infoDiv.appendChild(enrollLabel)
 
             innerDiv.appendChild(infoDiv)
 

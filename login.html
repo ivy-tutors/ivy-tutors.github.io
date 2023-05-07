@@ -87,7 +87,7 @@
 
         window.addEventListener('load', function(){
             init.then(() => {
-                console.log(data)
+                // console.log(data)
                 let dict = {}
                 for(let i = 0; i < data.length; i++)
                 {
@@ -109,7 +109,7 @@
                         }
                         
                         if (dict[document.getElementById('username').value]['pass'] == hashCode(document.getElementById('password').value)){
-                            console.log('success')
+                            // console.log('success')
                         } else {
                             throw new Error("not found")
                         }

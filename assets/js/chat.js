@@ -222,7 +222,6 @@ fetch('/assets/data.json')
     .then((dataJSON) => {
     $(function () {
 
-            console.log(dataJSON)
             $('#chat-app').chunkosChat({
                 dataJSON: dataJSON,
             });
