@@ -217,7 +217,7 @@
     }
 }(jQuery));
 
-fetch('data.json')
+fetch('assets/data.json')
     .then((response) => response.json())
     .then((dataJSON) => {
     $(function () {
