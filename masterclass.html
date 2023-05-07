@@ -367,7 +367,8 @@
               subdata.append('UID', UID)
               subdata.append('Email', email)
               subdata.append('Type', 'Cancellation')
-              
+              subdata.append('Time', new Date().toUTCString())
+
               const action = 'https://script.google.com/macros/s/AKfycbwyvmo5pYhTdihtEa0H-vEoSt__-EKCJj2sJPSgfZxM6B91jNHGYgqf16E_pWTEI8piTQ/exec';
               fetch(action, {
                   method: 'POST',
