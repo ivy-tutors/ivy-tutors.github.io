@@ -217,12 +217,10 @@
     }
 }(jQuery));
 
-fetch('/assets/data.json')
+fetch('data.json')
     .then((response) => response.json())
     .then((dataJSON) => {
     $(function () {
-
-        console.log(dataJSON)
 
             $('#chat-app').chunkosChat({
                 dataJSON: dataJSON,
