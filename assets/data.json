@@ -178,7 +178,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] How many students have you tutored?"
+              "text":"We're proud to say that since our inception, we have tutored hundreds of students from across the world. Our team of Ivy League and T10 students brings a wealth of knowledge and expertise to each tutoring session, ensuring that our students receive personalized attention and guidance."
             }],
   "optionType":"name",
   "options":[{
@@ -209,7 +209,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] How advanced are these courses?"
+              "text":"Our courses cover a wide range of academic levels and can be tailored to meet the needs of students at various proficiency levels. We pride ourselves on our ability to tailor each course to the students that take it; each iteration of the course is slightly different than the last!"
             }],
   "optionType":"name",
   "options":[{
@@ -240,7 +240,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] What are your tutors' qualifications?"
+              "text":"Our tutors are all Ivy League and T10 students who excel in their respective fields of expertise. They have undergone a rigorous selection process to join our team, ensuring they possess deep knowledge and understanding of the subjects they teach. All of them have achieved top scores in the courses and exams they tutor, such as AP, IB, SAT, ACT, and more!"
             }],
   "optionType":"name",
   "options":[{
@@ -271,7 +271,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] What kinds of programs do you offer?"
+              "text":"We offer a wide range of programs, including specialized courses in AP and IB subjects, standardized test preparation (SAT, ACT, ISEE, SSAT, TOEFL, IELTS), olympiad competition preparation, pre-professional field training, and college admissions guidance. Our programs are designed to cater to the diverse needs of high school students and provide comprehensive support to help them excel academically and reach their goals."
             }],
   "optionType":"name",
   "options":[{
@@ -312,7 +312,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] Tell me about standard courses."
+              "text":"Our standard subject courses cover a wide range of academic disciplines, including mathematics, science, English literature, history, social sciences, and more. These courses are designed to align with the AP and IB curriculum, providing students with in-depth knowledge and conceptual understanding of the subjects!"
             }],
   "optionType":"name",
   "options":[{
@@ -348,7 +348,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] Tell me about standardized testing courses."
+              "text":"Our standardized testing courses focus on comprehensive preparation for exams such as the SAT, ACT, ISEE, SSAT, TOEFL, and IELTS. Our experienced tutors are well-versed in the content and format of these tests, and they provide personalized instruction to help students improve their test-taking strategies, time management skills, and subject-specific knowledge. We offer targeted practice materials, simulated exams, and individualized feedback to ensure students are fully prepared and confident on test day."
             }],
   "optionType":"name",
   "options":[{
@@ -384,7 +384,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] Tell me about competition training."
+              "text":"Our competition training programs focus on preparing students for various olympiad competitions in subjects like mathematics, science, computer science, and more. Our tutors have expertise in these competitive domains and guide students through rigorous problem-solving techniques, advanced concepts, and practice materials specific to each competition. We aim to enhance students' analytical skills, critical thinking abilities, and creativity, enabling them to excel in these challenging academic competitions. "
             }],
   "optionType":"name",
   "options":[{
@@ -420,7 +420,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] Tell me about admissions councelling."
+              "text":"Our admissions counseling services are designed to guide students through the college application process and help them stand out among their peers. Our experienced mentors provide personalized guidance on selecting the right colleges, crafting compelling personal statements, securing strong recommendation letters, and preparing for interviews. We assist students in showcasing their unique strengths, experiences, and achievements to create impactful college applications. Previous students have received offers from universities like Harvard, Columbia, and Duke university, to name a few."
             }],
   "optionType":"name",
   "options":[{
@@ -456,7 +456,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] Tell me about in person programs."
+              "text":"In addition to our online tutoring and mentoring services, we also host in-person programs alongside school leadership. These programs are designed to offer students in a particular school or community valuable learning opportunities at a dramatically reduced cost. If you're interested in bringing our in-person programs to your school, we would love to get in touch with your school leadership and present them with a proposal!"
             }],
   "optionType":"name",
   "options":[{
@@ -492,7 +492,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] I would like a course recommendation."
+              "text":"I recommend exploring our foundational courses in subjects like mathematics, English, or science. These courses provide a solid academic foundation and can benefit students at various academic levels. If you want a more specific recommendation, what are you interested in?"
             }],
   "optionType":"name",
   "options":[{
@@ -533,7 +533,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] Humanities"
+              "text":"Based on your interest in the humanities, I'd recommend considering an ELA course with us to hone your analytical or creative writing skills! Whether its learning to write a novel or composing poetry, we can tailor our courses to any of your interests!"
             }],
   "optionType":"name",
   "options":[{
@@ -569,7 +569,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] STEM"
+              "text":"Considering your interest in STEM, I'd recommend browsing our extensive STEM course offerings, from the physical sciences to pure mathematics and computer science. If you'd like to dabble in multiple fields in a low-stress environment, I'd recommend checking out our STEM-related masterclasses!"
             }],
   "optionType":"name",
   "options":[{
@@ -605,7 +605,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] Research."
+              "text":"Ooh! Exciting. If you're interested in research, I would encourage you to fill out a special course request to get matched up with a specialized mentor in the field that will guide you through an actual research project created by our organization. If the price is a little too high, we would also recommend checking out the research-related masterclasses!"
             }],
   "optionType":"name",
   "options":[{
@@ -641,7 +641,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] Admissions"
+              "text":"Really important moment coming up; we get it. The admissions process, from college admissions to research camp admissions and everything in between, is something our tutors would love to help out with. Some mentors in our organization heavily specialize in admissions processes, being mentors and counselors for the Coca-Cola Scholarship and other prestigious awards. Previous mentees have received offers from prestigious summer camps like PROMYS and SUMaC or universities like Harvard, Duke, or Columbia."
             }],
   "optionType":"name",
   "options":[{
@@ -677,7 +677,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] Competitions."
+              "text":"Competition training is a bit more specialized on our end, so I would recommend filling out a specialized course request to see whether or not a tutor was available to mentor you in a given competition. More popular olympiad-style competitions like the AMC series will be easier to find a mentor."
             }],
   "optionType":"name",
   "options":[{
@@ -713,7 +713,7 @@
   "nextMessageId":"",
   "texts":[{
               "id":1,
-              "text":"[!] How do I register for a course? Talk about financial aid / price."
+              "text":"Registering for a course is simple! After creating an account, you can either register for a course, request a tutor, request a specific class, or join a masterclass, all with a few clicks! As for financial aid and pricing, both are dependent on tutor availability. Although we do offer quite extensive financial aid upon request, I would also recommend taking classes in small groups of 3-5 students or enrolling in our masterclasses, which are usually considerably cheaper!"
             }],
   "optionType":"name",
   "options":[{
