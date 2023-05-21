@@ -80,7 +80,7 @@
             e.preventDefault()
             reg_button.disabled = true
             try {
-                let inputs = ['course', 'difficulty', 'hours', 'hpw', 'nstudent', 'bid']
+                let inputs = ['course', 'difficulty', 'hours', 'hpw', 'nstudent', 'bid', 'referer']
                 for(let i = 0; i < inputs.length; i++){
                     if (document.getElementById(inputs[i]).value == ''){
                         throw new Error("Empty") 
@@ -99,7 +99,7 @@
                 }
                 
                 const data = new FormData(reg_form)
-                data.append('Requested Tutor', document.getElementById('tname').value.trim())
+                data.append('Requested Tutor', 'None')
                 data.append('Course Name', document.getElementById('course').value.trim())
                 data.append('Description', "N/A")
                 data.append('Total Hours', document.getElementById('hours').value.trim())
@@ -107,6 +107,7 @@
                 data.append('Hours Per Week', document.getElementById('hpw').value.trim())
                 data.append('Number of Students', document.getElementById('nstudent').value.trim())
                 data.append('Bid per Student per Hour', document.getElementById('bid').value)
+                data.append('Referer', document.getElementById('referer').value.trim())
                 data.append('UID', UID)
                 data.append('Email', email)
                 data.append('Flag', 'Standard')
@@ -154,13 +155,12 @@
         <ul>
           <li><a class="nav-link scrollto" href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
           <li><a class="nav-link scrollto" href="index.html#faq">FAQ</a></li>
           <li><a class="nav-link scrollto" href="chatbot.html">Tutor Chat</a></li>
           <li class="dropdown"><a href="my-portal.html"><span>My Portal</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="course-request.html">Request a Course</a></li>
-              <li><a href="request.html">Request a Specific Tutor</a></li>
+              <!-- [!] <li><a href="request.html">Request a Specific Tutor</a></li> -->
               <li><a href="specialized-request.html">Request a Specialized Course</a></li>
               <li><a href="masterclass.html">Join a Masterclass</a></li>               
             </ul>          
@@ -261,6 +261,19 @@
                                             </td>
                                         </tr>
                                     </table>
+
+                                    <br/>
+
+                                    <table style="width:100%">
+                                      <tr style="width:100%">
+                                        <td style="width:100%">
+                                            <div class="form-group">
+                                                <label for="referer">Referer Name</label>
+                                                <input type="text" class="form-control" id="referer" name="referer" value="None">
+                                            </div>
+                                        </td>
+                                      </tr>
+                                    </table>
                                     <div id="errTxt" hidden>
                                         <br>
                                         <i>Please enter values in all locations!</i>
@@ -307,7 +320,8 @@
                   </h3>
                   <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                     <div class="accordion-body">
-                      Yes! If you would like to select a specific tutor, please request a tutor <a href="request.html">here</a>!
+                      Yes! If you know a current tutor with us, you may request for a specific tutor using this <a href="request-form.html">form</a>! 
+                      <!-- [!] If you would like to browse our database of mentors for a suitable tutor, go <a href="request.html">here</a>. -->
                     </div>
                   </div>
                 </div><!-- # Faq item-->
@@ -392,7 +406,7 @@
   
             </div>
   
-            <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/faq.jpg");'>&nbsp;</div>
+            <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/images/img-2.jpeg");'>&nbsp;</div>
           </div>
   
         </div>

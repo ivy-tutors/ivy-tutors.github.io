@@ -233,9 +233,9 @@
             let enrollLabel = document.createElement('p')
             let nenrol = numEnrolled(enrollmentdata, data[i].c[2].v)
             let enrolVal
-            if(nenrol < 10){
+            if(nenrol < 5){
               enrolVal = '<p style="color:#006400">Low</p>'
-            } else if (nenrol < 30){
+            } else if (nenrol < 15){
               enrolVal = '<p style="color:#d4af37">Average</p>'
             } else {
               enrolVal = '<p style="color:#a51c30">High</p>'
@@ -456,13 +456,12 @@
         <ul>
           <li><a class="nav-link scrollto" href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
           <li><a class="nav-link scrollto" href="index.html#faq">FAQ</a></li>
           <li><a class="nav-link scrollto" href="chatbot.html">Tutor Chat</a></li>
           <li class="dropdown"><a href="my-portal.html"><span>My Portal</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="course-request.html">Request a Course</a></li>
-              <li><a href="request.html">Request a Specific Tutor</a></li>
+              <!-- [!] <li><a href="request.html">Request a Specific Tutor</a></li> -->
               <li><a href="specialized-request.html">Request a Specialized Course</a></li>
               <li><a href="masterclass.html">Join a Masterclass</a></li>      
             </ul>        
