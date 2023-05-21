@@ -33,6 +33,11 @@
             "label":"How do I register for a course?",
             "value":"How do I register for a course?",
             "nextMessageId":6
+          },{
+            "id":6,
+            "label":"There's something wrong with the website.",
+            "value":"There's something wrong with the website.",
+            "nextMessageId":7
 }]},{
   "id":1,
   "text":"",
@@ -72,6 +77,12 @@
               "label":"How do I register for a course?",
               "value":"How do I register for a course?",
               "nextMessageId":6
+            },{
+              "id":6,
+              "label":"There's something wrong with the website.",
+              "value":"There's something wrong with the website.",
+              "nextMessageId":7
+    
   }]},{
   "id":2,
   "text":"",
@@ -714,6 +725,22 @@
   "texts":[{
               "id":1,
               "text":"Registering for a course is simple! After creating an account, you can either register for a course, request a tutor, request a specific class, or join a masterclass, all with a few clicks! As for financial aid and pricing, both are dependent on tutor availability. Although we do offer quite extensive financial aid upon request, I would also recommend taking classes in small groups of 3-5 students or enrolling in our masterclasses, which are usually considerably cheaper!"
+            }],
+  "optionType":"name",
+  "options":[{
+              "id":6,
+              "label":"I have a different question.",
+              "value":"I have a different question.",
+              "nextMessageId":0
+}]},{
+  "id":7,
+  "text":"",
+  "messageType":"AMTO",
+  "imageUrl":"",
+  "nextMessageId":"",
+  "texts":[{
+              "id":1,
+              "text":"Hmm... that's not good! Please reach out to our email ivytutors2021@gmail.com detailing the issue and we'll fix it right away! Apologies for the inconvenience."
             }],
   "optionType":"name",
   "options":[{

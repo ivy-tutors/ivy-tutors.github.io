@@ -117,7 +117,7 @@
                     const data = new FormData(reg_form)
                     data.append('Student Name', document.getElementById('sname').value.trim())
                     data.append('Parent Name', document.getElementById('pname').value.trim())
-                    data.append('Email Contact', hashCode(document.getElementById('email').value.trim()))
+                    data.append('Email Contact', document.getElementById('email').value.trim())
                     data.append('Grade Level', document.getElementById('glevel').value.trim())
                     data.append('Username', document.getElementById('username').value.trim())
                     data.append('School', document.getElementById('school').value.trim())
