@@ -1,0 +1,164 @@
+[
+  {
+    "question": "An engine provides 10 kW of power to lift a heavy load at constant velocity a distance of 20 m in 5 s. What is the mass of the object being lifted?",
+    "a": "100 kg",
+    "b": "150 kg",
+    "c": "200 kg",
+    "d": "250 kg",
+    "correct": "d"
+  },
+  {
+    "question": "The maximum mass that can be hung vertically from a string without breaking the string is 10 kg. A length of this string that is 2 m long is used to rotate a 0.5 kg object in a circle on a frictionless table with the string horizontal. The maximum speed that the mass can attain under these conditions without the string breaking is most nearly",
+    "a": "5 m/s",
+    "b": "10 m/s",
+    "c": "20 m/s",
+    "d": "none of the above",
+    "correct": "c"
+  },
+  {
+    "question": "An electrical motor provides 0.50 W of mechanical power. How much time will it take the motor to lift a 0.1 kg mass at constant speed from the floor to a shelf 2.0 m above the floor?",
+    "a": "0.40s",
+    "b": "1.0s",
+    "c": "2.0s",
+    "d": "4.0s",
+    "correct": "d"
+  },
+  {
+    "question": "Identical net forces act for the same length of time on two different spherical masses. Which of the following describes the change in linear momentum of the smaller mass compared to that of the larger mass?",
+    "a": "It is smaller than the change in linear momentum of the larger mass but not zero.",
+    "b": "It is larger than the change in linear momentum of the larger mass.",
+    "c": "It is equal to the change in linear momentum of the larger mass.",
+    "d": "none of the above",
+    "correct": "c"
+  },
+  {
+    "question": "A person throws a ball of mass 0.20 kg. The ball starts from rest, accelerates horizontally and uniformly through a distance of 0.90 m, and leaves the person’s hand at 30 m/s. The average horizontal force applied to the ball by the person’s hand is",
+    "a": "3.3 N",
+    "b": "16.7 N",
+    "c": "81 N",
+    "d": "100 N",
+    "correct": "d"
+  },
+  {
+    "question": "A meterstick of negligible mass is placed on a fulcrum at the 0.4 m mark, with a 1 kg mass hung at the zero mark and a 0.5 kg mass hung at the 1.0 m mark. The meterstick is held horizontal and released. Immediately after release, the magnitude of the net torque on the meterstick about the fulcrum is most nearly",
+    "a": "1 N m",
+    "b": "2 N m",
+    "c": "2.5 N m",
+    "d": "7 N m",
+    "correct": "a"
+  },
+  {
+    "question": "Car A can travel around a curved section of road without skidding at a maximum constant speed of 10 m s. When car B travels around the same curve without skidding at its maximum speed, it has twice the centripetal acceleration as car A. The maximum speed at which car B can safely travel around the curve is most nearly",
+    "a": "5.0 m/s",
+    "b": "10 m/s",
+    "c": "14 m/s",
+    "d": "20 m/s",
+    "correct": "c"
+  },
+  {
+    "question": "A car is traveling down the highway at speed v when the driver slams on the brakes and skids to a stop in a distance d. Assuming the same frictional force, how far would the car slide if its speed was 2v?",
+    "a": "d/2",
+    "b": "d",
+    "c": "2d",
+    "d": "none of the above",
+    "correct": "d"
+  },
+  {
+    "question": "A comet moves in an elliptical orbit around the Sun. Which of the following is at a maximum when the comet is at its farthest distance from the Sun?",
+    "a": "Kinetic energy of the comet",
+    "b": "Speed of the comet",
+    "c": "Acceleration of the comet",
+    "d": "Gravitational potential energy of the Sun-comet system",
+    "correct": "d"
+  },
+  {
+    "question": "Consider the following model. In order to model the motion of an extinct ape, scientists measure its hand and arm bones. From shoulder to wrist, the arm bones are 0.60 m long and their mass is 4.0 kg. From wrist to the tip of the fingers, the hand bones are 0.10 m long and their mass is 1.0 kg. In the model above, each bone is assumed to have a uniform density. When the arm and hand hang straight down, the distance from the shoulder to the center of mass of the arm-hand system is most nearly",
+    "image": "https://i.postimg.cc/J49B1HZn/torquesnip.png",
+    "a": "0.25 m",
+    "b": "0.35 m",
+    "c": "0.37 m",
+    "d": "0.50 m",
+    "correct": "c"
+  },
+  {
+    "question": "Consider the following model. In order to model the motion of an extinct ape, scientists measure its hand and arm bones. From shoulder to wrist, the arm bones are 0.60 m long and their mass is 4.0 kg. From wrist to the tip of the fingers, the hand bones are 0.10 m long and their mass is 1.0 kg. In the model above, each bone is assumed to have a uniform density. The arm is held in the horizontal position and the hand is bent at the wrist so the fingers point up, as shown in the figure on the right. The torque exerted by the weight of the hand with respect to the shoulder is most nearly",
+    "image": "https://i.postimg.cc/J49B1HZn/torquesnip.png",
+    "a": "6 N m",
+    "b": "10 N m",
+    "c": "30 N m",
+    "d": "60 N m",
+    "correct": "a"
+  },
+  {
+    "question": "A proton moving along the positive x-axis enters an electric field that is directed along the positive y-axis. What is the direction of the electric force acting on the proton after it enters the electric field?",
+    "a": "Along the negative z-axis",
+    "b": "Along the positive z-axis",
+    "c": "Along the negative y-axis",
+    "d": "Along the positive y-axis",
+    "correct": "d"
+  },
+  {
+    "question": "All the following statements about an isolated, solid charged conductor are correct EXCEPT:",
+    "a": "All parts of the conductor are at the same potential.",
+    "b": "All excess charge resides on the outer surface.",
+    "c": "The net charge enclosed by any surface lying entirely within the conductor must equal zero",
+    "d": "The electric field E just outside the conductor is directed parallel to the surface",
+    "correct": "d"
+  },
+  {
+    "question": "When two resistors having resistances R1 and R2 are connected in parallel, the equivalent resistance of the combination is 10 W . Which of the following statements about the resistances is true?",
+    "a": "Both R1 and R2 are greater than 10 W",
+    "b": "Both R1 and R2 are equal to 10 W",
+    "c": "Both R1 and R2 are less than 10 W",
+    "d": "One of R1 and R2 is greater than 10 W and the other less than 10 W",
+    "correct": "a"
+  },
+  {
+    "question": "When two identical resistors are connected in series to a battery, the total power dissipated is P. When the same two resistors are connected in parallel to the same battery, the total power dissipated is",
+    "a": "P/2",
+    "b": "P",
+    "c": "2P",
+    "d": "none of the above",
+    "correct": "d"
+  },
+  {
+    "question": "A magnetic field perpendicular to the plane of a wire loop is uniform in space but changes with time t in the region of the loop. If the induced emf in the loop increases linearly with time t, then the magnitude of the magnetic field must be proportional to",
+    "a": "<math><mi>t</mi></math>",
+    "b": "<math><msup><mi>t</mi><mn>2</mn></msup></math>",
+    "c": "<math><msup><mi>t</mi><mn>3</mn></msup></math>",
+    "d": "none of the above",
+    "correct": "b"
+  },
+  {
+    "question": "An air-gap capacitor originally has capacitance C. If a thin sheet of metal is placed halfway between the plates of the capacitor without touching either plate, the effective capacitance is",
+    "a": "C/2",
+    "b": "C",
+    "c": "2C",
+    "d": "none of the above",
+    "correct": "b"
+  },
+  {
+    "question": "Gauss's law provides a convenient way to calculate the electric field outside and near each of the following isolated charged conductors EXCEPT:",
+    "a": "large plate",
+    "b": "sphere",
+    "c": "cube",
+    "d": "long, solid rod",
+    "correct": "c"
+  },
+  {
+    "question": "A hollow metal sphere of radius R is positively charged. Of the following distances from the center of the sphere, which location will have the greatest electric field strength?",
+    "a": "0 (i.e. center of the sphere)",
+    "b": "3R/2",
+    "c": "2R",
+    "d": "none of the above (i.e. field has constant strength)",
+    "correct": "b"
+  },
+  {
+    "question": "Which of the following statements about conductors under electrostatic conditions is true?",
+    "a": "Positive work is required to move a positive charge over the surface of a conductor.",
+    "b": "Charge that is placed on the surface of a conductor always spreads evenly over the surface.",
+    "c": "The electric potential inside a conductor is always zero.",
+    "d": "The surface of a conductor is always an equipotential surface.",
+    "correct": "d"
+  }
+]

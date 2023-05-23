@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ivy Tutors Academy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/apple-touch-icon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files -->
+  <link href="assets/css/variables-red.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="assets/css/chat.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: HeroBiz
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script>
+    if (sessionStorage.ITAUID == undefined && localStorage.ITAUID == undefined){
+        document.location.href = "login.html"
+    }   
+    if (sessionStorage.ITAeID == undefined && localStorage.ITAeID == undefined){
+        document.location.href = "login.html"
+    }   
+    window.addEventListener('load', () => {
+      document.getElementById('signout').addEventListener('click', (e) => {
+        e.preventDefault()
+        localStorage.removeItem('ITAUID')
+        sessionStorage.removeItem('ITAUID')
+        localStorage.removeItem('ITAeID')
+        sessionStorage.removeItem('ITAeID')
+        document.location.href = "login.html"
+      })
+    })
+  </script>
+
+  <script>
+    let search = function () {
+        document.getElementById('fail').hidden = true
+        q = document.getElementById('search').value
+        tutors = document.getElementsByClassName('tutor')
+        counter = 0
+
+        for(i = 0; i < tutors.length; i++){
+          if(tutors[i].getAttribute('searchable').toLowerCase().includes(q.toLowerCase())){
+            counter += 1
+            tutors[i].hidden = false
+          } else {
+            tutors[i].hidden = true
+          }
+        }
+
+        if (counter == 0){
+            document.getElementById('fail').hidden = false
+        }
+    }
+  </script>
+  
+  <script>
+    let details = navigator.userAgent;
+  
+    let regexp = /android|iphone|kindle|ipad/i;
+    
+    let isMobileDevice = regexp.test(details);
+
+    window.addEventListener('load', function() {
+      if(isMobileDevice){
+        document.getElementById('title').hidden = true
+      }
+      document.getElementById('search').addEventListener('input', (event) => {
+          search()
+      })
+      fetch('assets/json/diagnostic_tests.json')
+      .then((response) => response.json())
+      .then((dataJSON) => {
+        let tutorDiv = document.getElementById('info')
+        for(let i = 0; i < dataJSON.length; i++){
+          cardInfo = dataJSON[i]
+          
+          let containerDiv = document.createElement('div')
+          containerDiv.setAttribute('class', 'col-xl-3 col-md-4 tutor')
+          containerDiv.setAttribute('data-aos', 'zoom-in')
+          containerDiv.setAttribute('data-aos-delay', '200')
+          containerDiv.setAttribute('searchable', cardInfo['name'])
+
+          let innerDiv = document.createElement('div')
+          innerDiv.setAttribute('class', 'service-item')
+
+          let imgDiv = document.createElement('div')
+          imgDiv.setAttribute('class', 'img')
+
+          let backImg = document.createElement('img')
+          backImg.setAttribute('src', cardInfo['imageURL'])
+          backImg.className = 'img-fluid'
+          backImg.setAttribute('alt', '')
+          if (isMobileDevice){
+            backImg.setAttribute('style', 'width: 500%')
+          } else {
+            backImg.setAttribute('style', 'width: 296px; height:296px; object-fit:cover')
+          }
+          imgDiv.appendChild(backImg)
+          innerDiv.appendChild(imgDiv)
+
+          let infoDiv = document.createElement('div')
+          infoDiv.className = 'details position-relative'
+
+          let iconDiv = document.createElement('div')
+          iconDiv.className = 'icon'
+
+          let icon = document.createElement('i')
+          icon.className = 'bi bi-chat-square-text'
+
+          iconDiv.appendChild(icon)
+          infoDiv.appendChild(iconDiv)
+
+          let modalLink = document.createElement('a')
+          modalLink.href = 'diagnostic.html'
+          modalLink.className = 'stretched-link'
+          modalLink.addEventListener('click', () => { 
+            sessionStorage.examName = dataJSON[i]['name']; 
+            sessionStorage.examID = dataJSON[i]['id']
+          })
+
+          let nameLabel = document.createElement('h3')
+          nameLabel.innerText = cardInfo['name']
+
+          modalLink.appendChild(nameLabel)
+
+          infoDiv.appendChild(modalLink)
+
+          innerDiv.appendChild(infoDiv)
+
+          containerDiv.appendChild(innerDiv)
+
+          tutorDiv.appendChild(containerDiv)
+
+        }
+      });
+    
+    })
+  </script>
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 id="title">Ivy Tutors Academy<span>.</span></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="chatbot.html">Tutor Chat</a></li>
+          <li><a class="nav-link scrollto" href="tests.html">Diagnostic Tests</a></li>
+          <li class="dropdown"><a href="my-portal.html"><span>My Portal</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="my-portal.html">My Profile</a></li>
+              <li><a href="course-request.html">Request a Course</a></li>
+              <!-- [!] <li><a href="request.html">Request a Specific Tutor</a></li> -->
+              <li><a href="specialized-request.html">Request a Specialized Course</a></li>
+              <li><a href="masterclass.html">Join a Masterclass</a></li>      
+            </ul>        
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav><!-- .navbar -->
+
+      <a class="btn-getstarted scrollto" href="login.html" id="signout">Sign Out</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <section id="hero-animated" class="hero-animated-2 d-flex align-items-center">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+      
+      <div class="section-header">
+        <h2><span>Diagnostic</span> Exams.</h2>
+        <p>
+          Wondering about whether or not mentorship with us is worth it? Take these free 20-question diagnostic exams to find out. The difficulty of these exams is similar to that of AP / IB exams, and should be doable within 30 minutes. <b>You should not use any calculator or aid apart from a pencil and paper.</b>
+        </p>
+      </div>
+      <div class="d-flex">
+        <input type='text' id='search' class="form-control search-form" placeholder="Search by subject..." style="border:3px solid #A51C30; width:min(100vw, 400px)">
+      </div>
+    </div>
+  </section>
+    <div class="text-center" id="fail" hidden>
+      <p><i>No courses found!</i> Try a different search.</p>
+    </div>
+
+      <!-- ======= Services Section ======= -->
+      <section class="services">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="row gy-5" id="info">
+  
+  
+          </div>
+  
+        </div>
+      </section><!-- End Services Section -->
+            
+      
+      
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+</body>
+
+</html>

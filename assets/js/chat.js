@@ -217,7 +217,7 @@
     }
 }(jQuery));
 
-fetch('assets/data.json')
+fetch('assets/json/chatdata.json')
     .then((response) => response.json())
     .then((dataJSON) => {
     $(function () {

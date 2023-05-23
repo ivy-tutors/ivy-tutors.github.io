@@ -1,0 +1,162 @@
+[
+  {
+    "question": "<p>Compute</p><math display='block' style='display:block math;'><mrow><msub><mi>log</mi><mn>2</mn></msub><mo>⁡</mo><mo form='prefix' stretchy='false'>(</mo><mn>3</mn><mo form='postfix' stretchy='false'>)</mo><mo>⋅</mo><msub><mi>log</mi><mn>3</mn></msub><mo>⁡</mo><mo form='prefix' stretchy='false'>(</mo><mn>4</mn><mo form='postfix' stretchy='false'>)</mo><mo>⋅</mo><msub><mi>log</mi><mn>4</mn></msub><mo>⁡</mo><mo form='prefix' stretchy='false'>(</mo><mn>5</mn><mo form='postfix' stretchy='false'>)</mo><mo>⋯</mo><msub><mi>log</mi><mn>98</mn></msub><mo>⁡</mo><mo form='prefix' stretchy='false'>(</mo><mn>99</mn><mo form='postfix' stretchy='false'>)</mo><mo>⋅</mo><msub><mi>log</mi><mn>99</mn></msub><mo>⁡</mo><mo form='prefix' stretchy='false'>(</mo><mn>100</mn><mo form='postfix' stretchy='false'>)</mo></mrow></math>",
+    "a": "<math><mrow><msub><mi>log</mi><mn>99</mn></msub><mo>⁡</mo></mrow><mrow><mo form='prefix' stretchy='false'>(</mo><mn>100</mn><mo form='postfix' stretchy='false'>)</mo></mrow></math>",
+    "b": "<math><mrow><msub><mi>log</mi><mn>100</mn></msub><mo>⁡</mo></mrow><mrow><mo form='prefix' stretchy='false'>(</mo><mn>2</mn><mo form='postfix' stretchy='false'>)</mo></mrow></math>",
+    "c": "<math><mfrac><mrow><mrow><mi>log</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><mn>2</mn><mo form='postfix' stretchy='false'>)</mo></mrow><mn>2</mn></mfrac></math>",
+    "d": "<math><mfrac><mn>2</mn><mrow><mrow><mspace width='0.1667em'></mspace><mi>log</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><mn>2</mn><mo form='postfix' stretchy='false'>)</mo></mrow></mfrac></math>",
+    "correct": "d"
+  },
+  {
+    "question": "<math display='block' style='display:block math;'><mrow><munder><mi>lim</mi><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mspace width='0.1667em'></mspace><mfrac><msup><mi>x</mi><mn>2</mn></msup><mrow><mi>|</mi><mi>x</mi><mi>|</mi></mrow></mfrac></mrow></math>",
+    "a": "0",
+    "b": "1",
+    "c": "-1",
+    "d": "DNE",
+    "correct": "a"
+  },
+  {
+    "question": "<math display='block' style='display:block math;'><mrow><munder><mi>lim</mi><mrow><mi>x</mi><mo>→</mo><mi>∞</mi></mrow></munder><mo>⁡</mo><mspace width='0.1667em'></mspace><mfrac><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mrow><mrow><mrow><mi>ln</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><msqrt><mi>x</mi></msqrt><mo form='postfix' stretchy='false'>)</mo></mrow></mfrac></mrow></math>",
+    "a": "0",
+    "b": "2",
+    "c": "4",
+    "d": "DNE",
+    "correct": "d"
+  },
+  {
+    "question": "Solve for <math><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></math> for <math><mrow><mn>2</mn><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo></mrow><mrow><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo></mrow><mrow><mn>4</mn></mrow></math>.",
+    "a": "<math><mrow><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo>=</mo></mrow><mrow><mo>±</mo></mrow><mrow><msqrt><mrow><mn>2</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></math>",
+    "b": "<math><mrow><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo>=</mo></mrow><mrow><mo>−</mo></mrow><mrow><mfrac><mi>x</mi><mi>y</mi></mfrac></mrow></math>",
+    "c": "<math><mrow><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo>=</mo></mrow><mrow><mi>x</mi><mo>⋅</mo></mrow><mrow><mo form='prefix' stretchy='false'>(</mo><mn>2</mn><mo>−</mo></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><msup><mo form='postfix' stretchy='false'>)</mo><mrow><mo>−</mo><mn>0.5</mn></mrow></msup></mrow></math>",
+    "d": "none of the above",
+    "correct": "b"
+  },
+  {
+    "question": "Using the mean value theorem, identify a value <math><mrow><mi>x</mi><mo>=</mo></mrow><mrow><mi>c</mi></mrow></math> such that the slope of the line tangent to f(x) at c is equal to the average rate of change of the function on the specified domain: <math display='block' style='display:block math;'><mrow><mi>f</mi><mo form='prefix' stretchy='false'>(</mo><mi>x</mi><mo form='postfix' stretchy='false'>)</mo><mo>=</mo><msup><mi>sin</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mo form='prefix' stretchy='false'>(</mo><mi>x</mi><mo form='postfix' stretchy='false'>)</mo><mspace width='0.1667em'></mspace><mspace width='0.1667em'></mspace><mspace width='0.1667em'></mspace><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>≤</mo><mi>x</mi><mo>≤</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>",
+    "a": "<math><mrow><mi>c</mi><mo>=</mo></mrow><mrow><mo>±</mo></mrow><mrow><msqrt><mfrac><mrow><msup><mi>π</mi><mn>2</mn></msup><mo>−</mo><mn>9</mn></mrow><msup><mi>π</mi><mn>2</mn></msup></mfrac></msqrt></mrow></math>",
+    "b": "<math><mrow><mi>c</mi><mo>=</mo></mrow><mrow><msqrt><mfrac><mrow><msup><mi>π</mi><mn>2</mn></msup><mo>−</mo><mn>9</mn></mrow><msup><mi>π</mi><mn>2</mn></msup></mfrac></msqrt></mrow></math>",
+    "c": "<math><mrow><mi>c</mi><mo>=</mo></mrow><mrow><mfrac><mi>π</mi><mn>3</mn></mfrac></mrow></math>",
+    "d": "none of the above",
+    "correct": "a"
+  },
+  {
+    "question": "For the <i>inverse</i> of the function below, what is the slope of the line tangent to the curve for <math><mrow><mi>x</mi><mo>=</mo></mrow><mrow><mn>6</mn></mrow></math>? <math><mrow><mi>y</mi><mo>=</mo></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo></mrow><mrow><mn>2</mn><mi>x</mi><mo>+</mo></mrow><mrow><mn>3</mn><mspace width='0.1667em'></mspace><mi>x</mi><mo>≥</mo></mrow><mrow><mo>−</mo></mrow><mrow><mn>1</mn></mrow></math>",
+    "a": "<math><mfrac><mn>1</mn><mn>14</mn></mfrac></math>",
+    "b": "<math><mfrac><mn>3</mn><mn>4</mn></mfrac></math>",
+    "c": "<math><mfrac><mn>1</mn><mn>2</mn></mfrac></math>",
+    "d": "none of the above",
+    "correct": "d"
+  },
+  {
+    "question": "Using a right Riemann sub with 4 sub-intervals, estimate <math display='block' style='display:block math;'><mstyle scriptlevel='0' displaystyle='true'><msubsup><mo movablelimits='false'>∫</mo><mn>0</mn><mn>4</mn></msubsup><mo form='prefix' stretchy='false'>(</mo><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><mn>5</mn><mo form='postfix' stretchy='false'>)</mo><mi>d</mi><mi>x</mi></mstyle></math>",
+    "a": "113",
+    "b": "261",
+    "c": "374",
+    "d": "379",
+    "correct": "c"
+  },
+  {
+    "question": "Determine the average value of <math><mrow><mi>f</mi><mo form='prefix' stretchy='false'>(</mo><mi>x</mi><mo form='postfix' stretchy='false'>)</mo><mo>=</mo></mrow><mrow><mrow><mi>sin</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><mi>x</mi><mo form='postfix' stretchy='false'>)</mo><mrow><mspace width='0.1667em'></mspace><mi>cos</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><mi>x</mi><mo form='postfix' stretchy='false'>)</mo></mrow></math> over <math><mrow><mo form='prefix' stretchy='false'>[</mo><mn>0</mn><mo separator='true'>,</mo></mrow><mrow><mfrac><mi>π</mi><mn>2</mn></mfrac><mo form='postfix' stretchy='false'>]</mo></mrow></math>.",
+    "a": "<math><mfrac><mn>1</mn><mi>π</mi></mfrac></math>",
+    "b": "<math><mfrac><mn>1</mn><mi>2π</mi></mfrac></math>",
+    "c": "-<math><mfrac><mn>1</mn><mi>π</mi></mfrac></math>",
+    "d": "-<math><mfrac><mn>1</mn><mi>2π</mi></mfrac></math>",
+    "correct": "a"
+  },
+  {
+    "question": "<math display='block' style='display:block math;'><mstyle scriptlevel='0' displaystyle='true'><mo movablelimits='false'>∫</mo><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mspace width='0.1667em'></mspace><mtext>⁡</mtext><mo form='prefix' stretchy='false'>(</mo><mi>x</mi><mo form='postfix' stretchy='false'>)</mo><mspace width='0.1667em'></mspace><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mspace width='0.1667em'></mspace><mtext>⁡</mtext><mo form='prefix' stretchy='false'>(</mo><mi>x</mi><mo form='postfix' stretchy='false'>)</mo><mi>d</mi><mi>x</mi></mstyle></math>",
+    "a": "<math><mrow><mfrac><mn>1</mn><mn>8</mn></mfrac><mi>x</mi><mo>−</mo></mrow><mrow><mfrac><mn>1</mn><mn>32</mn></mfrac><mrow><mi>sin</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><mn>4</mn><mi>x</mi><mo form='postfix' stretchy='false'>)</mo><mo>+</mo></mrow><mrow><mi>C</mi></mrow></math>",
+    "b": "<math><mrow><mfrac><mn>1</mn><mn>8</mn></mfrac><mi>x</mi><mo>−</mo></mrow><mrow><mfrac><mn>1</mn><mn>32</mn></mfrac><mrow><mi>sin</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><mn>2</mn><mi>x</mi><mo form='postfix' stretchy='false'>)</mo><mo>+</mo></mrow><mrow><mi>C</mi></mrow></math>",
+    "c": "<math><mrow><mfrac><mn>1</mn><mn>16</mn></mfrac><mi>x</mi><mo>−</mo></mrow><mrow><mfrac><mn>1</mn><mn>64</mn></mfrac><mrow><mi>sin</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><mn>4</mn><mi>x</mi><mo form='postfix' stretchy='false'>)</mo><mo>+</mo></mrow><mrow><mi>C</mi></mrow></math>",
+    "d": "none of the above",
+    "correct": "a"
+  },
+  {
+    "question": "<math display='block' style='display:block math;'><mrow><mstyle displaystyle='true' scriptlevel='0'><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mstyle><mrow><mo fence='true' form='prefix'>(</mo><mstyle scriptlevel='0' displaystyle='true'><msubsup><mo movablelimits='false'>∫</mo><mn>0</mn><mrow><mn>3</mn><mi>x</mi></mrow></msubsup><mn>3</mn><mi>t</mi><mi>d</mi><mi>t</mi></mstyle><mo fence='true' form='postfix'>)</mo></mrow></mrow></math>",
+    "a": "<math><mrow><mn>3</mn><mi>x</mi></mrow></math>",
+    "b": "<math><mrow><mn>9</mn><mi>x</mi></mrow></math>",
+    "c": "<math><mrow><mn>27</mn><mi>x</mi></mrow></math>",
+    "d": "<math><mrow><mn>81</mn><mi>x</mi></mrow></math>",
+    "correct": "c"
+  },
+  {
+    "question": "Solve <math display='block' style='display:block math;'><mrow><mn>4</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mspace width='0.1667em'></mspace><mi>d</mi><mi>y</mi><mo>=</mo><mn>2</mn><mi>x</mi><mspace width='0.1667em'></mspace><mi>d</mi><mi>x</mi></mrow></math>",
+    "a": "<math><mrow><mi>y</mi><mo>=</mo></mrow><mrow><mrow><mi>arctan</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><mn>2</mn><mi>x</mi><mo form='postfix' stretchy='false'>)</mo><mo>+</mo></mrow><mrow><mi>C</mi></mrow></math>",
+    "b": "<math><mrow><mi>y</mi><mo>=</mo></mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mrow><mi>arctan</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><mn>2</mn><mi>x</mi><mo form='postfix' stretchy='false'>)</mo><mo>+</mo></mrow><mrow><mi>C</mi></mrow></math>",
+    "c": "<math><mrow><mi>y</mi><mo>=</mo></mrow><mrow><mrow><mi>ln</mi><mo>⁡</mo></mrow><mi>|</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo></mrow><mrow><mn>4</mn><mi>|</mi><mo>+</mo></mrow><mrow><mi>C</mi></mrow></math>",
+    "d": "none of the above",
+    "correct": "c"
+  },
+  {
+    "question": "Estimate the volume formed by the revolution of the function below around the y-axis. The function is bounded by the y-axis, <math><mrow><mi>y</mi><mo>=</mo></mrow><mrow><mn>4</mn></mrow></math>, and <math><mrow><mi>x</mi><mo>=</mo></mrow><mrow><mn>3.5</mn></mrow></math>. You may use a calculator for this problem only. <math display='block' style='display:block math;'><mrow><mi>f</mi><mo form='prefix' stretchy='false'>(</mo><mi>x</mi><mo form='postfix' stretchy='false'>)</mo><mo>=</mo><mstyle displaystyle='true' scriptlevel='0'><mfrac><mn>3</mn><mrow><mo form='prefix' stretchy='false'>(</mo><mi>x</mi><mo>+</mo><mn>1</mn><msup><mo form='postfix' stretchy='false'>)</mo><mn>2</mn></msup></mrow></mfrac></mstyle><mo>+</mo><msup><mi>e</mi><mi>x</mi></msup></mrow></math>", 
+    "a": "737.016",
+    "b": "739.983",
+    "c": "368.508",
+    "d": "369.992",
+    "correct": "a"
+  },
+  {
+    "question": "If, for <math><mrow><mi>t</mi><mo>&gt;</mo></mrow><mrow><mn>0</mn></mrow></math>, <math><mrow><mi>x</mi><mo>=</mo></mrow><mrow><msup><mi>t</mi><mn>2</mn></msup></mrow></math> and <math><mrow><mi>y</mi><mo>=</mo></mrow><mrow><mrow><mi>cos</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><msup><mi>t</mi><mn>2</mn></msup><mo form='postfix' stretchy='false'>)</mo></mrow></math>, determine <math><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></math>.",
+    "a": "<math><mrow><mrow><mi>cos</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><msup><mi>t</mi><mn>2</mn></msup><mo form='postfix' stretchy='false'>)</mo></mrow></math>",
+    "b": "<math><mrow><mo>−</mo><mrow><mi>sin</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><msup><mi>t</mi><mn>2</mn></msup><mo form='postfix' stretchy='false'>)</mo></mrow></math>",
+    "c": "<math><mrow><mo>−</mo><mrow><mi>sin</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><mn>2</mn><mi>t</mi><mo form='postfix' stretchy='false'>)</mo></mrow></math>",
+    "d": "<math><mrow><mrow><mi>sin</mi><mo>⁡</mo></mrow><mo form='prefix' stretchy='false'>(</mo><msup><mi>t</mi><mn>2</mn></msup><mo form='postfix' stretchy='false'>)</mo></mrow></math>",
+    "correct": "b"
+  },
+  {
+    "question": "Water is rising in a conical cup at a rate of <math><mrow><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mn>3</mn></mfrac><msup><mtext> in</mtext><mn>3</mn></msup><mo lspace='0em' rspace='0em'>⁄</mo></mrow><mrow><mtext>sec</mtext></mrow></math>. If the cup has height 18 in and a radius of 6 in, how fast is the water rising when the water is 6 in deep?",
+    "a": "<math><mfrac><mn>1</mn><mn>6</mn></mfrac></math> in/s",
+    "b": "<math><mfrac><mn>1</mn><mn>5</mn></mfrac></math> in/s",
+    "c": "<math><mfrac><mn>1</mn><mn>4</mn></mfrac></math> in/s",
+    "d": "none of the above",
+    "correct": "a"
+  },
+  {
+    "question": "Determine <math display='block' style='display:block math;'><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><msub><mi>log</mi><mn>8</mn></msub><mo>⁡</mo><mo form='prefix' stretchy='false'>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><msup><mo form='postfix' stretchy='false'>)</mo><mn>3</mn></msup></mrow></math>.",
+    "a": "<math><mfrac><mrow><mn>6</mn><mi>x</mi></mrow><mrow><mo form='prefix' stretchy='false'>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><msup><mo form='postfix' stretchy='false'>)</mo><mn>3</mn></msup><mrow><mi>ln</mi><mo>⁡</mo><mspace width='0.1667em'></mspace></mrow><mn>8</mn></mrow></mfrac></math>",
+    "b": "<math><mfrac><mrow><mn>6</mn><mi>x</mi></mrow><mrow><mo form='prefix' stretchy='false'>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mo form='postfix' stretchy='false'>)</mo><mrow><mspace width='0.1667em'></mspace><mi>ln</mi><mo>⁡</mo><mspace width='0.1667em'></mspace></mrow><mn>8</mn></mrow></mfrac></math>",
+    "c": "<math><mfrac><mn>6</mn><mrow><mo form='prefix' stretchy='false'>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mo form='postfix' stretchy='false'>)</mo><mrow><mspace width='0.1667em'></mspace><mi>ln</mi><mo>⁡</mo><mspace width='0.1667em'></mspace></mrow><mn>8</mn></mrow></mfrac></math>",
+    "d": "none of the above",
+    "correct": "b"
+  },
+  {
+    "question": "<math display='block' style='display:block math;'><mrow><mo movablelimits='false'>∫</mo><msup><mi>e</mi><mi>x</mi></msup><mrow><mi>sin</mi><mo>⁡</mo><mspace width='0.1667em'></mspace></mrow><mi>x</mi><mspace width='0.1667em'></mspace><mi>d</mi><mi>x</mi></mrow></math>",
+    "a": "<math><mrow><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mrow><mi>sin</mi><mo>⁡</mo><mspace width='0.1667em'></mspace></mrow><mi>x</mi><mo>−</mo><msup><mi>e</mi><mi>x</mi></msup><mrow><mi>cos</mi><mo>⁡</mo><mspace width='0.1667em'></mspace></mrow><mi>x</mi></mrow><mn>2</mn></mfrac><mo>+</mo></mrow><mrow><mi>C</mi></mrow></math>",
+    "b": "<math><mrow><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mrow><mi>sin</mi><mo>⁡</mo><mspace width='0.1667em'></mspace></mrow><mi>x</mi><mo>+</mo><msup><mi>e</mi><mi>x</mi></msup><mrow><mi>cos</mi><mo>⁡</mo><mspace width='0.1667em'></mspace></mrow><mi>x</mi></mrow><mn>2</mn></mfrac><mo>+</mo></mrow><mrow><mi>C</mi></mrow></math>",
+    "c": "<math><mrow><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mrow><mi>cos</mi><mo>⁡</mo><mspace width='0.1667em'></mspace></mrow><mi>x</mi><mo>+</mo><msup><mi>e</mi><mi>x</mi></msup><mrow><mi>sin</mi><mo>⁡</mo><mspace width='0.1667em'></mspace></mrow><mi>x</mi></mrow><mn>2</mn></mfrac><mo>+</mo></mrow><mrow><mi>C</mi></mrow></math>",
+    "d": "none of the above",
+    "correct": "a"
+  },
+  {
+    "question": "Which of the following integrals converges? <ol type='I'><li><math><mrow><msubsup><mo movablelimits='false'>∫</mo><mn>0</mn><mi>∞</mi></msubsup><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></math></li><li><math><mrow><msubsup><mo movablelimits='false'>∫</mo><mn>0</mn><mi>∞</mi></msubsup><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow></math></li><li><math><mrow><msubsup><mo movablelimits='false'>∫</mo><mn>0</mn><mi>∞</mi></msubsup><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mi>x</mi></mfrac></mrow></math></li></ol>",
+    "a": "I",
+    "b": "II",
+    "c": "I & II",
+    "d": "I & III",
+    "correct": "a"
+  },
+  {
+    "question": "Find the derivative of <math><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo></mrow><mrow><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mi>y</mi><mo>+</mo></mrow><mrow><mn>3</mn><mi>x</mi><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo></mrow><mrow><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo></mrow><mrow><mn>2</mn></mrow></math> at (3,2)",
+    "a": "7",
+    "b": "<math><mfrac><mn>19</mn><mn>25</mn></mfrac></math>",
+    "c": "<math><mfrac><mn>75</mn><mn>54</mn></mfrac></math>",
+    "d": "-<math><mfrac><mn>18</mn><mn>25</mn></mfrac></math>",
+    "correct": "d"
+  },
+  {
+    "question": "A kid is riding home in the woods on a straight path that is 50 m from the nearest point on the road. His home is 1500 m from the nearest point on the road. If the kid rides at 3 m/s in the woods and 5 m/s on the road, how far from his house should the kid cross to the road to get home in the shortest time? Select the closest answer choice.",
+    "a": "50m",
+    "b": "1500m",
+    "c": "300m",
+    "d": "1450m",
+    "correct": "d"
+  },
+  {
+    "question": "A child jumps on a trampoline and rises at a rate of 10 ft/min. The child’s mother is watching from the patio 40 ft away. How fast, in rad/sec, is the angle of elevation between the trampoline and the mother’s line of sight of her child increasing when the child is 30 ft in the air?",
+    "a": "<math><mfrac><mn>1</mn><mn>70</mn></mfrac></math> rad/s",
+    "b": "<math><mfrac><mn>1</mn><mn>375</mn></mfrac></math> rad/s",
+    "c": "<math><mfrac><mn>1</mn><mn>180</mn></mfrac></math>",
+    "d": "none of the above",
+    "correct": "b"
+  }
+]

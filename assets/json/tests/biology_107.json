@@ -1,0 +1,165 @@
+[
+  {
+    "question": "The most probable cause for the difference in mean stem length between plants in two dishes is which of the following?",
+    "a": "Shortening of cells in response to lack of light",
+    "b": "Elongation of seedlings in response to lack of light",
+    "c": "Enhancement of stem elongation by light",
+    "d": "Genetic differences between seeds",
+    "correct": "b"
+  },
+  {
+    "question": "Which structure-function pair is incorrectly matched?",
+    "a": "Vacuole — Digestion, waste disposal, and storage",
+    "b": "Chloroplast — Photosynthesis",
+    "c": "Ribosome — Synthesis of lipids, detoxification of drugs and poisons",
+    "d": "Lysosome — Breakdown of ingested substances, damaged organelles recycled",
+    "correct": "c"
+  },
+  {
+    "question": "Which of the following is <i>not</i> part of the endomembrane system?",
+    "a": "Endoplasmic reticulum",
+    "b": "Golgi apparatus",
+    "c": "Lysosomes",
+    "d": "Ribosomes",
+    "correct": "d"
+  },
+  {
+    "question": "Although animal cells lack cell walls, they have a complex network of glycoproteins that provide structure and strength to the cell, referred to as:",
+    "a": "Desmosomes",
+    "b": "Extracellular matrix",
+    "c": "Intermediate filaments",
+    "d": "Cytoskeleton",
+    "correct": "b"
+  },
+  {
+    "question": "Which answer correctly describes what is happening in the above diagram?",
+    "image": "https://highschooltestprep.com/wp-content/uploads/2017/12/BioDiagram2.png",
+    "a": "Diffusion of sugar from an area of low concentration to an area of high concentration",
+    "b": "Osmosis of water from an area of low water concentration to an area of high water concentration",
+    "c": "Osmosis of water from an area of low solute concentration to an area of high concentration",
+    "d": "Osmosis of sugar from an area of low water concentration to an area of high water concentration",
+    "correct": "c"
+  },
+  {
+    "question": "Organisms that reproduce sexually exhibit zygotic, gametic, or sporic meiosis. One way to determine the type of life cycle an organism has is by",
+    "a": "Observing embryonic development",
+    "b": "Comparing the diploid and haploid forms of the organism",
+    "c": "Determining when in the life cycle fertilization occurs",
+    "d": "Determining if gametes are multicellular or unicellular",
+    "correct": "b"
+  },
+  {
+    "question": "The following diagram shows energy transformations within a cell. Each form of energy is represented by the symbols E I–E IV. Two cellular organelles are represented by the letters A and B. What form of energy is represented by E II?",
+    "image": "https://www.kaptest.com/study/wp-content/uploads/Screenshot-2023-05-09-at-8.52.48-AM.png",
+    "a": "Radiant energy in the form of photons",
+    "b": "Chemical energy being stored in the bonds of glucose",
+    "c": "Chemical energy in the form of ATP",
+    "d": "Chemical energy released by glycolysis",
+    "correct": "c"
+  },
+  {
+    "question": "If the transformation depicted in organelle B requires oxygen, what form of energy is represented by E IV?",
+    "image": "https://www.kaptest.com/study/wp-content/uploads/Screenshot-2023-05-09-at-8.52.48-AM.png",
+    "a": "Radiant energy in the form of photons",
+    "b": "Chemical energy being stored as glycogen",
+    "c": "Chemical energy in the form of ATP",
+    "d": "Chemical energy released by glycolysis",
+    "correct": "c"
+  },
+  {
+    "question": "In order for an animal mutation to affect a population's genetic diversity, the mutation must take place:",
+    "a": "In the somatic cells",
+    "b": "During prophase",
+    "c": "In the gametes",
+    "d": "During telophase",
+    "correct": "c"
+  },
+  {
+    "question": "During metaphase I of meiosis I, homologous pairs of chromosomes are situated along the metaphase plate. The orientation of each pair is random, resulting in a 50% chance that a particular daughter cell will get the maternal chromosome and a 50% that the daughter cell will get the parental chromosome. This is one aspect of sexual reproduction that contributes to genetic variation, and is called:",
+    "a": "Independent assortment",
+    "b": "Separation of homologs",
+    "c": "Cytokinesis",
+    "d": "Reductional division",
+    "correct": "a"
+  },
+  {
+    "question": "During prophase I of meiosis, a reciprocal exchange of genetic material between nonsister chromatids producing chromosomes with new combinations of material and parental alleles. This is called:",
+    "a": "Synapsis",
+    "b": "Codominance",
+    "c": "Reductional division",
+    "d": "Crossing over",
+    "correct": "d"
+  },
+  {
+    "question": "Which of the following is not a difference between the cell cycle and meiosis?",
+    "a": "In the cell cycle, crossing over takes place during metaphase. In meiosis, crossing over takes place during prophase I.",
+    "b": "The cell cycle produces cells for growth and repair. Meiosis produces gametes.",
+    "c": "Cells divide one time in the cell cycle. Cells divide two times in meiosis.",
+    "d": "The cell cycle produces cells genetically identical to the parent cell. Meiosis produces cells genetically different from the parent and from each other.",
+    "correct": "a"
+  },
+  {
+    "question": "Which of the following is an example of long-distance cell signaling?",
+    "a": "Cell-cell recognition in animal cells",
+    "b": "Hormonal signaling in humans",
+    "c": "Plasmodesmata in plant cells",
+    "d": "Synaptic signaling in the nervous system",
+    "correct": "b"
+  },
+  {
+    "question": "Which part of your nervous system would likely be activated if you just realized you overslept and a final exam begins in just 10 minutes?",
+    "a": "Parasympathetic",
+    "b": "Enteric",
+    "c": "Sympathetic",
+    "d": "Reticular",
+    "correct": "c"
+  },
+  {
+    "question": "The cell's breakdown of sugar generates chemical energy in the form of ATP. When the cell makes more ATP than it can use, the excess ATP inhibits an enzyme near the beginning of the pathway and slows process of ATP production. What type of mechanism is described?",
+    "a": "Positive feedback",
+    "b": "Negative feedback",
+    "c": "Cell-to-cell signaling",
+    "d": "Signal recognition pathway",
+    "correct": "b"
+  },
+  {
+    "question": "Which of the following environmental conditions does not affect the activity of enzymes?",
+    "a": "Temperature",
+    "b": "The amount of free energy in the cell",
+    "c": "pH",
+    "d": "Chemicals in the enzyme's environment",
+    "correct": "b"
+  },
+  {
+    "question": "Why will the enzyme sucrase only act on sucrose and not bind to other disaccharides, such as maltose?",
+    "a": "Because of sucrose's molecular formula",
+    "b": "Because sucrose has a 1-2 glycosidic linkage and maltose has a 1-4 glycosidic linkage",
+    "c": "Because sucrose fits perfectly into sucrase's active site, and other disaccharides do not",
+    "d": "Because sucrose contains fructose",
+    "correct": "c"
+  },
+  {
+    "question": "Which of the following is <i>not</i> a step in the formation of the first living cells?",
+    "a": "The biotic synthesis of small organic molecules",
+    "b": "The packaging of molecules into droplets with membranes that maintained an internal chemistry different from their surroundings",
+    "c": "The joining of small molecules into macromolecules",
+    "d": "The origin of self-replicating molecules that eventually made inheritance possible",
+    "correct": "a"
+  },
+  {
+    "question": "What is the name of the DNA strand that elongates away from the replication fork in a series of segments?",
+    "a": "Okazaki fragments",
+    "b": "Lagging strand",
+    "c": "Leading strand",
+    "d": "Primer",
+    "correct": "b"
+  },
+  {
+    "question": "Which of the following correctly describes aspects of the endocrine system and the nervous system?",
+    "a": "Both systems act very quickly to relay information to various parts of the body",
+    "b": "Both systems send impulses directly to a specific part of the body as an impulse that targets specific cells",
+    "c": "In both systems information can be received by various cells in different organs and in different parts of the body",
+    "d": "Both systems contribute to maintaining a stable internal environment within an organism",
+    "correct": "d"
+  }
+]

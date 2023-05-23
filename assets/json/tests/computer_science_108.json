@@ -1,0 +1,174 @@
+[
+  {
+    "question": "Under which of these conditions will a sequential search be faster than a binary search?",
+    "a": "The value you are searching for is the first element in the array.",
+    "b": "The value you are searching for is the last element in the array",
+    "c": "The value you are searching for is in the middle of the array",
+    "d": "Sequential Search can never be faster than Binary Search",
+    "correct": "a"
+  },
+  {
+    "question": "Which of the following is a correct header for a method of the Example class that would return the value of the private instance variable x so that it can be used in a class other than Example?",
+    "a": "private int getX()",
+    "b": "public int getX()",
+    "c": "private void getX()",
+    "d": "public void getX(int x)",
+    "correct": "b"
+  },
+  {
+    "question": "Consider the following method. Which code correctly completes the method?",
+    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0330-01.jpg",
+    "a": "(1 / base) * power(base, expo + 1)",
+    "b": "(1 / base) * power(base, expo - 1)",
+    "c": "base * power(base, expo + 1)",
+    "d": "base * power(base, expo - 1)",
+    "correct": "a"
+  },
+  {
+    "question": "Consider the following method. What would be output following the call doSomething(3)?",
+    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0330-02.jpg",
+    "a": "3211211",
+    "b": "1121213",
+    "c": "1213121",
+    "d": "1211213",
+    "correct": "c"
+  },
+  {
+    "question": "Refer to the following recursive method. What is returned from mystery(3)?",
+    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0332-01.jpg",
+    "a": "6",
+    "b": "8",
+    "c": "10",
+    "d": "12",
+    "correct": "d"
+  },
+  {
+    "question": "Refer to the following method. What is returned from t(5)?",
+    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0333-01.jpg",
+    "a": "2",
+    "b": "0",
+    "c": "-2",
+    "d": "-4",
+    "correct": "d"
+  },
+  {
+    "question": "Refer to the following method. For the method call t(6), how many calls to t will be made, including the original call?",
+    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0333-01.jpg",
+    "a": "6",
+    "b": "7",
+    "c": "11",
+    "d": "15",
+    "correct": "d"
+  },
+  {
+    "question": "Which statement about parameters is false?",
+    "a": "The scope of parameters is the method in which they are defined.",
+    "b": "Static methods have no implicit parameter this.",
+    "c": "Two overloaded methods in the same class must have parameters with different names.",
+    "d": "All parameters in Java are passed by value.",
+    "correct": "c"
+  },
+  {
+    "question": "Which statement about subclass methods is false?",
+    "a": "Writing two subclass methods with the same name but different parameters is called method overriding",
+    "b": "A public method in a subclass that is not in its superclass is not accessible by the superclass",
+    "c": "A private method in a superclass is not inherited by its subclass",
+    "d": "all of the above statements are true",
+    "correct": "a"
+  },
+  {
+    "question": "The following two lines of code appear in a class other than Class1 and Class2: Class1 c = new Class2(); c.doSomething(8). What is printed as a result of executing the code segment?",
+    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0166-01.jpg",
+    "a": "416",
+    "b": "422",
+    "c": "714",
+    "d": "716",
+    "correct": "d"
+  },
+  {
+    "question": "The following program segment is intended to find the index of the first negative integer in arr[0] … arr[N-1], where arr is an array of N integers. When will this segment work as intended?",
+    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0265-02.jpg",
+    "a": "When arr contains at least one non-negative integer",
+    "b": "When arr contains at least one negative integer",
+    "c": "When arr contains no negative integers",
+    "d": "This segment always works",
+    "correct": "b"
+  },
+  {
+    "question": "Refer to the following code segment. You may assume that arr is an array of int values. What is the result of the segment?",
+    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0266-01.jpg",
+    "a": "Sum of arr[0], arr[1], ..., arr[arr.length-1] will be stored in sum",
+    "b": "Sum of arr[1], arr[1], ..., arr[arr.length-1] will be stored in sum",
+    "c": "Sum of arr[0], arr[1], ..., arr[arr.length] will be stored in sum",
+    "d": "A runtime error will occur",
+    "correct": "d"
+  },
+  {
+    "question": "Running this code segment, what is the maximum number of times that SMALL is printed?",
+    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0267-01.jpg",
+    "a": "k",
+    "b": "k-1",
+    "c": "k-2",
+    "d": "none of the above",
+    "correct": "b"
+  },
+  {
+    "question": "Consider writing a program that reads the lines of any text file into a sequential list of lines. Which of the following is a good reason to implement the list with an ArrayList of String objects rather than an array of String objects?",
+    "a": "The get and set methods of ArrayList are more convenient than the [] notation for arrays.",
+    "b": "The size method of ArrayList provides instant access to the length of the list.",
+    "c": "An ArrayList can contain objects of any type, which leads to greater generality.",
+    "d": "If any particular text file is unexpectedly long, the ArrayList will automatically be resized. The array, by contrast, may go out of bounds.",
+    "correct": "d"
+  },
+  {
+    "question": "Consider the following insertionSort method and private instance variable a, both in a Sorter class. An array of Integer types is to be sorted in descending order using the method. If the array is originally [1,7,9,5,4,12], what will it look like after the third for-loop iteration?",
+    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0358-01.jpg",
+    "a": "[9,7,1,5,4,12]",
+    "b": "[9,7,5,1,4,12]",
+    "c": "[12,9,7,1,5,4]",
+    "d": "none of the above",
+    "correct": "b"
+  },
+  {
+    "question": "Consider the following insertionSort method and private instance variable a, both in a Sorter class. When sorted biggest to smallest with insertionSort, which list will need the greatest number of changes in position?",
+    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0358-01.jpg",
+    "a": "[5, 1, 2, 3, 4, 7, 6, 9]",
+    "b": "[9, 5, 1, 4, 3, 2, 1, 0]",
+    "c": "[9, 4, 6, 2, 1, 5, 1, 3]",
+    "d": "[3, 2, 1, 0, 9, 6, 5, 4]",
+    "correct": "a"
+  },
+  {
+    "question": "Which sorting algorithm has a worst-case time complexity of O(n^2) in all cases?",
+    "a": "Quick sort",
+    "b": "Merge sort",
+    "c": "Insertion sort",
+    "d": "Heap sort",
+    "correct": "c"
+  },
+  {
+    "question": "Given the code snippet, what is its output?",
+    "image": "https://i.postimg.cc/zfVs5Zfr/snippet.png",
+    "a": "'a is 10' and 'b is 10'",
+    "b": "'a is 10' and 'b is 11'",
+    "c": "'a is 11' and 'b is 10'",
+    "d": "'a is 11' and 'b is 11'",
+    "correct": "c"
+  },
+  {
+    "question": "When designing a class hierarchy, which of the following should be true of a superclass?",
+    "a": "A superclass should contain data and functionality that is common to all classes that inherit from it",
+    "b": "A superclass should be the largest, most complex class compared to its subclasses",
+    "c": "A superclass should have public data in order to provide access to the rest of the hierarchy",
+    "d": "A superclass should only contain functionality that's required for the most complex class",
+    "correct": "a"
+  },
+  {
+    "question": "Which of the following is a legal Java identifier?",
+    "a": "1ForAll",
+    "b": "oneForAll",
+    "c": "one/4/all",
+    "d": "1_4_all",
+    "correct": "b"
+  }
+]

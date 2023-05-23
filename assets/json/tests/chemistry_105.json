@@ -1,0 +1,163 @@
+[
+  {
+    "question": "Which of the following gases has the weakest attractive forces between particles?",
+    "a": "CO2",
+    "b": "He",
+    "c": "NO",
+    "d": "HCl",
+    "correct": "b"
+  },
+  {
+    "question": "Which of the following must be true for a sample of supercritical uranium (235U)?",
+    "a": "The density exceeds that found at ambient temperatures and pressures.",
+    "b": "There is less density than found at ambient temperatures and pressures. ",
+    "c": "The rate of production of neutrons exceeds their rate of consumption.",
+    "d": "The sample is at least 99% pure.",
+    "correct": "c"
+  },
+  {
+    "question": "Which of the following reactions is most likely to have both a positive ΔH and ΔS?",
+    "a": "heat + NH4Cl (s) → NH3 (g) + HCl (g)",
+    "b": "2SO2 (g) + O2 (g) → 2SO3 (g) + heat",
+    "c": "heat + H2 (g) + CO2 (g) → H2O(g) + CO(g)",
+    "d": "2NO (g) → N2 (g) + O2 (g) + heat",
+    "correct": "a"
+  },
+  {
+    "question": "Complete combustion of a sample of a hydrocarbon in excess oxygen produces equimolar quantities of carbon dioxide and water. Which of the following could be the molecular formula of the compound?",
+    "a": "C2H2",
+    "b": "C2H6",
+    "c": "C4H8",
+    "d": "C10H8",
+    "correct": "c"
+  },
+  {
+    "question": "The first five ionization energies of a second-period element are given as 801, 2430, 3660, 25000, and 32820 kJ/mol. Which of the following correctly identifies the element and best explains the information?",
+    "a": "The element is B because it has three valence electrons.",
+    "b": "The element is B because it has five core electrons.",
+    "c": "The element is N because it has three electrons in the p sublevel.",
+    "d": "The element is N because it has five valence electrons.",
+    "correct": "a"
+  },
+  {
+    "question": "In a certain experiment, 1.22 g of benzoic acid, C6H5COOH, is dissolved in water and titrated with a solution of NaOH. Benzoic acid is a monoprotic acid. The equivalence point in the titration is reached when 50.0 mL of the base solution is added. (The molar mass of C6H5COOH is 122 g/mol.). What is the concentration of the NaOH solution used in this titration experiment?",
+    "a": "0.0002 M",
+    "b": "0.100 M",
+    "c": "0.200 M",
+    "d": "0.500 M",
+    "correct": "c"
+  },
+  {
+    "question": "A sample of CH3OH(g) is placed in the previously evacuated vessel with a pressure of 3.0 atm at 600 K. What is the final pressure in the vessel after the reaction is complete and the contents of the vessel are returned to 600 K?",
+    "a": "1.0 atm",
+    "b": "3.0 atm",
+    "c": "6.0 atm",
+    "d": "9.0 atm",
+    "correct": "d"
+  },
+  {
+    "question": "A mixture containing equal numbers of moles of pentane (C5H12) and octane (C8H18) was separated using distillation. Which of the following identifies the substance that would be initially present in higher concentration in the distillate and correctly explains why that occurs?",
+    "a": "pentane, because it has fewer C–C bonds to break",
+    "b": "pentane, because it has a shorter carbon chain and weaker London dispersion forces",
+    "c": "octane, because it has more C–C bonds to break",
+    "d": "octane, because it has a longer carbon chain and stronger London dispersion forces",
+    "correct": "b"
+  },
+  {
+    "question": "Under which of the following conditions of temperature and pressure will H2 gas be expected to behave most like an ideal gas?",
+    "a": "50 K and 0.10 atm",
+    "b": "50 K and 50. atm",
+    "c": "500 K and 0.10 atm",
+    "d": "500 K and 50. atm",
+    "correct": "c"
+  },
+  {
+    "question": "Given ethane (C2H6) and butane (C4H10), which compound has the higher boiling point, and why is that compound’s boiling point higher?",
+    "a": "butane, because it has more hydrogen atoms, resulting in more opportunities to form hydrogen bonds with neighboring molecules",
+    "b": "butane, because it has more electrons, resulting in greater polarizability and stronger dispersion forces",
+    "c": "ethane, because its molecules are smaller and they can get closer to one another, resulting in stronger coulombic attractions between molecules",
+    "d": "ethane, because its molecules have a greater dipole moment and experience stronger dipole-dipole attractions",
+    "correct": "b"
+  },
+  {
+    "question": "Which of the following best helps to explain why the value of ΔHo for the dissolving of CaF2 in water is positive?",
+    "a": "When CaF2(s) dissolves in water, the temperature of the solution increases.",
+    "b": "When CaF2(s) dissolves in water, the solution is able to conduct electricity.",
+    "c": "Ca2+ ions have very strong ion-ion interactions with F– ions in the crystal lattice.",
+    "d": "Ca2+ ions have very strong ion-dipole interactions with water molecules in the solution.",
+    "correct": "c"
+  },
+  {
+    "question": "In a certain experiment, 100. mL of 6.0 M HCl(aq) is added to 10.6 g of Na2CO3(s). Bubbles of CO2(g) are produced during the reaction, which proceeds until one of the reactants is completely consumed. What is the theoretical yield of NaCl(s) that should be present in the solution at the end of the reaction? (The molar masses of Na2CO3 and NaCl are equal to 106.0 and 58.5, respectively.)",
+    "a": "5.85 g NaCl",
+    "b": "10.6 g NaCl",
+    "c": "11.7 g NaCl",
+    "d": "14.6 g NaCl",
+    "correct": "c"
+  },
+  {
+    "question": "A hot iron ball is dropped into a 200. g sample of water initially at 25C. If 8.4 kJ of heat is transferred from the ball to the water, what is the final temperature of the water? (The specific heat of water is 4.2 J/(gC).)",
+    "a": "26C",
+    "b": "30C",
+    "c": "35C",
+    "d": "45C",
+    "correct": "c"
+  },
+  {
+    "question": "Which statement best describes the bond angles in NH3?",
+    "a": "Exactly 120 degrees",
+    "b": "Slightly less than 109",
+    "c": "Slightly less than 90 degrees",
+    "d": "None of the above",
+    "correct": "b"
+  },
+  {
+    "question": "The hydrogen halides are all polar molecules which form acidic solutions. Which of the following is the weakest acid?",
+    "a": "HCl",
+    "b": "HI",
+    "c": "HBr",
+    "d": "HF",
+    "correct": "d"
+  },
+  {
+    "question": "The pH of a 0.150 M solution of an aqueous weak monoprotic acid is 4.10. Calculate Ka for the acid.",
+    "a": "<math><mrow><mn>2.3</mn><mo>×</mo></mrow><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow></math>",
+    "b": "<math><mrow><mn>5.1</mn><mo>×</mo></mrow><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow></math>",
+    "c": "<math><mrow><mn>4.2</mn><mo>×</mo></mrow><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>8</mn></mrow></msup></mrow></math>",
+    "d": "none of the above",
+    "correct": "c"
+  },
+  {
+    "question": "A buffer solution is prepared that is 0.50 M in propanoic acid and 0.40 M in sodium propanoate with a solution volume of 1.00 liters. (Ka for propanoic acid = <math><mrow><mn>1.3</mn><mo>×</mo></mrow><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>5</mn></mrow></msup></mrow></math>). What is the pH of the solution when 0.060 mol of NaOH(s) is added to the solution? Assume no change in solution volume.",
+    "a": "4.97",
+    "b": "4.77",
+    "c": "4.67",
+    "d": "4.91",
+    "correct": "d"
+  },
+  {
+    "question": "A chemist desires to create a buffer solution beginning with 1.00 liter of 0.200 M NH3. How many moles of gaseous HCl must be introduced in order to produce a buffer of maximum capacity. Assume no increase in solution volume.",
+    "a": "0.100 mol HCl",
+    "b": "0.200 mol HCl",
+    "c": "0.300 mol HCl",
+    "d": "none of the above",
+    "correct": "a"
+  },
+  {
+    "question": "Two cells, one containing aqueous AgNO3 and the other containing CuSO4 are set up in series. In a given electrolysis that results in depositing 1.25 g of silver in the first cell, how much copper should deposit simultaneously in the second cell?",
+    "a": "0.736 g",
+    "b": "1.47 g",
+    "c": "0.368 g",
+    "d": "1.25 g",
+    "correct": "c"
+  },
+  {
+    "question": "How many pi bonds are present in the depicted molecule?",
+    "image": "https://www.sciencegeek.net/APchemistry/APtaters/graphics/CH9c.gif",
+    "a": "0",
+    "b": "1",
+    "c": "2",
+    "d": "3",
+    "correct": "b"
+  }
+]

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ivy Tutors Academy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/apple-touch-icon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files -->
+  <link href="assets/css/variables-red.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+	<!-- Quiz CSS File -->
+  <link href="assets/css/diag_test.css" rel="stylesheet">
+
+  <script>
+    let details = navigator.userAgent;
+  
+    let regexp = /android|iphone|kindle|ipad/i;
+    
+    let isMobileDevice = regexp.test(details);
+    
+    window.addEventListener('load', () => {
+      if(isMobileDevice){
+        document.getElementById('title').hidden = true
+      }
+    })
+  </script>
+
+  <!-- =======================================================
+  * Template Name: HeroBiz
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script>
+    if (sessionStorage.ITAUID == undefined && localStorage.ITAUID == undefined){
+        document.location.href = "login.html"
+    }   
+    if (sessionStorage.ITAeID == undefined && localStorage.ITAeID == undefined){
+        document.location.href = "login.html"
+    }   
+    if (sessionStorage.examID == undefined || sessionStorage.examName == undefined){
+        document.location.href = "tests.html"
+    }
+    window.addEventListener('load', () => {
+      document.getElementById('signout').addEventListener('click', (e) => {
+        e.preventDefault()
+        localStorage.removeItem('ITAUID')
+        sessionStorage.removeItem('ITAUID')
+        localStorage.removeItem('ITAeID')
+        sessionStorage.removeItem('ITAeID')
+        document.location.href = "login.html"
+      })
+
+      document.getElementById('exam').innerText = sessionStorage.examName
+    })
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 id="title">Ivy Tutors Academy<span>.</span></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="chatbot.html">Tutor Chat</a></li>
+          <li><a class="nav-link scrollto" href="tests.html">Diagnostic Tests</a></li>
+          <li class="dropdown"><a href="my-portal.html"><span>My Portal</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="my-portal.html">My Profile</a></li>
+              <li><a href="course-request.html">Request a Course</a></li>
+              <!-- [!] <li><a href="request.html">Request a Specific Tutor</a></li> -->
+              <li><a href="specialized-request.html">Request a Specialized Course</a></li>
+              <li><a href="masterclass.html">Join a Masterclass</a></li>               
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav><!-- .navbar -->
+
+      <a class="btn-getstarted scrollto" href="login.html" id="signout">Sign Out</a>
+
+    </div>
+  </header><!-- End Header -->
+
+    <section id="hero-animated" class="hero-animated-3 d-flex align-items-center">
+      <div class="quiz-container" id="quiz">
+        <h2><b id="exam" style="color:#A51C30; text-decoration: wavy;"></b> Diagnostic Exam</h2>
+        <div class="quiz-header">
+          <div style="text-align:center">         
+            <img id="image" hidden style="width:500px; max-height:550px"> 
+          </div>
+          <h2 id="question">Question is loading...</h2>
+          <ul>
+            <li>
+              <label for="a" id="a_text"><input type="radio" name="answer" id="a" class="answer"/> </label>
+            </li>
+            <li>
+              <label for="b" id="b_text"><input type="radio" name="answer" id="b" class="answer" /> </label>
+            </li>
+            <li>
+              <label for="c" id="c_text"><input type="radio" name="answer" id="c" class="answer" /> </label>
+            </li>
+            <li>
+              <label for="d" id="d_text"><input type="radio" name="answer" id="d" class="answer" /> </label>
+            </li>
+          </ul>
+        </div>
+        <button id="submit">Submit</button>
+      </div>
+    </section>
+
+        <!-- ======= About Section ======= -->
+        <section id="registration" class="about" style="margin-top:-10%" hidden>
+          <div style="margin:4em"></div>
+          <div class="container" data-aos="fade-up">
+    
+            <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+    
+              <div class="col-lg-5">
+                <div class="about-img">
+                  <img src="assets/images/img-6.png" class="img-fluid" alt="">
+                </div>
+              </div>
+    
+              <div class="col-lg-7">
+                <h3 class="pt-0 pt-lg-5">Registering for our courses</h3>
+    
+                <!-- Tabs -->
+                <ul class="nav nav-pills mb-3">
+                  <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Pricing</a></li>
+                  <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">Timeline</a></li>
+                  <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">Recommendations</a></li>
+                </ul><!-- End Tabs -->
+    
+                <!-- Tab Content -->
+                <div class="tab-content">
+    
+                  <div class="tab-pane fade show active" id="tab1">
+    
+                    <p class="fst-italic">
+                      Our pricing is consistently shifting according to tutor availability and relative difficulty of a course. In order to follow this flexibility, we utilize a bidding system for requesting courses.
+                    </p>
+    
+                    <div class="d-flex align-items-center mt-4">
+                      <i class="bi bi-check2"></i>
+                      <h4>What is bidding?</h4>
+                    </div>
+                    <p>
+                      Bidding is simply the how much a student is willing to pay for a course. For example, suppose Student A talks to their friend Student B
+                      and they want to take a course together. Once Student A and Student B agree on a price, Student A can request a 2 person course at a bid of <math><mi>$</mi></math>70 per hour per student. This means that Student A and Student B are willing to pay <math><mi>$</mi></math>70 an hour each for the course.
+                    </p>
+    
+                    <div class="d-flex align-items-center mt-4">
+                      <i class="bi bi-check2"></i>
+                      <h4>What are usual bids for your courses?</h4>
+                    </div>
+                    <p>
+                      Bidding allows for times of greater tutor availability (e.g. during off seasons) to have relatively lower prices. That being said, most successful bids for standard courses are in the following ranges (per student per hour), with more specialized courses (e.g. Olympiad training, niche languages, etc) being slightly more expensive.
+                      <ul>
+                        <li>One-on-one: <math><mi>$</mi></math>90-<math><mi>$</mi></math>120 USD</li>
+                        <li>Two Students: <math><mi>$</mi></math>70-<math><mi>$</mi></math>90 USD</li>
+                        <li>Three Students: <math><mi>$</mi></math>50-<math><mi>$</mi></math>70 USD</li>
+                        <li>Four Students: <math><mi>$</mi></math>40-<math><mi>$</mi></math>50 USD</li>
+                        <li>Five or more Students: <math><mi>$</mi></math>30-<math><mi>$</mi></math>40 USD</li> 
+                      </ul>
+                    </p>
+    
+                  </div><!-- End Tab 1 Content -->
+    
+                  <div class="tab-pane fade show" id="tab2">
+    
+                    <p class="fst-italic">Once you decided on a course you'd like to take, here's the timeline for requesting a course.</p>
+    
+                    <div class="d-flex align-items-center mt-4">
+                      <i class="bi bi-check2"></i>
+                      <h4>Request the course</h4>
+                    </div>
+                    <p>Navigate to either "Request a Course" if you are looking for a standard classroom course like Chemistry, US History, or SAT or "Request a Specialized Course" if you would like a course custom made for the studen in subjects like Latin or Olympiad training.</p>
+    
+                    <div class="d-flex align-items-center mt-4">
+                      <i class="bi bi-check2"></i>
+                      <h4>Wait for Processing</h4>
+                    </div>
+                    <p>If there's a match between your request and a mentor, an email will be sent to the address associated with your account connecting you with your tutor to schedule your first session! After payment is processed, your classes start in earnest. Matching will take at most 
+                      one week. If your request takes more than one week to fill, it is unlikely that there's a match with a tutor at the current moment.
+                    </p>
+    
+                    <div class="d-flex align-items-center mt-4">
+                      <i class="bi bi-check2"></i>
+                      <h4>What to do if there's no match?</h4>
+                    </div>
+                    <p>Don't fret! It's possible that all tutors are currently just busy at the moment. Feel free to resubmit another request through the form, adjusting any parameters like the student size or the bid as necessary, or contact us at <a href="mailto:ivytutors2021@gmail.com">ivytutors2021@gmail.com</a>!</p>
+    
+                  </div><!-- End Tab 2 Content -->
+    
+                  <div class="tab-pane fade show" id="tab3">
+    
+                    <p class="fst-italic">Looking for a place to start? Visit our <a href="chatbot.html">chatbot</a> if you have any quick questions.</p>
+    
+                    <div class="d-flex align-items-center mt-4">
+                      <i class="bi bi-check2"></i>
+                      <h4>What should I do if I know a course I want to take?</h4>
+                    </div>
+                    <p>If you know the course you'd like to take, you can either request a normal <a href="course-request.html">course</a> or a <a href="specialized-request.html">specialized course</a>, depending on how rare the subject is. Here's a good rule of thumb: if a course is usually offered in a high school setting, it's a normal course. Otherwise, it's a specialized one.</p>
+    
+                    <div class="d-flex align-items-center mt-4">
+                      <i class="bi bi-check2"></i>
+                      <h4>Will there ever be sales or times of lower bid prices?</h4>
+                    </div>
+                    <p>Yes! We will be intermittently be handing out discounts, which will appear as a banner on this page when they occur. Be sure to check in often!</p>
+    
+                    <div class="d-flex align-items-center mt-4">
+                      <i class="bi bi-check2"></i>
+                      <h4>What if I just want to try out your courses?</h4>
+                    </div>
+                    <p>If you'd like to try us out, please feel free to check out our masterclasses! We ensure that they are relatively inexpensive, but still offer a good peek into the way we conduct our lessons.</p>
+    
+                    <div class="d-flex align-items-center mt-4">
+                      <i class="bi bi-check2"></i>
+                      <h4>What if I have any questions or concerns?</h4>
+                    </div>
+                    <p>Please feel free to reach out to us! Feel free to contact us at <a href="mailto:ivytutors2021@gmail.com">ivytutors2021@gmail.com</a> with any questions or concerns!</p>
+    
+                  </div><!-- End Tab 3 Content -->
+    
+                </div>
+    
+              </div>
+    
+            </div>
+    
+          </div>
+        </section><!-- End About Section -->
+  
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+	<!-- Test JS File -->
+	<script src="assets/js/diag_test.js"></script>
+
+</body>
+
+</html>
