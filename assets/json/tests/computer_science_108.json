@@ -17,7 +17,7 @@
   },
   {
     "question": "Consider the following method. Which code correctly completes the method?",
-    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0330-01.jpg",
+    "image": "/assets/images/diagnostic-images/compsci-img-1.jpg",
     "a": "(1 / base) * power(base, expo + 1)",
     "b": "(1 / base) * power(base, expo - 1)",
     "c": "base * power(base, expo + 1)",
@@ -26,7 +26,7 @@
   },
   {
     "question": "Consider the following method. What would be output following the call doSomething(3)?",
-    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0330-02.jpg",
+    "image": "/assets/images/diagnostic-images/compsci-img-2.jpg",
     "a": "3211211",
     "b": "1121213",
     "c": "1213121",
@@ -35,7 +35,7 @@
   },
   {
     "question": "Refer to the following recursive method. What is returned from mystery(3)?",
-    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0332-01.jpg",
+    "image": "/assets/images/diagnostic-images/compsci-img-3.jpg",
     "a": "6",
     "b": "8",
     "c": "10",
@@ -44,7 +44,7 @@
   },
   {
     "question": "Refer to the following method. What is returned from t(5)?",
-    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0333-01.jpg",
+    "image": "/assets/images/diagnostic-images/compsci-img-4.jpg",
     "a": "2",
     "b": "0",
     "c": "-2",
@@ -53,7 +53,7 @@
   },
   {
     "question": "Refer to the following method. For the method call t(6), how many calls to t will be made, including the original call?",
-    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0333-01.jpg",
+    "image": "/assets/images/diagnostic-images/compsci-img-4.jpg",
     "a": "6",
     "b": "7",
     "c": "11",
@@ -78,7 +78,7 @@
   },
   {
     "question": "The following two lines of code appear in a class other than Class1 and Class2: Class1 c = new Class2(); c.doSomething(8). What is printed as a result of executing the code segment?",
-    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0166-01.jpg",
+    "image": "/assets/images/diagnostic-images/compsci-img-5.jpg",
     "a": "416",
     "b": "422",
     "c": "714",
@@ -87,7 +87,7 @@
   },
   {
     "question": "The following program segment is intended to find the index of the first negative integer in arr[0] … arr[N-1], where arr is an array of N integers. When will this segment work as intended?",
-    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0265-02.jpg",
+    "image": "/assets/images/diagnostic-images/compsci-img-6.jpg",
     "a": "When arr contains at least one non-negative integer",
     "b": "When arr contains at least one negative integer",
     "c": "When arr contains no negative integers",
@@ -96,7 +96,7 @@
   },
   {
     "question": "Refer to the following code segment. You may assume that arr is an array of int values. What is the result of the segment?",
-    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0266-01.jpg",
+    "image": "/assets/images/diagnostic-images/compsci-img-7.jpg",
     "a": "Sum of arr[0], arr[1], ..., arr[arr.length-1] will be stored in sum",
     "b": "Sum of arr[1], arr[1], ..., arr[arr.length-1] will be stored in sum",
     "c": "Sum of arr[0], arr[1], ..., arr[arr.length] will be stored in sum",
@@ -105,7 +105,7 @@
   },
   {
     "question": "Running this code segment, what is the maximum number of times that SMALL is printed?",
-    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0267-01.jpg",
+    "image": "/assets/images/diagnostic-images/compsci-img-8.jpg",
     "a": "k",
     "b": "k-1",
     "c": "k-2",
@@ -122,7 +122,7 @@
   },
   {
     "question": "Consider the following insertionSort method and private instance variable a, both in a Sorter class. An array of Integer types is to be sorted in descending order using the method. If the array is originally [1,7,9,5,4,12], what will it look like after the third for-loop iteration?",
-    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0358-01.jpg",
+    "image": "/assets/images/diagnostic-images/compsci-img-9.jpg",
     "a": "[9,7,1,5,4,12]",
     "b": "[9,7,5,1,4,12]",
     "c": "[12,9,7,1,5,4]",
@@ -131,7 +131,7 @@
   },
   {
     "question": "Consider the following insertionSort method and private instance variable a, both in a Sorter class. When sorted biggest to smallest with insertionSort, which list will need the greatest number of changes in position?",
-    "image": "https://img.crackap.com/ap/computer-science-a/br23/p0358-01.jpg",
+    "image": "/assets/images/diagnostic-images/compsci-img-9.jpg",
     "a": "[5, 1, 2, 3, 4, 7, 6, 9]",
     "b": "[9, 5, 1, 4, 3, 2, 1, 0]",
     "c": "[9, 4, 6, 2, 1, 5, 1, 3]",
@@ -148,7 +148,7 @@
   },
   {
     "question": "Given the code snippet, what is its output?",
-    "image": "https://i.postimg.cc/zfVs5Zfr/snippet.png",
+    "image": "/assets/images/diagnostic-images/compsci-img-10.png",
     "a": "'a is 10' and 'b is 10'",
     "b": "'a is 10' and 'b is 11'",
     "c": "'a is 11' and 'b is 10'",

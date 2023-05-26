@@ -153,7 +153,7 @@
   },
   {
     "question": "How many pi bonds are present in the depicted molecule?",
-    "image": "https://www.sciencegeek.net/APchemistry/APtaters/graphics/CH9c.gif",
+    "image": "/assets/images/diagnostic-images/chemistry-img-1.png",
     "a": "0",
     "b": "1",
     "c": "2",

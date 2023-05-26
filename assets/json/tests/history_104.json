@@ -1,7 +1,7 @@
 [
   {
     "question": "Consider the following passage from Bartolomé de las Casas published in the mid-sixteenth century. What answer best describes Spanish attitudes towards de las Casas’ report?",
-    "image": "https://i.postimg.cc/xCNsb2k3/hist-snip.png",
+    "image": "/assets/images/diagnostic-images/history-img-1.png",
     "a": "Many Spaniards were horrified by the savage and cruel behavior he described",
     "b": "Most Spaniards discounted his description because it was Protestant propaganda",
     "c": "Most Spaniards were incredulous because they realized de las Casas intentionally distorted precise colonial census information",
@@ -10,7 +10,7 @@
   },
   {
     "question": "Consider the following passage from Bartolomé de las Casas published in the mid-sixteenth century. Which of the following answers correctly identifies an important consequence of the Spanish attitude towards Native Americans?",
-    "image": "https://i.postimg.cc/xCNsb2k3/hist-snip.png",
+    "image": "/assets/images/diagnostic-images/history-img-1.png",
     "a": "Because so many native peoples were dying, the Spanish began to import slaves from Africa to replenish their labor supply",
     "b": "Native American people and culture were completely eradicated",
     "c": "The Spanish crown became insolvent because the reduced labor supply made it impossible for colonial possessions to become profitable",
@@ -19,7 +19,7 @@
   },
   {
     "question": "Consider the following passage from Bartolomé de las Casas published in the mid-sixteenth century. Which of the following answers correctly describes the social hierarchy of the Spanish empire?",
-    "image": "https://i.postimg.cc/xCNsb2k3/hist-snip.png",
+    "image": "/assets/images/diagnostic-images/history-img-1.png",
     "a": "Social standing was based on merit and abilities – anyone could increase their status and rise to the top",
     "b": "Spanish officials created a strict caste based on precise racial categories that placed native Spaniards at the top",
     "c": "Only colonists of pure Spanish heritage were afforded any social status",
@@ -28,7 +28,7 @@
   },
   {
     "question": "Consider this image of an actor portraying a Native American of the early colonial period. The image highlights which of the following?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/03/a1.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-2.jpg",
     "a": "The uniquely war-like attitude of Native Americans",
     "b": "The civilizing effect of European colonization upon the Native American peoples, which was entirely beneficial",
     "c": "How Native Americans became dependent on European trade goods",
@@ -37,7 +37,7 @@
   },
   {
     "question": "Consider this image of an actor portraying a Native American of the early colonial period. Which statement best describes the relationship between Native Americans and European settlers?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/03/a1.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-2.jpg",
     "a": "Native Americans unanimously welcomed the colonists because they understood the settlers were superior in many ways",
     "b": "Native Americans at times traded peacefully with European colonists but also frequently used diplomacy and force to resist encroachment.",
     "c": "Native Americans were skilled warriors who incessantly resisted European settlement and were only defeated by the colonist’s superior technology",
@@ -46,7 +46,7 @@
   },
   {
     "question": "Consider the following engraving. Which of the following statements correctly describes the consequences of European colonization?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/03/a2.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-3.png",
     "a": "The effects of colonization up both Europeans and Native Americans were temporary and very small.",
     "b": "The Europeans helped civilize the Native Americans and improved their quality of life by sharing technology with them.",
     "c": "Both the Europeans and Native Americans became wealthier by sharing the profits from economic ventures.",
@@ -55,7 +55,7 @@
   },
   {
     "question": "Consider the following engraving. What enabled the Europeans to conquer the Native American peoples?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/03/a2.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-3.png",
     "a": "The European invaders greatly outnumbered the Native Americans they encountered",
     "b": "There were no powerful Native American empires — only weak bands of nomads",
     "c": "The Europeans had advanced military technology and also brought with them diseases which ravaged native populations",
@@ -64,7 +64,7 @@
   },
   {
     "question": "Consider the following engraving. What effect, if any, did Native American culture have on Europeans?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/03/a2.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-3.png",
     "a": "Nothing — the Europeans rejected every aspect of Native American culture because they thought indigenous peoples were uncivilized",
     "b": "Many Europeans began to worship Native American deities because they were disgusted with the conflicts created by the Reformation",
     "c": "Large numbers of Europeans began to dress like the Native Americans because it was much more comfortable",
@@ -73,7 +73,7 @@
   },
   {
     "question": "Consider the following map illustrating expiditions to the New World. What statement best describes the relationships between different European imperial powers?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/03/a6.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-4.jpg",
     "a": "Colonial rivalry led to frequent conflicts",
     "b": "They often cooperated and shared profits in order to prevent conflict",
     "c": "The imperial powers rarely interacted with each other",
@@ -82,7 +82,7 @@
   },
   {
     "question": "Consider the following map illustrating expiditions to the New World. Which of the following was NOT a motivation that drove colonists to settle in the New World?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/03/a6.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-4.jpg",
     "a": "Economic prosperity",
     "b": "Political oppression in Europe",
     "c": "Religious freedom",
@@ -91,7 +91,7 @@
   },
   {
     "question": "Consider the following image depicting the use of slaves on a Virginia plantation. What was the most common form of resistance among slaves in the New World?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/03/a7.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-5.jpg",
     "a": "Slaves ran away and intentionally worked slowly",
     "b": "Slaves frequently gathered weapons and launched armed insurrections",
     "c": "Slave often poisoned their masters",
@@ -100,7 +100,7 @@
   },
   {
     "question": "Consider the following image depicting the use of slaves on a Virginia plantation. What statement correctly describes the syncretic nature of slave culture in the British colonies?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/03/a7.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-5.jpg",
     "a": "Slaves completely abandoned their traditional beliefs",
     "b": "Slaves refused to abandon any traditional beliefs",
     "c": "Slaves blended new and traditional beliefs",
@@ -109,7 +109,7 @@
   },
   {
     "question": "Consider the following image depicting the use of slaves on a Virginia plantation. What statement correctly describes the status of slaves in the southern British colonies?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/03/a7.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-5.jpg",
     "a": "It was only temporary and slaves were freed after they worked for their master for a certain number of years",
     "b": "Slaves inherited the status from their father and as a result had many rights except for suffrage",
     "c": "Slaves inherited the status from their mothers thus incorporating a strong racial element into colonial society",
@@ -118,7 +118,7 @@
   },
   {
     "question": "Consider the following image depicting the use of slaves on a Virginia plantation. Why did slavery become prevalent in the southern colonies but not in New England?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/03/a7.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-5.jpg",
     "a": "Southern colonies relied on more labor-intensive cash crops",
     "b": "New England Puritans were more devout than southern colonists",
     "c": "Slaves died in the colder New England weather but thrived in the climate of the southern colonies",
@@ -127,7 +127,7 @@
   },
   {
     "question": "Consider the following table demonstrating unemployment data from 1947-1957. Why was unemployment generally low after the end of World War II?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/04/a20.png",
+    "image": "/assets/images/diagnostic-images/history-img-6.png",
     "a": "The New Deal gave jobs to all the veterans who came home from the war",
     "b": "The economy remained on a war-footing in order to keep employment artificially high",
     "c": "People worked harder to find a job than they do nowadays",
@@ -136,7 +136,7 @@
   },
   {
     "question": "Consider the following table demonstrating unemployment data from 1947-1957. What consequences, if any, did the post-war boom have for the Sunbelt region?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/04/a20.png",
+    "image": "/assets/images/diagnostic-images/history-img-6.png",
     "a": "None — the Sunbelt region gained little aside from a slight boost in tourism revenue",
     "b": "The Sunbelt region made only political gains because many retirees moved to the region, increasing representation in Congress",
     "c": "The Sunbelt region made only economic gains because the increase in tourism led to the creation of many new jobs",
@@ -145,7 +145,7 @@
   },
   {
     "question": "Consider the following depiction of the French and Indian War. How did Britain try to deal with the massive expenses they incurred during the French & Indian War?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/04/a9.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-7.jpg",
     "a": "The British cabinet forced the North American colonies to loan money to the crown",
     "b": "The British empire sold all the colonies in North America to France",
     "c": "The British crown began to more rigorously enforce imperial policies and taxes",
@@ -154,7 +154,7 @@
   },
   {
     "question": "Consider the following depiction of the French and Indian War. What role did the Native Americans play in the French and Indian War?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/04/a9.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-7.jpg",
     "a": "None — They stopped trading with both the French and British",
     "b": "Indigenous peoples burned down Washington D.C. and the White House",
     "c": "Although unanimously allied with the British, indigenous people fought in few battles",
@@ -163,7 +163,7 @@
   },
   {
     "question": "Consider the following depiction of the Revolutionary War. Which of the following statements best describes the course of the American Revolution?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/04/a10.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-8.jpg",
     "a": "The patriot forces eventually prevailed after a long and hard campaign",
     "b": "All the important Revolutionary battles occurred in New England",
     "c": "The small but professional British force was quickly overwhelmed by colonial forces",
@@ -172,7 +172,7 @@
   },
   {
     "question": "Consider the following depiction of the Revolutionary War. What was the significance of the Battle of Saratoga in the autumn of 1777?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2016/04/a10.jpg",
+    "image": "/assets/images/diagnostic-images/history-img-8.jpg",
     "a": "None — it ended in a stalemate with heavy losses for both sides",
     "b": "It was a minor British victory that still instilled optimism for resisting the British",
     "c": "It was a patriot victory that encouraged the French to support the revolution",

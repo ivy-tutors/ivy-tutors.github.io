@@ -33,7 +33,7 @@
   },
   {
     "question": "Which answer correctly describes what is happening in the above diagram?",
-    "image": "https://highschooltestprep.com/wp-content/uploads/2017/12/BioDiagram2.png",
+    "image": "/assets/images/diagnostic-images/biology-img-1.png",
     "a": "Diffusion of sugar from an area of low concentration to an area of high concentration",
     "b": "Osmosis of water from an area of low water concentration to an area of high water concentration",
     "c": "Osmosis of water from an area of low solute concentration to an area of high concentration",
@@ -50,7 +50,7 @@
   },
   {
     "question": "The following diagram shows energy transformations within a cell. Each form of energy is represented by the symbols E I–E IV. Two cellular organelles are represented by the letters A and B. What form of energy is represented by E II?",
-    "image": "https://www.kaptest.com/study/wp-content/uploads/Screenshot-2023-05-09-at-8.52.48-AM.png",
+    "image": "/assets/images/diagnostic-images/biology-img-2.png",
     "a": "Radiant energy in the form of photons",
     "b": "Chemical energy being stored in the bonds of glucose",
     "c": "Chemical energy in the form of ATP",
@@ -59,7 +59,7 @@
   },
   {
     "question": "If the transformation depicted in organelle B requires oxygen, what form of energy is represented by E IV?",
-    "image": "https://www.kaptest.com/study/wp-content/uploads/Screenshot-2023-05-09-at-8.52.48-AM.png",
+    "image": "/assets/images/diagnostic-images/biology-img-2.png",
     "a": "Radiant energy in the form of photons",
     "b": "Chemical energy being stored as glycogen",
     "c": "Chemical energy in the form of ATP",
