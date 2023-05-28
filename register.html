@@ -115,13 +115,20 @@
                     for(let i = 0; i < inputs.length; i++){
                         if (document.getElementById(inputs[i]).value == ''){
                             throw new Error("Empty") 
+                        } else {
+                          document.getElementById('errTxt').hidden = true
                         }
                     }
                     if(emails.includes(document.getElementById('email').value.trim(),0)){
                         throw new Error("Exists")
+                    } else {
+                        document.getElementById('existsTxt').hidden = true
                     }
+
                     if(usernames.includes(document.getElementById('username').value.trim(),0)){
                         throw new Error("Username")
+                    } else {
+                        document.getElementById('userTxt').hidden = true
                     }
                     let UID = Math.floor(Math.random() * 1000000000)
                     const data = new FormData(reg_form)
