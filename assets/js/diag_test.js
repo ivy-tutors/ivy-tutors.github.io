@@ -56,11 +56,13 @@ fetch('assets/json/tests/' + sessionStorage.examID + '.json')
       currentQuiz++;
       if (currentQuiz < quizData.length) {img.hidden = true; loadQuiz();}
       else {
+        const credit = quizData[0].credit
         if(score / quizData.length < 0.6){
           quiz.style = 'text-align:center'
           quiz.innerHTML = `
             <h2>You answered ${score}/${quizData.length} questions correctly.</h2>  
             <p>Don't fret: this was a tough diagnostic exam! We would strongly recommend enrolling or registering for a course in this subject. Mastery is only one class away!</p> 
+            ${credit}
           `
           document.getElementById('registration').hidden = false
           setTimeout(() => {
@@ -70,7 +72,8 @@ fetch('assets/json/tests/' + sessionStorage.examID + '.json')
           quiz.style = 'text-align:center'
           quiz.innerHTML = `
             <h2>You answered ${score}/${quizData.length} questions correctly.</h2>  
-            <p>Not bad! It looks like there might be some rust with some concepts, though. We would still recommend enrolling or registering for a course in this subject.</p>  
+            <p>Not bad! It looks like there might be some rust with some concepts, though. We would still recommend enrolling or registering for a course in this subject.</p> 
+            ${credit} 
           `
           document.getElementById('registration').hidden = false
           setTimeout(() => {
@@ -81,6 +84,7 @@ fetch('assets/json/tests/' + sessionStorage.examID + '.json')
           quiz.innerHTML = `
             <h2>You answered ${score}/${quizData.length} questions correctly.</h2>  
             <p>Wow! Well done. Consider enrolling in an advanced course with us!</p>  
+            ${credit}
           `
           document.getElementById('registration').hidden = false
           setTimeout(() => {

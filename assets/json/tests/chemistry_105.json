@@ -5,7 +5,8 @@
     "b": "He",
     "c": "NO",
     "d": "HCl",
-    "correct": "b"
+    "correct": "b",
+    "credit": "<p style='margin-left:1em;margin-right:1em'>Want to see more questions like these? Although quite a few questions are ones we encountered as students back in our high school classes, some questions were taken off of the College Board <a href='https://apcentral.collegeboard.org/media/pdf/chemistry-released-exam-1999.pdf?course=ap-chemistry'>AP Chemistry</a> practice exam. Be sure to check it out!</p>"
   },
   {
     "question": "Which of the following must be true for a sample of supercritical uranium (235U)?",

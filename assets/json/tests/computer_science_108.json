@@ -5,7 +5,8 @@
     "b": "The value you are searching for is the last element in the array",
     "c": "The value you are searching for is in the middle of the array",
     "d": "Sequential Search can never be faster than Binary Search",
-    "correct": "a"
+    "correct": "a",
+    "credit": "<p style='margin-left:1em;margin-right:1em'>Want to see more questions like these? Although quite a few questions are ones we encountered as students back in our high school classes, some questions were taken off of the College Board <a href='https://secure-media.collegeboard.org/apc/computer-science-released-exam-1999.pdf'>AP Computer Science A</a> practice exam. Be sure to check it out!</p>"
   },
   {
     "question": "Which of the following is a correct header for a method of the Example class that would return the value of the private instance variable x so that it can be used in a class other than Example?",

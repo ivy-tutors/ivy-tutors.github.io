@@ -5,7 +5,8 @@
     "b": "150 kg",
     "c": "200 kg",
     "d": "250 kg",
-    "correct": "d"
+    "correct": "d",
+    "credit": "<p style='margin-left:1em;margin-right:1em'>Want to see more questions like these? Although quite a few questions are ones we encountered as students back in our high school classes, some questions were taken off of the College Board <a href='https://secure-media.collegeboard.org/apc/255117_1998_PhysicsBC_RE.pdf'>AP Physics</a> practice exam. Be sure to check it out!</p>"
   },
   {
     "question": "The maximum mass that can be hung vertically from a string without breaking the string is 10 kg. A length of this string that is 2 m long is used to rotate a 0.5 kg object in a circle on a frictionless table with the string horizontal. The maximum speed that the mass can attain under these conditions without the string breaking is most nearly",

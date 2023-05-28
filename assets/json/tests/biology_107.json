@@ -1,11 +1,12 @@
 [
   {
-    "question": "The most probable cause for the difference in mean stem length between plants in two dishes is which of the following?",
+    "question": "Consider an experiment where a student placed seeds of the same species in two identical dishes, A and B, with the only difference being that the seeds in Dish A were covered with light-absorbing paper for <i>only the first half</i> of the experiment while Dish B was offered light throughout the entire experiment. The plants in Dish A had a significantly higher average height than Dish B. The most probable cause for the difference in mean stem length between plants in two dishes is which of the following?",
     "a": "Shortening of cells in response to lack of light",
     "b": "Elongation of seedlings in response to lack of light",
     "c": "Enhancement of stem elongation by light",
     "d": "Genetic differences between seeds",
-    "correct": "b"
+    "correct": "b",
+    "credit": "<p style='margin-left:1em;margin-right:1em'>Want to see more questions like these? Although quite a few questions are ones we encountered as students back in our high school classes, some questions were taken off of the College Board <a href='https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-biology-practice-exam-2013.pdf'>AP Biology</a> practice exam. Be sure to check it out!</p>"
   },
   {
     "question": "Which structure-function pair is incorrectly matched?",
