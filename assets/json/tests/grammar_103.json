@@ -1,34 +1,34 @@
 [
   {
-    "question": "My father, though he is only in his early fifties, is stuck in his old-fashioned <u>ways. He has a</u> general mistrust of any innovation or technology that he can't immediately grasp and he always tells us, that if something isn't broken, then you shouldn't fix it.",
-    "a": "ways he has a",
-    "b": "ways having a",
-    "c": "ways, and still has a",
+    "question": "I grew up with buckets, shovels, and nets <u>waiting by the back door;</u> hip-waders hanging in the closet; tide table charts covering the refrigerator door; and a microscope was sitting on the kitchen table.",
+    "a": "waiting, by the back door,",
+    "b": "waiting by the back door,",
+    "c": "waiting by the back door",
     "d": "NO CHANGE",
     "correct": "d",
     "credit": "<p style='margin-left:1em;margin-right:1em'>Want to see more questions like these? Although quite a few questions are ones we encountered as students back in our high school classes, some questions were taken off of the <a href='https://www.act.org/content/act/en/products-and-services/the-act/test-preparation/english-practice-test-questions.html?page=0&chapter=0'>ACT English</a> and the College Board <a href='https://www.anderson.kyschools.us/Downloads/AP%20Lang%202007%20Released.pdf'>AP English Language</a> practice sections. Be sure to check them out!</p>"
   },
   {
-    "question": "My father, though he is only in his early fifties, is stuck in his old-fashioned ways. He has a general mistrust of any innovation or technology that he can't immediately grasp and he always <u>tells us, that</u> if something isn't broken, then you shouldn't fix it.",
-    "a": "tells us that",
-    "b": "tells us, that,",
-    "c": "tells us that,",
+    "question": "I grew up with buckets, shovels, and nets waiting by the back door; hip-waders hanging in the closet; tide table charts covering the refrigerator door; and a microscope <u>was sitting</u> on the kitchen table.",
+    "a": "would sit",
+    "b": "sitting",
+    "c": "sat",
+    "d": "NO CHANGE",
+    "correct": "c"
+  },
+  {
+    "question": "<u>Having studied, my mother is</u> a marine biologist. Our household didn’t run according to a typical schedule.</u>",
+    "a": "My mother is",
+    "b": "As my mother’s interest is science, she is",
+    "c": "My mother’s occupation is that of",
     "d": "NO CHANGE",
     "correct": "a"
   },
   {
-    "question": "He ran a small grocery store in town, and if you were to look at a snapshot of his back office taken when he opened the store in 1975, you would <u>see that not much has changed since.</u>",
-    "a": "not be likely to see very much that has changed since.",
-    "b": "be able to see right away that not very much has changed since.",
-    "c": "not change very much.",
-    "d": "NO CHANGE",
-    "correct": "d"
-  },
-  {
-    "question": "My father's state-of-the-art computer now serves as a very expensive bulletin board for the hundreds of adhesive notes he uses to keep himself organized. <u>Sooner than later,</u> we fully expect it will completely disappear under the mounting files and papers in the back office.",
-    "a": "Sooner rather than later,",
-    "b": "Sooner or later,",
-    "c": "As soon as later,",
+    "question": "Our meals weren’t always served in the expected order of breakfast, lunch, and supper. Everything <u>was subservient to the disposal of</u> the tides.",
+    "a": "was defenseless in the face of",
+    "b": "depended on",
+    "c": "trusted in",
     "d": "NO CHANGE",
     "correct": "b"
   },

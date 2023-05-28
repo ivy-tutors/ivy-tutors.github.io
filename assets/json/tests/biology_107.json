@@ -9,28 +9,28 @@
     "credit": "<p style='margin-left:1em;margin-right:1em'>Want to see more questions like these? Although quite a few questions are ones we encountered as students back in our high school classes, some questions were taken off of the College Board <a href='https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-biology-practice-exam-2013.pdf'>AP Biology</a> practice exam. Be sure to check it out!</p>"
   },
   {
-    "question": "Which structure-function pair is incorrectly matched?",
-    "a": "Vacuole — Digestion, waste disposal, and storage",
-    "b": "Chloroplast — Photosynthesis",
-    "c": "Ribosome — Synthesis of lipids, detoxification of drugs and poisons",
-    "d": "Lysosome — Breakdown of ingested substances, damaged organelles recycled",
-    "correct": "c"
-  },
-  {
-    "question": "Which of the following is <i>not</i> part of the endomembrane system?",
-    "a": "Endoplasmic reticulum",
-    "b": "Golgi apparatus",
-    "c": "Lysosomes",
-    "d": "Ribosomes",
+    "question": "Scientists have found that the existing populations of a certain species of amphibian are small in number, lacking in genetic diversity, and separated from each other by wide areas of dry land. Which of the following human actions is most likely to improve the long-term survival of the amphibians?",
+    "a": "Cloning the largest individuals to counteract the effects of aggressive predation",
+    "b": "Reducing the population size by one-fifth to decrease competition for limited resources",
+    "c": "Constructing a dam and irrigation system to control flooding",
+    "d": "Building ponds in the areas of dry land to promote interbreeding between the separated populations",
     "correct": "d"
   },
   {
-    "question": "Although animal cells lack cell walls, they have a complex network of glycoproteins that provide structure and strength to the cell, referred to as:",
-    "a": "Desmosomes",
-    "b": "Extracellular matrix",
-    "c": "Intermediate filaments",
-    "d": "Cytoskeleton",
+    "question": "Which of the following questions is most relevant to understanding the Calvin cycle?",
+    "a": "How does chlorophyll capture light?",
+    "b": "How is ATP used in the formation of 3-carbon carbohydrates?",
+    "c": "How is NADP+ reduced to NADPH?",
+    "d": "How is ATP produced in chemiosmosis?",
     "correct": "b"
+  },
+  {
+    "question": "If chemical signals in the cytoplasm control the progression of a cell to the M phase of the cell cycle, then fusion of a cell in G1 with a cell in early M phase would most likely result in the",
+    "a": "replication of chromosomes only in the G1 cell",
+    "b": "exiting of both cells from the cell cycle and into the G0 phase",
+    "c": "condensation of chromatin in preparation of nuclear division in both cells",
+    "d": "transfer of organelles from the G1 cell to the cell in the M phase",
+    "correct": "c"
   },
   {
     "question": "Which answer correctly describes what is happening in the above diagram?",
@@ -100,12 +100,12 @@
     "correct": "a"
   },
   {
-    "question": "Which of the following is an example of long-distance cell signaling?",
-    "a": "Cell-cell recognition in animal cells",
-    "b": "Hormonal signaling in humans",
-    "c": "Plasmodesmata in plant cells",
-    "d": "Synaptic signaling in the nervous system",
-    "correct": "b"
+    "question": "Rosalind Franklin's x-ray diffraction images taken in the 1950s most directly support which of the following claims about DNA?",
+    "a": "The ratio of base pairs are constant",
+    "b": "The nucleotide sequence determines genetic information",
+    "c": "The two strands of DNA are antiparallel",
+    "d": "The basic molecular structure is a helix",
+    "correct": "d"
   },
   {
     "question": "Which part of your nervous system would likely be activated if you just realized you overslept and a final exam begins in just 10 minutes?",
@@ -124,11 +124,11 @@
     "correct": "b"
   },
   {
-    "question": "Which of the following environmental conditions does not affect the activity of enzymes?",
-    "a": "Temperature",
-    "b": "The amount of free energy in the cell",
-    "c": "pH",
-    "d": "Chemicals in the enzyme's environment",
+    "question": "The vertebrate forelimb initially develops in the embryo as a solid mass of tissue. As development progresses, the solid mass near the end of the forelimb is remodeled into individual digits. Which of the following best explains the role of apoptosis in remodeling of the forelimb?",
+    "a": "Apoptosis replaces old cells with new ones that are less likely to contain mutations",
+    "b": "Apoptosis involves the regulated activation of proteins in specific cells of the developing forelimb that leads to the death of those cells",
+    "c": "Apoptosis involves the destruction of extra cells in the developing forelimb, which provides nutrients for phagocytic cells",
+    "d": "Apoptosis in the developing forelimb triggers the differentiation of cells whose fate was not already determined",
     "correct": "b"
   },
   {

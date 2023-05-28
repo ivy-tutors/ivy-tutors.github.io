@@ -91,12 +91,12 @@
     "correct": "a"
   },
   {
-    "question": "A proton moving along the positive x-axis enters an electric field that is directed along the positive y-axis. What is the direction of the electric force acting on the proton after it enters the electric field?",
-    "a": "Along the negative z-axis",
-    "b": "Along the positive z-axis",
-    "c": "Along the negative y-axis",
-    "d": "Along the positive y-axis",
-    "correct": "d"
+    "question": "A solid metal ball and a hollow plastic ball of the same external radius are released from rest in a vacuum chamber. When each have fallen 1 m, they both have the same",
+    "a": "inertia",
+    "b": "speed",
+    "c": "momentum",
+    "d": "change in potential energy",
+    "correct": "b"
   },
   {
     "question": "All the following statements about an isolated, solid charged conductor are correct EXCEPT:",

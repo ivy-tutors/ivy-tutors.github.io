@@ -65,12 +65,12 @@
     "correct": "b"
   },
   {
-    "question": "Under which of the following conditions of temperature and pressure will H2 gas be expected to behave most like an ideal gas?",
-    "a": "50 K and 0.10 atm",
-    "b": "50 K and 50. atm",
-    "c": "500 K and 0.10 atm",
-    "d": "500 K and 50. atm",
-    "correct": "c"
+    "question": "If the temperature of an aqueous solution of NaCl is increased from 20C to 90C, which of the following is true?",
+    "a": "The molarity of the solution remains unchanged",
+    "b": "The molality of the solution remains unchanged",
+    "c": "The mole fraction of solute decreases",
+    "d": "The mole fraction of solute increases",
+    "correct": "b"
   },
   {
     "question": "Given ethane (C2H6) and butane (C4H10), which compound has the higher boiling point, and why is that compound’s boiling point higher?",
@@ -105,12 +105,12 @@
     "correct": "c"
   },
   {
-    "question": "Which statement best describes the bond angles in NH3?",
-    "a": "Exactly 120 degrees",
-    "b": "Slightly less than 109",
-    "c": "Slightly less than 90 degrees",
-    "d": "None of the above",
-    "correct": "b"
+    "question": "Of the following molecules, which has the largest dipole moment?",
+    "a": "CO",
+    "b": "CO2",
+    "c": "F2",
+    "d": "HF",
+    "correct": "d"
   },
   {
     "question": "The hydrogen halides are all polar molecules which form acidic solutions. Which of the following is the weakest acid?",
@@ -153,12 +153,11 @@
     "correct": "c"
   },
   {
-    "question": "How many pi bonds are present in the depicted molecule?",
-    "image": "/assets/images/diagnostic-images/chemistry-img-1.png",
-    "a": "0",
-    "b": "1",
-    "c": "2",
-    "d": "3",
+    "question": "After completing an experiment to determine gravimetrically the percentage of water in a hydrate, a student reported a value of 38 percent. The correct value for the percentage of water in the hydrate is 5 1 percent. Which of the following is the most likely explanation for this difference?",
+    "a": "Strong initial heating caused some of the hydrate sample to spatter out of the crucible",
+    "b": "The dehydrated sample absorbed moisture after heating",
+    "c": "The amount of the hydrate sample used was too small",
+    "d": "The crucible was not heated to constant mass before use",
     "correct": "b"
   }
 ]
