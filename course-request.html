@@ -96,7 +96,7 @@
                         throw new Error("Empty") 
                     }
                 }
-                document.getElementById('errTxt').hidden = false
+                document.getElementById('errTxt').hidden = true
                 let UID
                 if(sessionStorage.ITAUID != undefined){
                     UID = sessionStorage.ITAUID
@@ -122,6 +122,7 @@
                 data.append('UID', UID)
                 data.append('Email', email)
                 data.append('Flag', 'Standard')
+                data.append('Time', new Date().toUTCString())
                 
                 const action = e.target.action;
                 fetch(action, {
