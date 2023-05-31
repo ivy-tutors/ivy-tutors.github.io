@@ -155,6 +155,43 @@
         })
     })
   </script>
+
+  <script>
+    window.addEventListener('load', () => {
+      students = document.getElementById('nstudent')
+      bid = document.getElementById('bid')
+      students.addEventListener('input', () => {
+        try {
+          if (bid.value == ''){
+            throw Error
+          }
+          if ((students.value == 1 && bid.value < 90) || (students.value == 2 && bid.value < 70) || (students.value == 3 && bid.value < 50) || (students.value == 4 && bid.value < 40) || (students.value >= 5 && students.value <= 10 && bid.value < 30) || (bid.value < 20)){
+            bid.style = bid.style + '; background-color: #ffcccb'
+            document.getElementById('badBid').hidden = false
+          } else {
+            bid.style = bid.style + '; background-color: white'
+            document.getElementById('badBid').hidden = true
+          }
+        } catch (e) {  }
+      })
+
+      bid.addEventListener('input', () => {
+        try {
+          if (students.value == ''){
+            throw Error
+          }
+          if ((students.value == 1 && bid.value < 90) || (students.value == 2 && bid.value < 70) || (students.value == 3 && bid.value < 50) || (students.value == 4 && bid.value < 40) || (students.value >= 5 && students.value <= 10 && bid.value < 30) || (bid.value < 20)){
+            bid.style = bid.style + '; background-color: #ffcccb'
+            document.getElementById('badBid').hidden = false
+          } else {
+            bid.style = bid.style + '; background-color: white'
+            document.getElementById('badBid').hidden = true
+          }
+        } catch (e) {  }
+      })
+    })
+  </script>
+
 </head>
 
 <body>
@@ -302,6 +339,10 @@
                                         </td>
                                       </tr>
                                     </table>
+                                    <div id="badBid" hidden>
+                                      <br>
+                                      <i>With current demand, your bid is slightly lower than others in the system. Although you can still request this course at this bid, we would recommend either increasing the bid amount or the number of students in the course.</i>
+                                    </div>
                                     <div id="errTxt" hidden>
                                         <br>
                                         <i>Please enter values in all locations!</i>
