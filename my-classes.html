@@ -41,7 +41,19 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <link href="assets/css/chat.css" rel="stylesheet">
+  <script>
+    let details = navigator.userAgent;
+  
+    let regexp = /android|iphone|kindle|ipad/i;
+    
+    let isMobileDevice = regexp.test(details);
+    
+    window.addEventListener('load', () => {
+      if(isMobileDevice){
+        document.getElementById('title').hidden = true
+      }
+    })
+  </script>
 
   <!-- =======================================================
   * Template Name: HeroBiz
@@ -69,115 +81,10 @@
     })
   </script>
 
-  <script>
-    let search = function () {
-        document.getElementById('fail').hidden = true
-        q = document.getElementById('search').value
-        tutors = document.getElementsByClassName('tutor')
-        counter = 0
-
-        for(i = 0; i < tutors.length; i++){
-          if(tutors[i].getAttribute('searchable').toLowerCase().includes(q.toLowerCase())){
-            counter += 1
-            tutors[i].hidden = false
-          } else {
-            tutors[i].hidden = true
-          }
-        }
-
-        if (counter == 0){
-            document.getElementById('fail').hidden = false
-        }
-    }
-  </script>
-  
-  <script>
-    let details = navigator.userAgent;
-  
-    let regexp = /android|iphone|kindle|ipad/i;
-    
-    let isMobileDevice = regexp.test(details);
-
-    window.addEventListener('load', function() {
-      if(isMobileDevice){
-        document.getElementById('title').hidden = true
-      }
-      document.getElementById('search').addEventListener('input', (event) => {
-          search()
-      })
-      fetch('assets/json/diagnostic_tests.json')
-      .then((response) => response.json())
-      .then((dataJSON) => {
-        let tutorDiv = document.getElementById('info')
-        for(let i = 0; i < dataJSON.length; i++){
-          cardInfo = dataJSON[i]
-          
-          let containerDiv = document.createElement('div')
-          containerDiv.setAttribute('class', 'col-xl-3 col-md-4 tutor')
-          containerDiv.setAttribute('data-aos', 'zoom-in')
-          containerDiv.setAttribute('data-aos-delay', '200')
-          containerDiv.setAttribute('searchable', cardInfo['name'])
-
-          let innerDiv = document.createElement('div')
-          innerDiv.setAttribute('class', 'service-item')
-
-          let imgDiv = document.createElement('div')
-          imgDiv.setAttribute('class', 'img')
-
-          let backImg = document.createElement('img')
-          backImg.setAttribute('src', cardInfo['imageURL'])
-          backImg.className = 'img-fluid'
-          backImg.setAttribute('alt', '')
-          if (isMobileDevice){
-            backImg.setAttribute('style', 'width: 500%')
-          } else {
-            backImg.setAttribute('style', 'width: 296px; height:296px; object-fit:cover')
-          }
-          imgDiv.appendChild(backImg)
-          innerDiv.appendChild(imgDiv)
-
-          let infoDiv = document.createElement('div')
-          infoDiv.className = 'details position-relative'
-
-          let iconDiv = document.createElement('div')
-          iconDiv.className = 'icon'
-
-          let icon = document.createElement('i')
-          icon.className = 'bi bi-chat-square-text'
-
-          iconDiv.appendChild(icon)
-          infoDiv.appendChild(iconDiv)
-
-          let modalLink = document.createElement('a')
-          modalLink.href = 'diagnostic.html'
-          modalLink.className = 'stretched-link'
-          modalLink.addEventListener('click', () => { 
-            sessionStorage.examName = dataJSON[i]['name']; 
-            sessionStorage.examID = dataJSON[i]['id']
-          })
-
-          let nameLabel = document.createElement('h3')
-          nameLabel.innerText = cardInfo['name']
-
-          modalLink.appendChild(nameLabel)
-
-          infoDiv.appendChild(modalLink)
-
-          innerDiv.appendChild(infoDiv)
-
-          containerDiv.appendChild(innerDiv)
-
-          tutorDiv.appendChild(containerDiv)
-
-        }
-      });
-    
-    })
-  </script>
-
 </head>
 
 <body>
+
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top" data-scrollto-offset="0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
@@ -190,20 +97,21 @@
 
       <nav id="navbar" class="navbar">
         <ul>
+
           <li><a class="nav-link scrollto" href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="about.html">About</a></li>
           <li><a class="nav-link scrollto" href="chatbot.html">Tutor Chat</a></li>
           <li><a class="nav-link scrollto" href="course-list.html">Courses</a></li>
           <li><a class="nav-link scrollto" href="tests.html">Diagnostic Tests</a></li>
-          <li class="dropdown"><a href="my-portal.html"><span>My Portal</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown"><a href="#"><span>My Portal</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="my-portal.html">My Profile</a></li>
               <li><a href="my-classes.html">My Classes</a></li>
               <li><a href="course-request.html">Request a Course</a></li>
               <!-- [!] <li><a href="request.html">Request a Specific Tutor</a></li> -->
               <li><a href="specialized-request.html">Request a Specialized Course</a></li>
-              <li><a href="masterclass.html">Join a Masterclass</a></li>      
-            </ul>        
+              <li><a href="masterclass.html">Join a Masterclass</a></li>               
+            </ul>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
@@ -214,38 +122,98 @@
     </div>
   </header><!-- End Header -->
 
-  <section id="hero-animated" class="hero-animated-2 d-flex align-items-center">
+  <section id="hero-animated" class="hero-animated d-flex align-items-center">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-      
-      <div class="section-header">
-        <h2><span>Diagnostic</span> Exams.</h2>
-        <p>
-          Wondering about whether or not mentorship with us is worth it? Take these free 20-question diagnostic exams to find out. The difficulty of these exams is similar to that of AP / IB exams, and should be doable within 30 minutes. <b>You should not use any calculator or aid apart from a pencil and paper.</b>
-        </p>
-      </div>
-      <div class="d-flex">
-        <input type='text' id='search' class="form-control search-form" placeholder="Search by subject..." style="border:3px solid #A51C30; width:min(100vw, 400px)">
-      </div>
+      <h2>Welcome to your <span>Courses</span></h2>
+      <p>
+        Find invitations and information about your active courses here.
+      </p>
     </div>
   </section>
-    <div class="text-center" id="fail" hidden>
-      <p><i>No courses found!</i> Try a different search.</p>
-    </div>
 
-      <!-- ======= Services Section ======= -->
-      <section class="services">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="row gy-5" id="info">
-  
-  
+  <main id="main" style="margin-top:-10%">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services" style="margin-top:-10%">
+      <div class="container d-flex justify-content-center" data-aos="fade-up">
+        <div class="rounded p-4 text-white" style="background-color: #d9d9d9; border-color: crimson; border-width: 1cm; width: 75%">
+          <code style="font-size:28px; color:crimson">Class Example</code>
+          <table style="width:100%">
+            <tr>
+              <td style="width:60%">
+                <p style="color:black" id="class-description"><strong>Description: </strong>asdfsasfd</p>
+                <p style="color:black"><strong>Frequency: </strong><p id="class-frequency"></p></p>
+                <p style="color:black"><strong>Location: </strong><p id="class-location"></p></p>
+              </td>
+              <td style="width:20%">
+                <img src="">
+              </td>
+            </tr>
+
+          </table>
+          <div class="d-flex">
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Our Introduction</span></a>
           </div>
-  
         </div>
-      </section><!-- End Services Section -->
-            
-      
-      
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services" style="margin-top:-7%">
+      <div class="container d-flex justify-content-center" data-aos="fade-up">
+        <div class="rounded p-4 text-white" style="background-color: #d9d9d9; border-color: crimson; border-width: 1cm; width: 75%">
+          <code style="font-size:28px; color:crimson">Class Example</code>
+          <table style="width:100%">
+            <tr>
+              <td style="width:60%">
+                <p style="color:black" id="class-description"><strong>Description: </strong>asdfsasfd</p>
+                <p style="color:black"><strong>Frequency: </strong><p id="class-frequency"></p></p>
+                <p style="color:black"><strong>Location: </strong><p id="class-location"></p></p>
+              </td>
+              <td style="width:20%">
+                <img src="">
+              </td>
+            </tr>
+
+          </table>
+          <div class="d-flex">
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Our Introduction</span></a>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services" style="margin-top:-7%">
+      <div class="container d-flex justify-content-center" data-aos="fade-up">
+        <div class="rounded p-4 text-white" style="background-color: #d9d9d9; border-color: crimson; border-width: 1cm; width: 75%">
+          <code style="font-size:28px; color:crimson">Class Example</code>
+          <table style="width:100%">
+            <tr>
+              <td style="width:60%">
+                <p style="color:black" id="class-description"><strong>Description: </strong>asdfsasfd</p>
+                <p style="color:black"><strong>Frequency: </strong><p id="class-frequency"></p></p>
+                <p style="color:black"><strong>Location: </strong><p id="class-location"></p></p>
+              </td>
+              <td style="width:20%">
+                <img src="">
+              </td>
+            </tr>
+
+          </table>
+          <div class="d-flex">
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Our Introduction</span></a>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+  </main><!-- End #main -->
+
+    
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -259,6 +227,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 </body>
 
 </html>
