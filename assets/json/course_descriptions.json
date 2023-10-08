@@ -1,0 +1,298 @@
+[{
+  "name":"Algebra I & II",
+  "description":"Algebra I & II is a comprehensive mathematics course that provides students with a solid foundation in algebraic concepts and skills. This course is designed to help students develop a deep understanding of algebraic principles, problem-solving techniques, and mathematical reasoning. Algebra I & II combines two essential levels of algebra into a single course, offering students a well-rounded and immersive experience in algebraic thinking.",
+  "example":"Linda is planning to invest some money in two different savings accounts. She has a total of $10,000 to invest. She wants to invest part of it in Account A, which offers a 4% annual interest rate, and the remainder in Account B, which offers a 6% annual interest rate. If she wants to earn $500 in interest in one year, how much should she invest in each account?",
+  "price":"$90/hr"
+},{
+  "name":"Geometry",
+  "description":"Geometry is a fundamental branch of mathematics that explores the properties and relationships of shapes, sizes, angles, and dimensions in two and three dimensions. This course equips students with the essential skills to analyze and solve geometric problems, understand spatial relationships, and apply geometric concepts to real-world scenarios. Students will delve into topics such as points, lines, angles, polygons, congruence, similarity, transformations, and trigonometry, providing a solid foundation for advanced mathematics and practical applications.",
+  "example":"Amanda is planning to build a rectangular garden in her backyard. She wants the garden to have an area of 120 square feet and a length that is 4 feet longer than its width. If the width of the garden is represented by x feet, determine the dimensions of the garden and calculate the length of the fencing she needs to enclose it.",
+  "price":"$90/hr"
+},{
+  "name":"Precalculus",
+  "description":"Precalculus is an advanced mathematics course that prepares students for the study of calculus and other higher-level mathematical concepts. This comprehensive course covers a wide range of topics, including functions, algebraic and trigonometric equations, complex numbers, vectors, matrices, and polar coordinates. Students will develop the mathematical tools and skills needed to tackle complex problems, model real-world phenomena, and excel in calculus and advanced mathematical disciplines.",
+  "example":"Sarah is launching a model rocket into the air. The height of the rocket, in meters, above the ground is represented by the function h(t) = -5t^2 + 20t + 10, where t is the time in seconds after launch. Calculate the maximum height the rocket reaches and determine the time it takes for the rocket to reach this height.",
+  "price":"$90/hr"
+},{
+  "name":"Calculus",
+  "description":"Calculus is a foundational branch of mathematics that explores the concepts of change, motion, and accumulation. This course is designed to provide students with a deep understanding of calculus principles, techniques, and applications. Topics covered include limits, derivatives, integrals, and their applications in various fields such as physics, engineering, economics, and more. Students will develop critical problem-solving skills and gain insight into the fundamental concepts that underlie the mathematical modeling of dynamic processes.",
+  "example":"A tank is being filled with water at a constant rate of 10 liters per minute. The tank has the shape of an inverted cone with a height of 6 meters and a base radius of 4 meters. Determine the rate at which the water level is rising when the water is 3 meters deep in the tank.",
+  "price":"$90/hr"
+},{
+  "name":"Statistics",
+  "description":"Statistics is a crucial field of study that enables individuals to make informed decisions, draw meaningful conclusions, and analyze data effectively. This course provides students with a comprehensive understanding of statistical concepts and methods. Topics covered include data collection, descriptive statistics, probability, hypothesis testing, regression analysis, and inferential statistics. Students will learn how to summarize data, conduct experiments, perform hypothesis tests, and interpret statistical results, empowering them to make data-driven decisions in various domains.",
+  "example":"A company produces light bulbs, and the lifetime of these bulbs follows a normal distribution with a mean of 800 hours and a standard deviation of 50 hours. Calculate the probability that a randomly selected light bulb will last between 750 and 850 hours.",
+  "price":"$90/hr"
+},{
+  "name":"Linear Algebra",
+  "description":"Linear Algebra is a fundamental branch of mathematics that focuses on vector spaces, linear transformations, and systems of linear equations. This course provides students with a solid foundation in linear algebraic concepts and techniques. Topics covered include vector operations, matrix algebra, determinants, eigenvalues and eigenvectors, and applications in fields such as physics, engineering, computer science, and data analysis. Students will learn to analyze and solve complex problems, understand the geometric interpretation of vectors and matrices, and apply linear algebra to various real-world scenarios.",
+  "example":"A robotics team is designing a robot with two motors that control its movement along the x and y axes. The relationship between the motor speeds and the robot's velocity is given by the following system of equations: 2x+3y=10, 4x-y=5. Determine the values of x and y that represent the motor speeds required for the robot to move at a velocity of (2, 3) units per second in the x and y directions, respectively.",
+  "price":"$90/hr"
+},{
+  "name":"Differential Equations",
+  "description":"Differential Equations is a specialized branch of mathematics that explores the modeling and analysis of dynamic systems, phenomena, and change over time. This course equips students with the tools to solve and interpret differential equations, which are fundamental to various fields, including physics, engineering, biology, and economics. Topics covered include first-order and higher-order differential equations, initial and boundary value problems, linear and nonlinear systems, and applications in modeling physical and natural phenomena. Students will develop a deep understanding of dynamic processes and their mathematical representations.",
+  "example":"A tank initially contains 1000 liters of pure water. Saltwater containing 2 grams of salt per liter is poured into the tank at a rate of 5 liters per minute. The tank is well-mixed, and the mixture is drained from the tank at a rate of 3 liters per minute. Write a differential equation that models the amount of salt in the tank as a function of time and determine the amount of salt in the tank after 10 minutes.",
+  "price":"$100/hr"
+},{
+  "name":"Mathematical Modelling",
+  "description":"Mathematical Modeling is an interdisciplinary field that applies mathematical techniques to real-world problems, allowing individuals to understand, analyze, and predict complex phenomena. This course introduces students to the art and science of constructing mathematical models for a wide range of applications, including physics, biology, economics, and social sciences. Topics covered include problem formulation, model development, parameter estimation, and model validation. Students will learn to translate real-world scenarios into mathematical equations, make predictions, and refine models to improve their accuracy.",
+  "example":"A population of rabbits in a certain area is growing rapidly. The rate of growth of the rabbit population is proportional to the current population size, and there are currently 500 rabbits in the area. The population doubles in size every month. Create a mathematical model to describe the rabbit population as a function of time and use the model to estimate the population after 6 months.",
+  "price":"$100/hr"
+},{
+},{
+  "name":"Real/Complex Analysis",
+  "description":"Real and Complex Analysis is an advanced mathematical course that explores the foundations of real and complex numbers, sequences, and functions. This course delves into the theory of limits, continuity, differentiability, and integration in both real and complex domains. Topics covered include the properties of real and complex numbers, convergence of sequences and series, complex functions, contour integration, and the study of real and complex functions' behavior. Real/Complex Analysis is essential for understanding the theoretical underpinnings of calculus and advanced mathematics.",
+  "example":"Consider the complex function f(z) = z^3 - 4z^2 + 5z - 2 in the complex plane. Find all the complex roots (zeros) of this function and determine their multiplicity. Additionally, plot the function in the complex plane and indicate the locations of the roots.",
+  "price":"$100/hr"
+},{
+  "name":"Stochastic Calculus",
+  "description":"Stochastic Calculus is an advanced mathematical discipline that focuses on modeling and analyzing random processes and systems. This course equips students with the tools to understand and work with stochastic differential equations, Itô's calculus, and stochastic integration. Topics covered include Brownian motion, continuous-time stochastic processes, stochastic differential equations, martingales, and their applications in finance, engineering, and other fields. Stochastic Calculus is essential for quantifying uncertainty, risk, and randomness in various domains.",
+  "example":"A financial analyst is modeling the stock price of a company using geometric Brownian motion, which is described by the stochastic differential equation: dS(t) = μS(t)dt + σS(t)dW(t). Here, S(t) represents the stock price, μ is the expected return, σ is the volatility, and W(t) is a Wiener process (Brownian motion). Calculate the expected stock price at time T, E[S(T)], given the initial stock price S(0), the expected return μ, the volatility σ, and the time horizon T.",
+  "price":"$100/hr"
+},{
+  "name":"AMC 8/10/12",
+  "description":"This course is designed to prepare students for the AMC competition by covering a wide range of mathematical topics, including algebra, geometry, number theory, and combinatorics. Students will practice solving challenging problems similar to those found in the competition, improve their problem-solving skills, and gain valuable experience in competitive mathematics.",
+  "example":"Eight people are sitting around a circular table, each holding a fair coin. All eight people flip their coins and those who flip heads stand while those who flip tails remain seated. What is the probability that no two adjacent people will stand?",
+  "price":"$100/hr"
+},{
+  "name":"AIME",
+  "description":"The AIME (American Invitational Mathematics Examination) is a prestigious mathematics competition that challenges high school students with complex and creative problem-solving tasks. This course is designed to prepare students for the AIME competition by covering advanced mathematical topics, including algebra, geometry, number theory, and combinatorics. Students will engage in rigorous problem-solving, explore advanced mathematical concepts, and develop the analytical and creative thinking skills needed to excel in the AIME competition.",
+  "example":"For any positive integer a, s(a) denotes the sum of the positive integer divisors of a. Let n be the least positive integer such that s(a^n)-1 is divisible by 2021 for all positive integers a. Find the sum of the prime factors in the prime factorization of n.",
+  "price":"$100/hr"
+},{
+  "name":"USAJMO/USAMO",
+  "description":"The USA(J)MO is a highly competitive mathematics competition for talented high school students. This course is designed to prepare students for the USA(J)MO competition by delving into advanced mathematical topics and honing problem-solving skills. Topics covered include number theory, algebra, combinatorics, and geometry, with an emphasis on proof-writing and creative problem-solving strategies. Students will work on challenging problems, strengthen their mathematical reasoning abilities, and develop the expertise needed to excel in the USA(J)MO competition.",
+  "example":"Carina has three pins, labeled A, B, and C, respectively, located at the origin of the coordinate plane. In a move, Carina may move a pin to an adjacent lattice point at distance 1 away. What is the least number of moves that Carina can make in order for triangle ABC to have area 2021?",
+  "price":"$120/hr"
+},{
+  "name":"Biology",
+  "description":"Biology is the scientific study of living organisms and their interactions with the environment. This course provides a comprehensive introduction to the field of biology, covering topics ranging from cellular biology and genetics to ecology and evolution. Students will explore the fundamental principles that govern life processes, examine the diversity of living organisms, and gain insights into the intricate web of life on Earth. Practical applications of biology in areas such as medicine, genetics, and environmental science will also be explored.",
+  "example":"In a population of rabbits, a new genetic mutation has emerged that results in rabbits having longer ears than the rest of the population. Over several generations, this trait becomes more prevalent in the population. Explain the biological mechanisms and processes that could lead to the increased frequency of this genetic trait in the rabbit population.",
+  "price":"$90/hr"
+},{
+  "name":"Chemistry",
+  "description": "Chemistry is the study of matter, its properties, composition, and transformations. This course provides a comprehensive understanding of chemical principles, including atomic structure, chemical bonding, reactions, and the behavior of matter. Students will explore the periodic table, chemical equations, thermodynamics, and the fascinating world of organic and inorganic chemistry. Practical applications of chemistry in fields such as medicine, industry, and environmental science will also be explored.",
+  "example": "In a chemical reaction, 2 moles of hydrogen gas (H₂) react with 1 mole of oxygen gas (O₂) to produce 2 moles of water (H₂O). If 5 moles of hydrogen gas and 2 moles of oxygen gas are available, how many moles of water can be produced?",
+  "price":"$90/hr"
+},{
+  "name": "Physics",
+  "description": "Physics is the study of the fundamental principles governing the natural world, including the behavior of matter and energy. This course delves into the laws of physics, including classical mechanics, electromagnetism, thermodynamics, and modern physics. Students will explore the principles that govern the universe, from the motion of objects to the behavior of particles on the quantum level.",
+  "example": "A ball is thrown vertically upward with an initial velocity of 20 m/s. Determine the maximum height it reaches and the time it takes to reach this height.",
+  "price": "$90/hr"
+  },
+  {
+  "name": "Neuroscience",
+  "description": "Neuroscience is the multidisciplinary study of the nervous system, including the brain and spinal cord. This course provides an in-depth understanding of neural function, behavior, and cognitive processes. Students will explore topics such as neural anatomy, neurochemistry, sensory perception, and the mechanisms underlying learning and memory.",
+  "example": "Explain the process of synaptic transmission and how neurotransmitters play a role in transmitting signals between neurons.",
+  "price": "$90/hr"
+  },
+  {
+  "name": "Environmental Science",
+  "description": "Environmental Science is the study of the natural world and the impact of human activities on the environment. This course covers a wide range of topics, including ecology, conservation, pollution, and sustainable practices. Students will examine the intricate relationships between ecosystems, biodiversity, and human societies.",
+  "example": "Investigate the causes and consequences of air pollution in urban areas and propose sustainable solutions to mitigate its effects.",
+  "price": "$90/hr"
+  },{
+    "name": "Computer Science",
+    "description": "Computer Science is the study of algorithms, data structures, and the principles that underlie computing systems. This course provides a comprehensive understanding of programming, software development, and computer architecture. Students will explore topics such as algorithm design, data analysis, and the development of software applications.",
+    "example": "Write a Python program that calculates the factorial of a given positive integer using recursion.",
+    "price": "$90/hr"
+    },
+    {
+    "name": "Economics",
+    "description": "Economics is the study of how individuals, businesses, and societies allocate resources and make decisions. This course covers microeconomics and macroeconomics, exploring topics such as supply and demand, market structures, economic policies, and global economics. Students will gain insights into the factors influencing economic behavior and decision-making.",
+    "example": "Explain the concept of elasticity in economics and provide real-world examples of elastic and inelastic goods.",
+    "price": "$90/hr"
+    },
+    {
+    "name": "Psychology",
+    "description": "Psychology is the scientific study of the mind and behavior. This course delves into various branches of psychology, including cognitive psychology, behavioral psychology, and clinical psychology. Students will explore topics such as memory, perception, personality, and psychological disorders.",
+    "example": "Discuss the major theories of motivation in psychology and provide examples of how they apply to everyday life.",
+    "price": "$90/hr"
+    },
+    {
+    "name": "Web Development",
+    "description": "Web Development is the art and science of creating interactive and visually appealing websites and web applications. This course covers front-end and back-end development, HTML, CSS, JavaScript, and web frameworks. Students will learn to design and build dynamic websites and web-based applications.",
+    "example": "Create a responsive web page using HTML and CSS that includes a navigation menu, images, and a contact form.",
+    "price": "$90/hr"
+    },
+    {
+    "name": "Political Science",
+    "description": "Political Science is the study of political systems, government structures, and the behavior of political actors. This course covers topics such as political theory, international relations, comparative politics, and public policy. Students will gain insights into the workings of governments and political processes.",
+    "example": "Analyze the impact of political ideologies on government policies and decision-making in a specific country.",
+    "price": "$90/hr"
+    },{
+      "name": "English Literature",
+      "description": "English Literature is the study of literary works and their cultural significance. This course explores various literary genres, authors, and literary analysis techniques. Students will delve into classic and contemporary literature, analyze themes, characters, and literary devices, and gain a deeper appreciation for the written word.",
+      "example": "Analyze the symbolism of the 'green light' in F. Scott Fitzgerald's novel 'The Great Gatsby' and its significance in the story.",
+      "price": "$90/hr"
+      },
+      {
+      "name": "English Language Arts",
+      "description": "English Language Arts encompasses the study of language, communication, and the art of effective writing and speaking. This course covers grammar, composition, rhetoric, and literary analysis. Students will enhance their language skills, learn to craft persuasive essays, and explore the power of language in various contexts.",
+      "example": "Write a persuasive essay arguing for or against a specific environmental conservation initiative, providing strong supporting evidence.",
+      "price": "$90/hr"
+      },
+      {
+      "name": "English Language Arts",
+      "description": "English Language Arts encompasses the study of language, communication, and the art of effective writing and speaking. This course covers grammar, composition, rhetoric, and literary analysis. Students will enhance their language skills, learn to craft persuasive essays, and explore the power of language in various contexts.",
+      "example": "Compose a creative short story that explores the theme of resilience in the face of adversity.",
+      "price": "$90/hr"
+      },
+      {
+      "name": "Creative Writing",
+      "description": "Creative Writing is an exploration of imaginative and expressive writing. This course encourages students to unleash their creativity and experiment with various writing forms, including poetry, fiction, and creative nonfiction. Students will develop their unique writing voice and storytelling skills.",
+      "example": "Write a poem inspired by a vivid childhood memory, using descriptive language and vivid imagery.",
+      "price": "$90/hr"
+      },
+      {
+      "name": "Music Theory",
+      "description": "Music Theory is the study of the principles that underlie music composition and performance. This course covers musical notation, scales, chords, harmony, and musical analysis. Students will deepen their understanding of music, explore the language of music notation, and analyze musical compositions.",
+      "example": "Analyze the structure and harmonic progression in a classical piece of music by a renowned composer.",
+      "price": "$90/hr"
+      },{
+        "name": "Debate and Public Speaking",
+        "description": "Debate and Public Speaking is a comprehensive course that focuses on effective communication, persuasion, and argumentation. Students will learn the art of public speaking, debate techniques, and critical thinking. This course empowers students to express their ideas confidently and persuasively in various public speaking contexts, including debates, speeches, and presentations.",
+        "example": "Prepare and deliver a persuasive speech on a current social or political issue, using compelling evidence and persuasive techniques.",
+        "price": "$100/hr"
+        },
+        {
+        "name": "US History",
+        "description": "US History is a journey through the rich tapestry of American history and its impact on society and the world. This course covers key events, figures, and periods in US history, from colonial times to the present day. Students will explore the foundations of the nation, its growth, challenges, and the evolution of its democracy.",
+        "example": "Analyze the causes and consequences of the American Civil War and its significance in shaping the nation's history.",
+        "price": "$90/hr"
+        },
+        {
+        "name": "European History",
+        "description": "European History is a comprehensive exploration of the history, culture, and developments of Europe. This course covers key epochs, revolutions, and figures in European history, from ancient civilizations to contemporary Europe. Students will gain insights into the interconnectedness of European nations and their global impact.",
+        "example": "Examine the impact of the Renaissance on art, culture, and intellectual thought in Europe during the 15th and 16th centuries.",
+        "price": "$90/hr"
+        },
+        {
+        "name": "World History",
+        "description": "World History is a global journey through the history of civilizations, societies, and cultures across continents and eras. This course delves into pivotal moments, empires, and historical processes that have shaped the world's history. Students will gain a broader perspective on human history and its global interplay.",
+        "example": "Discuss the effects of the Silk Road on cultural exchange and trade between East and West during ancient times.",
+        "price": "$90/hr"
+        },
+        {
+        "name": "Geography",
+        "description": "Geography is the study of the Earth's physical features, climates, regions, and their human and environmental interactions. This course explores the diverse landscapes, cultures, and geopolitical issues of the world. Students will analyze maps, study global challenges, and develop a deeper understanding of the planet's geography.",
+        "example": "Examine the impact of climate change on polar ice caps and its consequences for global sea levels and ecosystems.",
+        "price": "$90/hr"
+        },
+        {
+        "name": "Political Science",
+        "description": "Political Science is the study of political systems, government structures, and the behavior of political actors. This course covers topics such as political theory, international relations, comparative politics, and public policy. Students will gain insights into the workings of governments and political processes.",
+        "example": "Analyze the impact of political ideologies on government policies and decision-making in a specific country.",
+        "price": "$90/hr"
+        },{
+          "name": "Philosophy",
+          "description": "Philosophy is the exploration of fundamental questions about existence, knowledge, ethics, and the nature of reality. This course delves into the works of renowned philosophers and philosophical movements. Students will engage in critical thinking, ethical reasoning, and philosophical discussions on timeless questions.",
+          "example": "Discuss the concept of free will and determinism in philosophy, considering various philosophical perspectives on this topic.",
+          "price": "$90/hr"
+          },
+          {
+          "name": "Spanish",
+          "description": "Spanish is a vibrant and widely spoken language with a rich cultural heritage. This course focuses on language proficiency, vocabulary, grammar, and conversational skills in Spanish. Students will learn to communicate effectively in both spoken and written Spanish, exploring the language's cultural nuances.",
+          "example": "Write a short essay in Spanish about a cultural celebration or tradition in a Spanish-speaking country.",
+          "price": "$90/hr"
+          },
+          {
+          "name": "French",
+          "description": "French is a language known for its elegance and global influence. This course emphasizes French language acquisition, pronunciation, grammar, and comprehension. Students will immerse themselves in French culture, literature, and conversation, gaining proficiency in both written and spoken French.",
+          "example": "Conduct a conversation in French discussing daily routines, hobbies, and future plans.",
+          "price": "$90/hr"
+          },
+          {
+          "name": "Italian",
+          "description": "Italian is a romance language renowned for its musicality and cultural richness. This course focuses on Italian language skills, including vocabulary, grammar, and pronunciation. Students will explore Italian culture, traditions, and the art of conversing in Italian.",
+          "example": "Translate an Italian poem into English, discussing its themes and literary techniques.",
+          "price": "$90/hr"
+          },
+          {
+          "name": "Mandarin",
+          "description": "Mandarin Chinese is one of the most widely spoken languages globally. This course emphasizes Mandarin language proficiency, characters, tones, and conversational abilities. Students will dive into Chinese culture, history, and effective communication in Mandarin.",
+          "example": "Write and deliver a short speech in Mandarin on a topic of your choice, demonstrating language fluency.",
+          "price": "$90/hr"
+          },
+          {
+          "name": "Japanese",
+          "description": "Japanese is a fascinating language with a unique writing system and cultural significance. This course focuses on Japanese language skills, including kanji, grammar, and speaking proficiency. Students will explore Japanese culture, customs, and the art of communication in Japanese.",
+          "example": "Compose a haiku in Japanese, reflecting the traditional 5-7-5 syllable structure and thematic depth.",
+          "price": "$90/hr"
+          },{
+            "name": "Korean",
+            "description": "Korean is a dynamic language with a unique writing system and cultural depth. This course focuses on Korean language skills, including Hangul, grammar, and conversational fluency. Students will immerse themselves in Korean culture, language, and communication.",
+            "example": "Compose a short story in Korean that showcases your language proficiency and creativity.",
+            "price": "$90/hr"
+            },
+            {
+            "name": "College Counseling",
+            "description": "College Counseling offers personalized guidance and support for students navigating the college admissions process. This service includes college selection, application assistance, essay guidance, and interview preparation. Pricing may fluctuate based on the scope of services provided.",
+            "example": "Assist a student in crafting a compelling college admissions essay that highlights their unique experiences and aspirations.",
+            "price": "Fluctuates"
+            },
+            {
+            "name": "Extracurricular Counseling",
+            "description": "Extracurricular Counseling provides tailored advice on extracurricular activities and involvement. This service helps students identify and pursue meaningful extracurricular opportunities that align with their interests and goals. Pricing may vary based on individual needs.",
+            "example": "Guide a student in planning and organizing a community service project that demonstrates leadership and commitment.",
+            "price": "Fluctuates"
+            },
+            {
+            "name": "Essay Editing",
+            "description": "Essay Editing offers professional editing and feedback on written assignments, essays, and research papers. Our expert editors provide constructive suggestions to improve clarity, coherence, and overall quality of written work. Pricing may vary based on the length and complexity of the document.",
+            "example": "Edit and enhance a research paper on the environmental impact of renewable energy sources, ensuring proper citations and clarity of arguments.",
+            "price": "Fluctuates"
+            },
+            {
+            "name": "Independent Research",
+            "description": "Independent Research empowers students to explore their academic interests through self-directed research projects. This service provides guidance on research design, data collection, analysis, and presentation. Pricing may fluctuate based on the scope and complexity of the research.",
+            "example": "Mentor a student in conducting an independent research project on the effects of social media on mental health among adolescents, guiding them through the research process.",
+            "price": "Fluctuates"
+            },
+            {
+            "name": "Mock Trial",
+            "description": "Mock Trial is an engaging legal simulation program that allows students to develop critical thinking, advocacy, and public speaking skills. This course involves preparing and participating in mock trial cases. Students will learn about legal procedures, argumentation, and courtroom etiquette.",
+            "example": "Participate in a mock trial as an attorney, presenting a compelling case and cross-examining witnesses in a courtroom setting.",
+            "price": "$100/hr"
+            },
+            {
+            "name": "Model UN",
+            "description": "Model United Nations (Model UN) is an educational program that simulates the United Nations, allowing students to explore international diplomacy, politics, and problem-solving. This course involves research, debate, and collaboration in addressing global issues as delegates of various countries.",
+            "example": "Represent a specific country in a Model UN conference and deliver a persuasive speech on an international crisis, advocating for diplomatic solutions.",
+            "price": "$100/hr"
+            },{
+              "name": "PSAT",
+              "description": "The PSAT (Preliminary SAT) is a standardized test that serves as a practice exam for the SAT. This course offers comprehensive PSAT preparation, including content review, test-taking strategies, and practice tests. Students will enhance their skills in reading, writing, and math to excel in the PSAT.",
+              "example": "If x and y are positive integers, with 3x - 2y = 10 and x + 6y = 6, what is the value of 2x + 2y?",
+              "price": "$100/hr"
+              },
+              {
+              "name": "SAT",
+              "description": "The SAT is a widely recognized standardized test for college admissions. This course provides thorough SAT preparation, covering critical reading, writing, and math components. Students will learn test-taking strategies and receive personalized guidance to achieve their best SAT scores.",
+              "example": "In a certain school, 40% of the students take both Physics and Chemistry, while 60% of the students take either Physics or Chemistry or both. If there are 200 students in total, how many students take at least one of the two subjects?",
+              "price": "$100/hr"
+              },
+              {
+              "name": "ACT",
+              "description": "The ACT is another prominent standardized test for college admissions. This course offers comprehensive ACT preparation, focusing on English, mathematics, reading, and science reasoning. Students will practice ACT-style questions and develop effective test strategies.",
+              "example": "A student is conducting an experiment to investigate the effect of temperature on the rate of chemical reactions. The student places two identical containers with reactants in a controlled environment. One container is kept at room temperature (25°C), while the other is placed in a heated chamber at 50°C. The student measures the rate of reaction in both containers over a period of time. What is the independent variable?",
+              "price": "$100/hr"
+              },
+              {
+              "name": "SSAT",
+              "description": "The SSAT (Secondary School Admission Test) is a standardized test used for admissions to independent and private schools. This course provides SSAT preparation, covering verbal, quantitative, and reading comprehension sections. Students will enhance their academic skills and test-taking abilities.",
+              "example": "Find an appropriate adjective to fill in the blank: The ___ harvest of apples this year resulted in a bountiful supply of apple pies for the whole town to enjoy.",
+              "price": "$100/hr"
+              },
+              {
+              "name": "ISEE",
+              "description": "The ISEE (Independent School Entrance Examination) is a standardized test for admission to independent schools. This course offers comprehensive ISEE preparation, including verbal reasoning, quantitative reasoning, reading comprehension, and mathematics. Students will excel in the ISEE with targeted instruction and practice tests.",
+              "example": "If 2/3 of a number is equal to 4/5 of another number, and the sum of the two numbers is 60, what is the larger number?",
+              "price": "$100/hr"
+              },
+              {
+              "name": "TOEFL",
+              "description": "The TOEFL (Test of English as a Foreign Language) is an English language proficiency test for non-native English speakers. This course provides TOEFL preparation, focusing on reading, listening, speaking, and writing skills. Students will gain the language proficiency needed to succeed on the TOEFL.",
+              "example": "<br>Passage:<br> In recent years, there has been a growing interest in renewable energy sources such as solar power. Solar panels, which capture energy from the sun and convert it into electricity, have become increasingly popular for both residential and commercial use. One of the key advantages of solar power is its sustainability and environmental friendliness.<br><br> Question:<br> What is one of the key advantages of solar power mentioned in the passage?",
+              "price": "$100/hr"
+              }]

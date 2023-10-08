@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXWH4ZFR7P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YXWH4ZFR7P');
+  </script>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ivy Tutors Academy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/apple-touch-icon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.css" rel="stylesheet"> -->
+  <link href="//cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css" rel="stylesheet">
+
+  <!-- Variables CSS Files -->
+  <link href="assets/css/variables-red.css" rel="stylesheet">
+  <link href="assets/css/search.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <script>
+    let details = navigator.userAgent;
+  
+    let regexp = /android|iphone|kindle|ipad/i;
+    
+    let isMobileDevice = regexp.test(details);
+
+    window.addEventListener('load', function() {
+      if(isMobileDevice){
+        document.getElementById('title').hidden = true
+      }
+    }) 
+  </script>
+
+
+  <!-- =======================================================
+  * Template Name: HeroBiz
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script>
+    window.addEventListener('load', () => {
+      if (sessionStorage.ITAUID == undefined && localStorage.ITAUID == undefined){
+        document.getElementById('login').hidden = false
+        document.getElementById('signout').hidden = true
+      } else {
+        document.getElementById('login').hidden = true
+        document.getElementById('signout').hidden = false
+      }
+      if (sessionStorage.ITAeID == undefined && localStorage.ITAeID == undefined){
+        document.getElementById('login').hidden = false
+        document.getElementById('signout').hidden = true
+      } else {
+        document.getElementById('login').hidden = true
+        document.getElementById('signout').hidden = false
+      }
+      document.getElementById('signout').addEventListener('click', (e) => {
+        e.preventDefault()
+        localStorage.removeItem('ITAUID')
+        sessionStorage.removeItem('ITAUID')
+        localStorage.removeItem('ITAeID')
+        sessionStorage.removeItem('ITAeID')
+        document.location.href = "login.html"
+      })
+    })
+  </script>
+  </head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 id="title">Ivy Tutors Academy<span>.</span></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="about.html">About</a></li>
+          <!-- <li><a class="nav-link scrollto" href="chatbot.html">Tutor Chat</a></li> -->
+          <li><a class="nav-link scrollto" href="course-list.html">Courses</a></li>
+          <li><a class="nav-link scrollto" href="tests.html">Diagnostic Tests</a></li>
+          <li class="dropdown"><a href="my-portal.html"><span>My Portal</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="my-portal.html">My Profile</a></li>
+              <li><a href="course-search.html">Course Search</a></li>
+              <li><a href="schedule.html">Schedule a Consultation!</a></li>
+              <!-- <li><a href="my-classes.html">My Classes</a></li>
+              <li><a href="course-request.html">Request a Course</a></li> -->
+              <!-- [!] <li><a href="request.html">Request a Specific Tutor</a></li> -->
+              <!-- <li><a href="specialized-request.html">Request a Specialized Course</a></li> -->
+              <!-- <li><a href="masterclass.html">Join a Masterclass</a></li>                -->
+            </ul>          
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav><!-- .navbar -->
+
+      <a class="btn-getstarted scrollto" href="login.html" id="login">Log In</a>
+      <a class="btn-getstarted scrollto" href="login.html" id="signout" hidden>Sign Out</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main>
+
+    <section id="hero-animated" class="hero-animated-2 d-flex align-items-center" style="width:100%">
+      <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+        
+        <div class="section-header">
+          <h2><span>Course</span> Search.</h2>
+          <p>
+            Want to learn more about our various courses? Read about some of our favorite subjects!
+          </p>
+        </div>
+          
+          <div class="col-md-4 col-sm-6" style="width:100%">
+            <select id='course-select' class="js-select2-multi" multiple="multiple" style="width: min(600px,80%);">
+              <option>Algebra I & II</option>
+              <option>Geometry</option>
+              <option>Precalculus</option>
+              <option>Calculus</option>
+              <option>Statistics</option>
+              <option>Linear Algebra</option>
+              <option>Differential Equations</option>
+              <option>Mathematical Modelling</option>
+              <option>Real/Complex Analysis</option>
+              <option>Stochastic Calculus</option>
+              <option>AMC 8/10/12</option>
+              <option>AIME</option>
+              <option>USAJMO/USAMO</option>
+              <option>Biology</option>
+              <option>Chemistry</option>
+              <option>Physics</option>
+              <option>Neuroscience</option>
+              <option>Environmental Science</option>
+              <option>Computer Science</option>
+              <option>Economics</option>
+              <option>Psychology</option>
+              <option>Web Development</option>
+              <option>Political Science</option>
+              <option>English Literature</option>
+              <option>English Language Arts</option>
+              <option>Creative Writing</option>
+              <option>Music Theory</option>
+              <option>Debate and Public Speaking</option>
+              <option>US History</option>
+              <option>European History</option>
+              <option>World History</option>
+              <option>Geography</option>
+              <option>Political Science</option>
+              <option>Philosophy</option>
+              <option>Spanish</option>
+              <option>French</option>
+              <option>Italian</option>
+              <option>Mandarin</option>
+              <option>Japanese</option>
+              <option>Korean</option>
+              <option>College Counseling</option>
+              <option>Extracurricular Counseling</option>
+              <option>Essay Editing</option>
+              <option>Independent Research</option>
+              <option>Mock Trial</option>
+              <option>Model UN</option>
+              <option>PSAT</option>
+              <option>SAT</option>
+              <option>ACT</option>
+              <option>SSAT</option>
+              <option>ISEE</option>
+              <option>TOEFL</option>
+            </select>
+          </div>
+                    
+        </div>
+      </div>
+    </section>
+        <div class="container" data-aos="fade-up">
+  
+          <div class="gy-5" id="info">
+            
+          </div>
+  
+        </div>
+
+      </section>
+  
+  </main>
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.min.js"></script>
+
+  <script>
+   $(document).ready(function() {
+  $(".js-select2").select2({
+    closeOnSelect: false
+  });
+  $(".js-select2-multi").select2({
+    closeOnSelect: false
+  });
+});
+  </script>
+
+  <script>
+    let course_divs = {}
+
+    const generateDiv = (elt) => {
+      let container_div = document.createElement('div')
+      container_div.className = "container d-flex justify-content-center"
+      container_div.setAttribute('data-aos', 'fade-up')
+      container_div.style = "margin-bottom:1cm"
+      container_div.id = elt['name']
+
+      let text_div = document.createElement('div')
+      text_div.className = "rounded p-4 class_info_card"
+
+      let header = document.createElement('h3')
+      header.style = 'color:#A51C30'
+      header.innerText = elt['name']
+
+      let pDesc = document.createElement('p')
+      let strongDescriptionText = document.createElement('strong')
+      strongDescriptionText.innerText = 'Description: '
+      pDesc.appendChild(strongDescriptionText)
+      pDesc.innerHTML += elt['description']
+
+      let pExam = document.createElement('p')
+      let strongExampleText = document.createElement('strong')
+      strongExampleText.innerText = 'Example Question: '
+      pExam.appendChild(strongExampleText)
+      pExam.innerHTML += elt['example']
+
+      let pPric = document.createElement('p')
+      let strongPriceText = document.createElement('strong')
+      strongPriceText.innerText = 'Standard 1-1 Price: '
+      pPric.appendChild(strongPriceText)
+      pPric.innerHTML += elt['price']
+
+      let aButton = document.createElement('a')
+      aButton.className = 'arrow'
+      aButton.href = 'schedule.html'
+      aButton.innerText = "I'm Interested"
+
+      text_div.appendChild(header)
+      text_div.appendChild(pDesc)
+      text_div.appendChild(pExam)
+      text_div.appendChild(pPric)
+      text_div.appendChild(aButton)
+      container_div.appendChild(text_div)
+
+      return container_div
+    }
+
+    fetch('assets/json/course_descriptions.json')
+    .then((response) => response.json())
+    .then((dataJSON) => {
+      for(let i = 0; i < dataJSON.length; i++){
+        course_divs[dataJSON[i]['name']] = generateDiv(dataJSON[i])
+      }
+    });
+
+    const observer = new MutationObserver((mutationsList, observer) => {
+        for (const mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+              let tutorDiv = document.getElementById('info')
+              for(let i = 0; i < mutation.addedNodes.length; i++){
+                tutorDiv.appendChild(course_divs[mutation.addedNodes[i].innerText.trim()])
+              }
+              for(let i = 0; i < mutation.removedNodes.length; i++){
+                document.getElementById(mutation.removedNodes[i].innerText.trim()).remove()
+              }
+            }
+        }
+    });
+
+    const config = { childList: true };
+
+    window.addEventListener('load', () => {
+      const targetElement = document.getElementsByClassName('select2-choices')[0];
+      observer.observe(targetElement, config);
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+.class_info_card {
+    margin-bottom: 5px;
+    background: #FA6F96;
+    background: -webkit-linear-gradient(to right, #FA6F96, #FC8FB8);
+    background: linear-gradient(to right, #FA6F96, #FC8FB8); 
+    border-width: 1cm; 
+    width: 75%
+}
+
+.arrow {
+  cursor: pointer;
+  display: inline-block;  
+  height: 40px;
+  position: relative;
+  margin-right:1cm;
+  line-height: 2.5em;
+  padding-left: 1em;
+  padding-right: 2em;
+  background: #C73E52;
+  float:right;
+  color: black;
+  &:after {
+    border-left: 20px solid #C73E52;
+    float:right
+}
+}
+
+.arrow:after {
+  content: "";
+  position: absolute;
+  border-bottom: 20px solid transparent;
+  border-top: 20px solid transparent;
+  height: 0px;
+  width: 0px;
+  margin-right: -20px;
+  right: 0; 
+}
+
+.arrow:hover, .arrow:active {
+  background: #A51C30;
+  color: black;
+  &:after {
+    border-left: 20px solid #A51C30;
+}
+}

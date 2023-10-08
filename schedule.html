@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height:100%">
 
 <head>
   <!-- Google tag (gtag.js) -->
@@ -41,6 +41,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+	<!-- Quiz CSS File -->
+  <link href="assets/css/diag_test.css" rel="stylesheet">
+
   <script>
     let details = navigator.userAgent;
   
@@ -81,9 +84,13 @@
     })
   </script>
 
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
 </head>
 
-<body>
+<body style="height:100%">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top" data-scrollto-offset="0">
@@ -97,21 +104,22 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-
           <li><a class="nav-link scrollto" href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="about.html">About</a></li>
           <!-- <li><a class="nav-link scrollto" href="chatbot.html">Tutor Chat</a></li> -->
           <li><a class="nav-link scrollto" href="course-list.html">Courses</a></li>
           <li><a class="nav-link scrollto" href="tests.html">Diagnostic Tests</a></li>
-          <li class="dropdown"><a href="#"><span>My Portal</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown"><a href="my-portal.html"><span>My Portal</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="my-portal.html">My Profile</a></li>
-              <li><a href="my-classes.html">My Classes</a></li>
-              <li><a href="course-request.html">Request a Course</a></li>
+              <li><a href="course-search.html">Course Search</a></li>
+              <li><a href="schedule.html">Schedule a Consultation!</a></li>
+              <!-- <li><a href="my-classes.html">My Classes</a></li>
+              <li><a href="course-request.html">Request a Course</a></li> -->
               <!-- [!] <li><a href="request.html">Request a Specific Tutor</a></li> -->
-              <li><a href="specialized-request.html">Request a Specialized Course</a></li>
+              <!-- <li><a href="specialized-request.html">Request a Specialized Course</a></li> -->
               <!-- <li><a href="masterclass.html">Join a Masterclass</a></li>                -->
-            </ul>
+            </ul>          
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
@@ -122,98 +130,26 @@
     </div>
   </header><!-- End Header -->
 
-  <section id="hero-animated" class="hero-animated d-flex align-items-center">
+  <section id="hero-animated" class="hero-animated-2 d-flex align-items-center" style="width:100%">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-      <h2>Welcome to your <span>Courses</span></h2>
-      <p>
-        Find invitations and information about your active courses here.
-      </p>
+      
+      <div class="section-header">
+        <h2><span>Consultation</span> Scheduling.</h2>
+        <p>
+          Interested in learning more about our courses? Schedule a free meeting with one of our organizers!
+        </p>
+      </div>
+        
+      <!-- Calendly inline widget begin -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/ivy-tutors-academy/30min?hide_event_type_details=1&primary_color=a51c30" style="width:min(800px, 80%);height:800px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly inline widget end -->
+
+
+
     </div>
   </section>
-
-  <main id="main" style="margin-top:-10%">
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services" style="margin-top:-10%">
-      <div class="container d-flex justify-content-center" data-aos="fade-up">
-        <div class="rounded p-4 text-white" style="background-color: #d9d9d9; border-color: crimson; border-width: 1cm; width: 75%">
-          <code style="font-size:28px; color:crimson">Class Example</code>
-          <table style="width:100%">
-            <tr>
-              <td style="width:60%">
-                <p style="color:black" id="class-description"><strong>Description: </strong>asdfsasfd</p>
-                <p style="color:black"><strong>Frequency: </strong><p id="class-frequency"></p></p>
-                <p style="color:black"><strong>Location: </strong><p id="class-location"></p></p>
-              </td>
-              <td style="width:20%">
-                <img src="">
-              </td>
-            </tr>
-
-          </table>
-          <div class="d-flex">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Our Introduction</span></a>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services" style="margin-top:-7%">
-      <div class="container d-flex justify-content-center" data-aos="fade-up">
-        <div class="rounded p-4 text-white" style="background-color: #d9d9d9; border-color: crimson; border-width: 1cm; width: 75%">
-          <code style="font-size:28px; color:crimson">Class Example</code>
-          <table style="width:100%">
-            <tr>
-              <td style="width:60%">
-                <p style="color:black" id="class-description"><strong>Description: </strong>asdfsasfd</p>
-                <p style="color:black"><strong>Frequency: </strong><p id="class-frequency"></p></p>
-                <p style="color:black"><strong>Location: </strong><p id="class-location"></p></p>
-              </td>
-              <td style="width:20%">
-                <img src="">
-              </td>
-            </tr>
-
-          </table>
-          <div class="d-flex">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Our Introduction</span></a>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services" style="margin-top:-7%">
-      <div class="container d-flex justify-content-center" data-aos="fade-up">
-        <div class="rounded p-4 text-white" style="background-color: #d9d9d9; border-color: crimson; border-width: 1cm; width: 75%">
-          <code style="font-size:28px; color:crimson">Class Example</code>
-          <table style="width:100%">
-            <tr>
-              <td style="width:60%">
-                <p style="color:black" id="class-description"><strong>Description: </strong>asdfsasfd</p>
-                <p style="color:black"><strong>Frequency: </strong><p id="class-frequency"></p></p>
-                <p style="color:black"><strong>Location: </strong><p id="class-location"></p></p>
-              </td>
-              <td style="width:20%">
-                <img src="">
-              </td>
-            </tr>
-
-          </table>
-          <div class="d-flex">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Our Introduction</span></a>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Services Section -->
-
-  </main><!-- End #main -->
-
-    
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader"></div>
-
+  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -227,6 +163,9 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+	<!-- Test JS File -->
+	<script src="assets/js/diag_test.js"></script>
 
 </body>
 
