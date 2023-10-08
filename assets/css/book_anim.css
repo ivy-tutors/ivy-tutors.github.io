@@ -186,7 +186,7 @@ p {
   display: flex;
   width: 57vw;
   margin-top: 1vw;
-  margin-bottom: 10vw;
+  margin-bottom: 8vw;
   padding-right: 1%;
   padding-left: 1%;
   -webkit-box-pack: center;
@@ -440,7 +440,7 @@ p {
 
 .page-text h6 {
   font-family: 'PT Sans', sans-serif;
-  font-size: 9px;
+  font-size: 12px;
   text-decoration: none;
 }
 

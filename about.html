@@ -52,6 +52,9 @@
     window.addEventListener('load', () => {
       if(isMobileDevice){
         document.getElementById('title').hidden = true
+        document.getElementById('about-mobile').hidden = false
+      } else {
+        document.getElementById('about').hidden = false
       }
     })
   </script>
@@ -134,7 +137,7 @@
 
   <main id="main">
 
-    <section id="about" class="about" style="margin-top:5%">
+    <section id="about" class="about" style="margin-top:5%" hidden>
       <div class="section-header">
         <h2>About Us</h2>
       </div>
@@ -164,12 +167,13 @@
                   <h3><strong><br>The Ivy Tutors Academy</strong></h3>
                   <h6>HISTORY</h6>
                   <p></p>
-                  <p class="book_p"><i>The Ivy Tutors Academy started as a humble student group out of Harvard University students dedicated to spreading high-level educational opportunities worldwide.</i></p>
-                  <p class="book_p">All, all alike endear’d, grown, ungrown, young or old,</p>
-                  <p class="book_p">Strong, ample, fair, enduring, capable, rich,</p>
-                  <p class="book_p">Perennial with the Earth, with Freedom, Law and Love,</p>
-                  <p class="book_p">A grand, sane, towering, seated Mother,</p>
-                  <p class="book_p">Chair’d in the adamant of Time.</p>
+                  <p class="book_p"><i>The Ivy Tutors Academy started as a humble student group out of Harvard University students to spreading high-level educational opportunities worldwide.</i></p><br>
+                  <p class="book_p">Our first courses launched in March 2022, offering our mentorship services to friends and family in the nearby community. 
+                    Courses primarily centered around STEM subjects like mathematics or physics.
+                    Ever since then, our students hail from all around the United States, China, Japan, Philippines, Germany, India, and more!</p><br>
+                  <p class="book_p">After our courses, many of our students have earned higher grades, gained admission into prestigious high schools, and have even earned seats in the Harvard (and other Ivies) incoming class. Experienced 
+                    in launching worldwide training programs both over Zoom and in-person, our organization now features dozens of specialized instructors from 
+                    across the Ivy Leagues and T10 colleges in subjects ranging from biology to literature to mathematics and computer science.</p>
                 </div>
               </div>
             </div>
@@ -192,7 +196,30 @@
             <div class="layer-text right">
               <div class="page-right-2">
                 <div class="page-text w-richtext">
-                    asdf
+                  <h6>WHO WE ARE</h6>
+                  <p></p>
+                  <p class="book_p">
+                    <i class="bi bi-check2"></i>
+                    Our Team
+                  </p> 
+                  <p class="book_p">
+                    We currently have about two dozen tutors qualified in subjects from Multivariate Calculus to Film to Poetry from the Ivy Leagues and other T10 schools. Our mentors are published scientific researchers, book authors, Olympiad medallists, big tech interns, and entrepreneurs. Our common thread? Education.
+                  </p><br>
+                  <p class="book_p">
+                    <i class="bi bi-check2"></i>
+                    Our Students
+                  </p> 
+                  <p class="book_p">
+                    Comprising over 150 individuals, our students are on a collective journey to unlock their fullest potential. They represent a myriad of disciplines and interests, each pursuing excellence in their chosen fields. From budding scientists to future business tycoons, from aspiring artists to the tech wizards of tomorrow, our students are united by a shared hunger for knowledge and a passion for learning. We would love for you to join their ranks.
+                  </p><br>
+                  <p class="book_p">
+                    <i class="bi bi-check2"></i>
+                    Our Philosophy
+                  </p> 
+                  <p class="book_p">
+                    Our philosophy is rooted in a profound belief in the transformative power of education. We understand that learning is not a one-size-fits-all endeavor; it's a deeply personal and dynamic process. Therefore, we've crafted our educational approach with precision and care. We recognize that every student is a unique combination of talents, aspirations, and experiences. Our approach is not just about imparting knowledge but also about igniting a passion for lifelong learning.
+                  </p><br>
+                </div>
                 </div>
               </div>
             </div>
@@ -203,14 +230,11 @@
   
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about" style="margin-top:5%">
+    <section id="about-mobile" class="about" style="margin-top:5%" hidden>
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
           <h2>About Us</h2>
-          <p>
-            Read about our history, statistics, and offerings!
-          </p>
         </div>
 
         <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
@@ -237,7 +261,7 @@
               <div class="tab-pane fade show active" id="tab1">
 
                 <p class="fst-italic">
-                  The Ivy Tutors Academy started as a humble student group out of Harvard University students dedicated to spreading high-level educational 
+                  The Ivy Tutors Academy started as a humble student group out of Harvard University dedicated to spreading high-level educational 
                   opportunities worldwide.
                 </p>
 
@@ -314,12 +338,6 @@
                   <h4>Specialized Courses.</h4>
                 </div>
                 <p>For students looking for hard-to-find courses like Latin or Olympiad training, we can accomodate most requests of this nature as well. These courses will be specifically tailored by a mentor with an intricate knowledge of the subject.</p>
-
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Masterclasses.</h4>
-                </div>
-                <p>For those who want to try out our programs without concerning themselves with our bidding request process. Our masterclasses are carefully-constructed courses exposing students to pre-professional fields like pre-med and machine learning or bootcamps like intensive SAT/ACT prep or a writing workshop.</p>
 
               </div><!-- End Tab 3 Content -->
 
