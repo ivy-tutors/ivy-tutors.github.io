@@ -568,6 +568,52 @@ section {
 /*--------------------------------------------------------------
 # Animated Hero Section
 --------------------------------------------------------------*/
+.hero-animated-label {
+  width: 100%;
+  position: relative;
+}
+
+.gradient {
+  background: #A51C30;
+  background: -webkit-linear-gradient(to right, #A51C30, #C73F63);
+  background: linear-gradient(to right, #A51C30, #C73F63); 
+}
+
+.hero-animated-label h2 {
+  font-size: 36px;
+  font-weight: 300;
+  color: #FFF;
+  font-family: var(--font-secondary);
+}
+
+.hero-animated-label h2 span {
+  color: #FFF;
+}
+
+.hero-animated-label p {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.hero-animated-label .btn-get-started {
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: black;
+  background: white;
+  font-family: var(--font-secondary);
+}
+
+.hero-animated-label .btn-get-started:hover {
+  background: #A51C30;
+  color: #FFF;
+}
+
+
 .hero-animated-3 {
   width: 100%;
   min-height: 20vh;

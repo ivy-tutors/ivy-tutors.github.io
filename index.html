@@ -43,6 +43,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/statistics.css" rel="stylesheet">
+  <link href="assets/css/image_gallery.css" rel="stylesheet">
 
   <script>
     let details = navigator.userAgent;
@@ -151,8 +152,39 @@
     </div>
   </section>
 
+  <div class="slider">
+    <div class="slide"><img src="assets/gallery/gallery22.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery23.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery20.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery19.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery17.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery16.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery15.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery13.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery12.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery4.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery5.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery7.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery10.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery1.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery2.jpg" alt="" /></div>
+    <button class="btn btn-next" id="next-slide">&#187;</button>
+    <button class="btn btn-prev" id="prev-slide">&#171;</button>
+  </div>
+</div>
+
+<div class="hero-animated-label d-flex align-items-center gradient" style="padding:0; margin-top:-0.1cm">
+  <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" style="margin-top:0;margin-bottom: 0;">
+    <h2>Who We <span>Are</span></h2>
+    <p>A personalized mentorship experience for students around the world.</p>
+    <div class="d-flex">
+      <a href="about.html#leadership" class="btn-get-started scrollto">Meet the Leadership</a>
+    </div>
+  </div>
+</div>
+
   <main id="main">
-      <section id="statistic" class="statistic-section one-page-section">
+      <section id="statistic" class="statistic-section one-page-section" style="margin-top:-0.1cm">
         <div class="container">
             <div class="row text-center">
                 <div class="col-xs-12 col-md-3">
@@ -191,7 +223,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- ======= Call To Action Section ======= -->
     <section id="cta" class="cta">
@@ -292,6 +323,82 @@
             time: 1000
         });
       });
+  </script>
+
+  <script>
+"use strict";
+// Select all slides
+const slides = document.querySelectorAll(".slide");
+
+// loop through slides and set each slides translateX
+slides.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
+
+// select next slide button
+const nextSlide = document.querySelector(".btn-next");
+
+// current slide counter
+let curSlide = 0;
+// maximum number of slides
+let maxSlide = slides.length - 1;
+
+// add event listener and navigation functionality
+nextSlide.addEventListener("click", function () {
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+
+  //   move slide by -100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+
+// select next slide button
+const prevSlide = document.querySelector(".btn-prev");
+
+// add event listener and navigation functionality
+prevSlide.addEventListener("click", function () {
+  // check if current slide is the first and reset current slide to last
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  }
+
+  //   move slide by 100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+  </script>
+
+  <script>
+    window.addEventListener('load', () => {
+      document.onkeydown = function (e) {
+        if (e.key == 'ArrowRight'){
+          document.getElementById('next-slide').click()
+        }
+        if (e.key == 'ArrowLeft'){
+          document.getElementById('prev-slide').click()
+        }
+      };
+
+    })
+  </script>
+
+  <script>
+    function simulateClick() {
+      const nextSlideButton = document.getElementById('next-slide');
+      if (nextSlideButton) {
+        nextSlideButton.click();
+      }
+    }
+    const intervalId = setInterval(simulateClick, 5000);
   </script>
 </body>
 
