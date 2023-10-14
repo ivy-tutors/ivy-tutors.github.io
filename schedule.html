@@ -66,13 +66,21 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   <script>
-    if (sessionStorage.ITAUID == undefined && localStorage.ITAUID == undefined){
-        document.location.href = "login.html"
-    }   
-    if (sessionStorage.ITAeID == undefined && localStorage.ITAeID == undefined){
-        document.location.href = "login.html"
-    }   
     window.addEventListener('load', () => {
+      if (sessionStorage.ITAUID == undefined && localStorage.ITAUID == undefined){
+        document.getElementById('login').hidden = false
+        document.getElementById('signout').hidden = true
+      } else {
+        document.getElementById('login').hidden = true
+        document.getElementById('signout').hidden = false
+      }
+      if (sessionStorage.ITAeID == undefined && localStorage.ITAeID == undefined){
+        document.getElementById('login').hidden = false
+        document.getElementById('signout').hidden = true
+      } else {
+        document.getElementById('login').hidden = true
+        document.getElementById('signout').hidden = false
+      }
       document.getElementById('signout').addEventListener('click', (e) => {
         e.preventDefault()
         localStorage.removeItem('ITAUID')
@@ -83,8 +91,7 @@
       })
     })
   </script>
-
-  <script type="text/javascript"
+    <script type="text/javascript"
     src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>
 
@@ -105,7 +112,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="about.html">About</a></li>
+          <!-- <li><a class="nav-link scrollto" href="about.html">About</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="chatbot.html">Tutor Chat</a></li> -->
           <li><a class="nav-link scrollto" href="course-list.html">Courses</a></li>
           <li><a class="nav-link scrollto" href="tests.html">Diagnostic Tests</a></li>
@@ -121,11 +128,13 @@
               <!-- <li><a href="masterclass.html">Join a Masterclass</a></li>                -->
             </ul>          
           </li>
+          <li><a class="nav-link scrollto" href="schedule.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
 
-      <a class="btn-getstarted scrollto" href="login.html" id="signout">Sign Out</a>
+      <a class="btn-getstarted scrollto" href="login.html" id="login">Log In</a>
+      <a class="btn-getstarted scrollto" href="login.html" id="signout" hidden>Sign Out</a>
 
     </div>
   </header><!-- End Header -->

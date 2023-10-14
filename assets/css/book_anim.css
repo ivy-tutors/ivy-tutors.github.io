@@ -92,7 +92,7 @@ html.w-mod-touch * {
   display: inline-block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  z-index: 2147483647 !important;
+  z-index: 2147483646 !important;
   top: auto !important;
   right: 12px !important;
   bottom: 12px !important;

@@ -1,0 +1,37 @@
+.wrap {
+  padding: 0px;
+  position: relative;
+  width: 90%;
+}
+
+.clients {
+    align-items: center;
+    -webkit-box-align: center;
+    display: grid;
+    gap: 2rem 2rem;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    margin: 2.4rem auto;
+    max-width: 1024px; }
+
+.clients li {
+  list-style: none;
+  margin: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.school-img img {
+  height: 5cm
+}
+
+.clients li:hover {
+-webkit-transform: translateY(-0.3rem);
+transform: translateY(-0.3rem); 
+}
+
+@media (min-width: 1024px) {
+.clients {
+    grid-template-columns: auto auto auto auto auto; }
+    
+.clients img {
+  height: 4rem; }}

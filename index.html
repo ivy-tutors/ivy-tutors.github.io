@@ -44,6 +44,14 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/statistics.css" rel="stylesheet">
   <link href="assets/css/image_gallery.css" rel="stylesheet">
+  <link href="assets/css/leadership.css" rel="stylesheet">
+  <link href="assets/css/school_list.css" rel="stylesheet">
+
+
+<!-- JUST FOR EXTENSION [!] -->
+  <link href="assets/css/extension_test.css" rel="stylesheet">
+<!-- JUST FOR EXTENSION [!] -->
+
 
   <script>
     let details = navigator.userAgent;
@@ -55,11 +63,6 @@
     window.addEventListener('load', () => {
       if(isMobileDevice){
         document.getElementById('title').hidden = true
-        book_lines = document.getElementsByClassName('book_p')
-        for(let i = 0; i < book_lines.length; i++){
-          console.log(i)
-          book_lines[i].style = "font-size:6pt"
-        }
       }
     })
   </script>
@@ -115,7 +118,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="about.html">About</a></li>
+          <!-- <li><a class="nav-link scrollto" href="about.html">About</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="chatbot.html">Tutor Chat</a></li> -->
           <li><a class="nav-link scrollto" href="course-list.html">Courses</a></li>
           <li><a class="nav-link scrollto" href="tests.html">Diagnostic Tests</a></li>
@@ -131,6 +134,7 @@
               <!-- <li><a href="masterclass.html">Join a Masterclass</a></li>                -->
             </ul>          
           </li>
+          <li><a class="nav-link scrollto" href="schedule.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
@@ -141,33 +145,55 @@
     </div>
   </header><!-- End Header -->
 
-  <section id="hero-animated" class="hero-animated d-flex align-items-center">
+  <section id="hero-animated" class="hero-animated-4 d-flex align-items-center">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-      <img src="assets/img/hero-carousel/hero-carousel-3.svg" class="img-fluid animated">
-      <h2>Welcome to <span>the Academy</span></h2>
-      <p>A personalized mentorship experience for students around the world.</p>
+      <!-- <img src="assets/img/hero-carousel/hero-carousel-3.svg" class="img-fluid animated"> -->
+      <h2 style="margin-top:20%">Welcome to <span>the Academy</span></h2>
+      <p>Admissions counseling, tutoring, and mentorship.<br>A group of peers dedicated to your success.</p>
       <div class="d-flex">
-        <a href="about.html" class="btn-get-started scrollto">About Us</a>
+        <a href="#about" class="btn-get-started scrollto">About Us</a>
       </div>
     </div>
   </section>
 
-  <div class="slider">
-    <div class="slide"><img src="assets/gallery/gallery22.jpg" alt="" /></div>
-    <div class="slide"><img src="assets/gallery/gallery23.jpg" alt="" /></div>
-    <div class="slide"><img src="assets/gallery/gallery20.jpg" alt="" /></div>
+  <div class="hero-animated-no-top d-flex align-items-center">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative">
+      <h2>The <span>Results</span></h2>
+      <p>Our mentors, your students, real successes.</p>
+      <div class="wrap">
+        <ul class="clients">
+          <li><a href="javascript: void(0)"><img src="assets/results/harvard.png" alt="Harvard" style="height:3cm"></a></li>
+          <li><a href="javascript: void(0)"><img src="assets/results/columbia.jpg" alt="Columbia" style="height:3cm"></a></li>
+          <li><a href="javascript: void(0)"><img src="assets/results/upenn.png" alt="UPenn" style="height:3cm"></a></li>
+          <li><a href="javascript: void(0)"><img src="assets/results/uchicago.webp" alt="uchicago" style="height:3cm"></a></li>
+          <li><a href="javascript: void(0)"><img src="assets/results/ucberkley.png" alt="ucberkley" style="height:3cm"></a></li>
+          <li><a href="javascript: void(0)"><img src="assets/results/jhu.jpg" alt="jhu" style="height:3cm"></a></li>
+          <li><a href="javascript: void(0)"><img src="assets/results/emory.jpg" alt="emory" style="height:3cm"></a></li>
+          <li><a href="javascript: void(0)"><img src="assets/results/washu.png" alt="washu" style="height:3cm"></a></li>
+          <li><a href="javascript: void(0)"><img src="assets/results/cmu.png" alt="cmu" style="height:3cm"></a></li>
+          <li><a href="javascript: void(0)"><img src="assets/results/babson.png" alt="babson" style="height:3cm"></a></li>
+        </ul>
+      </div>        
+    </div>
+  </div>
+  
+
+  <div class="slider gradient">
     <div class="slide"><img src="assets/gallery/gallery19.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery23.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery1.jpg" alt="" /></div>
+    <div class="slide"><img src="assets/gallery/gallery20.jpg" alt="" /></div>
     <div class="slide"><img src="assets/gallery/gallery17.jpg" alt="" /></div>
     <div class="slide"><img src="assets/gallery/gallery16.jpg" alt="" /></div>
-    <div class="slide"><img src="assets/gallery/gallery15.jpg" alt="" /></div>
+    <!-- <div class="slide"><img src="assets/gallery/gallery15.jpg" alt="" /></div> -->
+    <div class="slide"><img src="assets/gallery/gallery22.jpg" alt="" /></div>
     <div class="slide"><img src="assets/gallery/gallery13.jpg" alt="" /></div>
-    <div class="slide"><img src="assets/gallery/gallery12.jpg" alt="" /></div>
+    <!-- <div class="slide"><img src="assets/gallery/gallery12.jpg" alt="" /></div> -->
     <div class="slide"><img src="assets/gallery/gallery4.jpg" alt="" /></div>
-    <div class="slide"><img src="assets/gallery/gallery5.jpg" alt="" /></div>
-    <div class="slide"><img src="assets/gallery/gallery7.jpg" alt="" /></div>
-    <div class="slide"><img src="assets/gallery/gallery10.jpg" alt="" /></div>
-    <div class="slide"><img src="assets/gallery/gallery1.jpg" alt="" /></div>
-    <div class="slide"><img src="assets/gallery/gallery2.jpg" alt="" /></div>
+    <!-- <div class="slide"><img src="assets/gallery/gallery5.jpg" alt="" /></div> -->
+    <!-- <div class="slide"><img src="assets/gallery/gallery7.jpg" alt="" /></div> -->
+    <!-- <div class="slide"><img src="assets/gallery/gallery10.jpg" alt="" /></div> -->
+    <!-- <div class="slide"><img src="assets/gallery/gallery2.jpg" alt="" /></div> -->
     <button class="btn btn-next" id="next-slide">&#187;</button>
     <button class="btn btn-prev" id="prev-slide">&#171;</button>
   </div>
@@ -178,13 +204,13 @@
     <h2>Who We <span>Are</span></h2>
     <p>The snapshots and statistics that defined our journey</p>
     <div class="d-flex">
-      <a href="about.html#leadership" class="btn-get-started scrollto">Meet the Leadership</a>
+      <a href="#leadership" class="btn-get-started scrollto">Meet the Leadership</a>
     </div>
   </div>
 </div>
 
   <main id="main">
-      <section id="statistic" class="statistic-section one-page-section" style="margin-top:-0.1cm">
+      <section id="statistic" class="statistic-section one-page-section gradient" style="margin-top:-0.1cm">
         <div class="container">
             <div class="row text-center">
                 <div class="col-xs-12 col-md-3">
@@ -224,6 +250,266 @@
         </div>
     </section>
 
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-5">
+            <div class="about-img">
+              <img src="assets/images/img-5.jpeg" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <h3 class="pt-0 pt-lg-5">About Us</h3>
+
+            <!-- Tabs -->
+            <ul class="nav nav-pills mb-3">
+              <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">History</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">Statistics</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">Courses</a></li>
+            </ul><!-- End Tabs -->
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+
+              <div class="tab-pane fade show active" id="tab1">
+
+                <p class="fst-italic">
+                  The Ivy Tutors Academy started as a humble student group out of Harvard University dedicated to spreading high-level educational 
+                  opportunities worldwide.
+                </p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Our first program</h4>
+                </div>
+                <p>
+                  Our first courses launched in March 2022, offering our mentorship services to friends and family in the nearby community. 
+                  Courses primarily centered around STEM subjects like mathematics or physics.
+                  Ever since then, our students hail from all around the United States, China, Japan, Philippines, Germany, India, and more!
+              </p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Our expansion</h4>
+                </div>
+                <p>
+                  After our courses, many of our students have reported being more passionate about their learning, earning higher grades, 
+                  or (in the case of our college mentorship program) even earning admission into universities like Harvard itself. Experienced 
+                  in launching worldwide training programs both over Zoom and in-person, our organization now features dozens of specialized instructors from 
+                  across the Ivy Leagues and T10 colleges in subjects ranging from biology to literature to mathematics and computer science.
+                </p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Our future</h4>
+                </div>
+                <p>
+                  We hope to build out a larger and larger set of opportunities for our students, ranging from affordable masterclasses to in-person courses around the world!
+                  Be sure to stay tuned!
+                </p>
+
+              </div><!-- End Tab 1 Content -->
+
+              <div class="tab-pane fade show" id="tab2">
+
+                <p class="fst-italic">Learn more about the numbers that built our organization.</p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Number of tutors</h4>
+                </div>
+                <p>
+                  We currently have about two dozen tutors qualified in subjects from Multivariate Calculus to Film to Poetry from the Ivy Leagues and other T10 schools. Our mentors are published scientific researchers, book authors, Olympiad medallists, big tech interns, and entrepreneurs. Our common thread? Education.
+                </p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Number of students mentored</h4>
+                </div>
+                <p>Ever since opening our doors, we have mentored hundreds of students (ignoring masterclasses) from around the world in fields like computer science, mathematics, standardized testing, and more. Our students range from wanting simple AP guidance to months-long college admissions counselling to get into top-tier schools like ours.               </p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Average class size</h4>
+                </div>
+                <p>With the exception of the masterclasses, the average class size is about 2 students per course. Our courses are highly customized to the needs of its participants, with our tutors crafting custom practice problems, tailoring curriculums, and giving guidance to point anyone to success.</p>
+
+              </div><!-- End Tab 2 Content -->
+
+              <div class="tab-pane fade show" id="tab3">
+
+                <p class="fst-italic">Learn more about our current offerings and how we can best serve your educational journey.</p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Standard Courses.</h4>
+                </div>
+                <p>Standard courses are courses most may find in a high school curriculum. AP/IB courses, standardized testing, and essay editing are all exceptional examples. Whether it's to boost your GPA, get ahead of your grade, or get that standardized test score, we can help.</p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Specialized Courses.</h4>
+                </div>
+                <p>For students looking for hard-to-find courses like Latin or Olympiad training, we can accomodate most requests of this nature as well. These courses will be specifically tailored by a mentor with an intricate knowledge of the subject.</p>
+
+              </div><!-- End Tab 3 Content -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="leadership" class="about gradient">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2 style="color:white"><strong>Leadership</strong></h2>
+          <p style="color:white">Meet our organizers, senior tutors, and leadership!</p>
+        </div>
+
+        <section id="team" class="team section-bg">
+          <div data-aos="fade-up">
+            
+            <div class="row">
+        
+              <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="pic"><img src="assets/leadership/erictang.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Eric Tang, Harvard University</h4>
+                    <span>Executive Board, Senior Tutor</span>
+                    <p>In addition to studying Computer Science and Statistics at Harvard, Eric aims to publish research in machine learning research in economics, law, and education. With over half a decade of experience, Eric oversees all mentorship and new student courses.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="pic"><img src="assets/leadership/simonyang.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Simon Yang, University of Chicago</h4>
+                    <span>Executive Board, Senior Tutor</span>
+                    <p>Simon has a deep connection with Economics, taking extremely intensive coursework in addition to launching his own initiatives. His love for economics is paralleled only for his love for education!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+        
+              <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="pic"><img src="assets/leadership/haleystark.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Haley Stark, Harvard University</h4>
+                    <span>Senior Tutor</span>
+                    <p>Haley is a published author, decorated public speaker, and lover of all things humanities. Studying Psychology and TDM at Harvard, Haley oversees courses ranging from standard English to public speaking to performing arts.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="pic"><img src="assets/leadership/harryepstein.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Harrison Epstein, Harvard University</h4>
+                    <span>Senior Tutor</span>
+                    <p>Harrison is a pre-med student at Harvard studying Psychology who is an award-winning trumpeter in his free time. Harrison oversees courses from biology to organic chemistry to anatomy and physiology.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+        
+              <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="pic"><img src="assets/leadership/armaantipirneni.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Armaan Tiperneni, Harvard University</h4>
+                    <span>Senior Tutor</span>
+                    <p>Armaan is an avid businessman and financial analyst. Holding numerous board positions across some of the most influencial clubs on campus, Armaan oversees professional training courses in finance, business, and artificial intelligence.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="pic"><img src="assets/leadership/michaelpeckham.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Michael Peckham, Harvard University</h4>
+                    <span>Senior Tutor</span>
+                    <p>In addition to his coursework at Harvard, Michael sings for one of Harvard's most selective acapella organizations. He holds over three years of experience mentoring subjects from the SAT to competition mathematics.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+        
+              <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="pic"><img src="assets/leadership/amywu.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Amy Wu, Massachusetts Institute of Technology</h4>
+                    <span>Senior Tutor</span>
+                    <p>Amy is fascinated with the intersection of Biology and Computer Science, being an associate at the prestigious MIT Biotech Group. In addition to teaching the physical and computational sciences, Amy also mentors standardized testing and helps develop course curricula.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="pic"><img src="assets/leadership/nancywang.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Nancy Wang, Massachusetts Institute of Technology</h4>
+                    <span>Senior Tutor</span>
+                    <p>Nancy studies Computer Science at MIT, working both for Microsoft and a high-frequency trading firm. Prior, she also acted as an undergraduate researcher for the MIT Media Lab and CSAIL. Nancy oversees students interested in research and industry for our organization.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+
+            <div class="row">
+        
+              <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="pic"><img src="assets/leadership/eunicechon.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Eunice Chon, Harvard University</h4>
+                    <span>Senior Advisor</span>
+                    <p>A Coca-Cola and Gates Scholar, Eunice has a firm interest in activism, government, and politics, being heavily involved at the Harvard Institute of Politics. Eunice advises students looking to bolster their extracurriculars with new, impactful activities.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="pic"><img src="assets/leadership/salvatorevalentino.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Salvatore Valentino, Harvard University</h4>
+                    <span>Senior Advisor</span>
+                    <p>Salvatore is an international student hailing from Italy who is heavily invested in the support of international students in their studies and pursuits to study in the United States. Salvatore advises international students with their applications and helps us design our international-student programs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+
+      </div>
+    </section><!-- End About Section -->
+
     <!-- ======= Call To Action Section ======= -->
     <section id="cta" class="cta">
       <div class="container" data-aos="zoom-out">
@@ -231,10 +517,10 @@
         <div class="row g-5">
 
           <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-            <h3>Try our <em>Diagnostic Assessments</em></h3>
-            <p>Want to test your prior knowledge in subjects ranging from Algebra to Biology to History? Spend some time taking our diagnostic exams to see where you stand.
+            <h3>Schedule a <em>Free Consultation</em></h3>
+            <p>Have some questions or would like to enroll? Schedule a free consultation with a senior member of our team!
             </p>
-            <a class="cta-btn align-self-start" href="tests.html">Diagnostic Exams</a>
+            <a class="cta-btn align-self-start" href="schedule.html">Schedule a Consultation</a>
           </div>
 
           <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
@@ -262,7 +548,7 @@
                 Learn more about our organization! If you are a student who is 
               </p>
               <ul>
-                <li><i class="bi bi-check-circle"></i> Looking to boost their GPA or resume with an advanced course</li>
+                <li><i class="bi bi-check-circle"></i> Looking to apply to prestigious programs</li>
                 <li><i class="bi bi-check-circle"></i> Trying to distinguish themselves from their classmates with research or independent work</li>
                 <li><i class="bi bi-check-circle"></i> Struggling to find qualified mentors in STEM or the humanities</li>
               </ul>
@@ -400,6 +686,86 @@ prevSlide.addEventListener("click", function () {
     }
     const intervalId = setInterval(simulateClick, 5000);
   </script>
+
+<!-- [!] EXTENSION WORKSPACE -->
+
+<!-- <div id="wrapper-div">
+  <div id="bottom" style="max-width: 300px; height: auto;">
+    <div class="chat-popup" id="myForm" style="background-color: rgb(252, 245, 229); margin-bottom: 2em; margin-right: 2em; display: flex; justify-content: center; width: auto;">
+      <form id="my-form" method="POST" action="https://script.google.com/macros/s/AKfycbxqfX-aFHBWO7N2EIMhwKbtWeezvxwblDk5ltHRFWiREQR3mMncFDGXz57bcHe-t1I/exec">
+        <div class="talktext">
+          <div id="title" style="margin-bottom: 0.5em;">
+            <p style="font-weight: bold; text-align: center;">Stressed / Struggling / Stuck!</p>
+          </div>
+          <div id="prompt" hidden="" style="margin-bottom: 0.5em;">
+            <p style="text-align: center; color: green;">Please Submit a Response!</p>
+          </div>
+          <div class="form-wrapper">
+            <p style="text-align: center;">How serious is it? <br>(none-  -  -  -  -severe)</p>
+            <div style="display: flex; justify-content: center;">
+              <label for="0">
+                <div style="display: flex; justify-content: center; margin: 0.5em;">
+                  <input type="radio" name="rating" class="0" id="0" value="0" data-toggle="tooltip" title="None">
+                </div>
+                <p style="text-align: center; margin-left: 0.5em; margin-right: 0.5em;">0</p>
+              </label>
+              <label for="1">
+                <div style="display: flex; justify-content: center; margin: 0.5em;">
+                  <input type="radio" name="rating" class="1" id="1" value="1">
+                </div>
+                <p style="text-align: center; margin-left: 0.5em; margin-right: 0.5em;">1</p>
+              </label>
+              <label for="2">
+                <div style="display: flex; justify-content: center; margin: 0.5em;">
+                  <input type="radio" name="rating" class="2" id="2" value="2">
+                </div>
+                <p style="text-align: center; margin-left: 0.5em; margin-right: 0.5em;">2</p>
+              </label>
+              <label for="3">
+                <div style="display: flex; justify-content: center; margin: 0.5em;">
+                  <input type="radio" name="rating" class="3" id="3" value="3">
+                </div>
+                <p style="text-align: center; margin-left: 0.5em; margin-right: 0.5em;">3</p>
+              </label>
+              <label for="4">
+                <div style="display: flex; justify-content: center; margin: 0.5em;">
+                  <input type="radio" name="rating" class="4" id="4" value="4">
+                </div>
+                <p style="text-align: center; margin-left: 0.5em; margin-right: 0.5em;">4</p>
+              </label>
+              <label for="5">
+                <div style="display: flex; justify-content: center; margin: 0.5em;">
+                  <input type="radio" name="rating" class="5" id="5" value="5" data-toggle="tooltip" title="Severe">
+                </div>
+                <p style="text-align: center; margin-left: 0.5em; margin-right: 0.5em;">5</p>
+              </label>
+            </div>
+          </div>
+          <div style="margin: 2em;"></div>
+          <div class="form-wrapper">
+            <p style="text-align: center;">Did you encounter a bug?</p>
+            <input type="checkbox" name="name" value="value" id="id">
+            <label for="id">Yes</label>
+          </div>
+          <div style="margin: 1em;"></div>
+          <div style="display: flex; justify-content: center;">
+            <button type="submit" id="subBtn" disabled="">
+              <b>Submit</b>
+            </button>
+          </div>
+          <div id="errDiv" style="display: flex; text-align: center; margin-top: 0.5em;">
+            <p style="color: red;">There is no participant ID saved. Please <a href="https://jfreitag25.github.io/stress-study/login-student.html">log in</a> and refresh the page!</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <button type="button" class="btn btn-floating btn-lg" id="stress-extension-btn" onclick="openForm()"><img src="https://i.postimg.cc/qv7dKJdY/image-6.png" style="width: 35px; height: 35px;"></button>
+</div>
+
+<script src="assets/js/extension_test.js"></script> -->
+<!-- [!] EXTENSION WORKSPACE -->
+
 </body>
 
 </html>

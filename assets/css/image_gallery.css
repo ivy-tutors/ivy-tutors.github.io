@@ -5,9 +5,6 @@
   height: 650px;
   position: relative;
   overflow: hidden; /* <===  */
-  background: #A51C30;
-  background: -webkit-linear-gradient(to right, #A51C30, #C73F63);
-  background: linear-gradient(to right, #A51C30, #C73F63); 
 }
 
 .slide {
