@@ -24,6 +24,10 @@ section {
 }
 
 @media (max-width: 900px) {
+  .member-div {
+    margin-bottom:1em;
+  }
+
   .team .member .pic {
     overflow: hidden;
     width: 120px;
