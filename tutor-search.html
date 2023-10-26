@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXWH4ZFR7P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YXWH4ZFR7P');
+  </script>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ivy Tutors Academy</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Favicons -->
+  <link href="assets/img/apple-touch-icon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.css" rel="stylesheet"> -->
+  <link href="//cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css" rel="stylesheet">
+
+  <!-- Variables CSS Files -->
+  <link href="assets/css/variables-red.css" rel="stylesheet">
+  <link href="assets/css/search.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <script>
+    let details = navigator.userAgent;
+  
+    let regexp = /android|iphone|kindle|ipad/i;
+    
+    let isMobileDevice = regexp.test(details);
+
+    window.addEventListener('load', function() {
+      if(isMobileDevice){
+        document.getElementById('title').hidden = true
+      }
+    }) 
+  </script>
+
+
+  <!-- =======================================================
+  * Template Name: HeroBiz
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script>
+    window.addEventListener('load', () => {
+      if (sessionStorage.t_ITAUID == undefined && localStorage.t_ITAUID == undefined){
+        document.location.href = "tutor-login.html"
+      }   
+      if (sessionStorage.t_ITAeID == undefined && localStorage.t_ITAeID == undefined){
+          document.location.href = "tutor-login.html"
+      }   
+      document.getElementById('signout').addEventListener('click', (e) => {
+        e.preventDefault()
+        localStorage.removeItem('t_ITAUID')
+        sessionStorage.removeItem('t_ITAUID')
+        localStorage.removeItem('t_ITAeID')
+        sessionStorage.removeItem('t_ITAeID')
+        document.location.href = "tutor-login.html"
+      })
+    })
+  </script>
+  </head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="tutor-search.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <h1 id="title">Ivy Tutors Academy<span>.</span></h1>
+      </a>
+
+      <a class="btn-getstarted scrollto" href="tutor-login.html" id="signout">Sign Out</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main>
+
+    <section id="hero-animated" class="hero-animated-2 d-flex align-items-center" style="width:100%">
+      <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+        
+        <div class="section-header">
+          <h2><span>Pending</span> Courses.</h2>
+          <p>
+            Here is a list of our currently-pending courses. Click "I'm Interested" and one of our organizers will reach out!
+          </p><br>
+          <p>
+            Want to be notified of new courses? You can opt into (or out of) text-message notifications!
+          </p><br>
+          <p>
+            <input type="checkbox" id="text-notif" name="text-notif" value="text-notif">
+            <label for="text-notif"> Opt In</label><br>
+          </p>
+        </div>
+          
+      </div>
+    </section>
+        <div class="container" data-aos="fade-up">
+  
+          <div class="gy-5" id="info">
+            
+          </div>
+  
+        </div>
+
+      </section>
+  
+  </main>
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.min.js"></script>
+
+  <script>
+   $(document).ready(function() {
+  $(".js-select2").select2({
+    closeOnSelect: false
+  });
+  $(".js-select2-multi").select2({
+    closeOnSelect: false
+  });
+});
+  </script>
+
+  <script>
+    let course_divs = {}
+
+    const generateDiv = (elt, i) => {
+      let container_div = document.createElement('div')
+      container_div.className = "container d-flex justify-content-center"
+      container_div.setAttribute('data-aos', 'fade-up')
+      container_div.style = "margin-bottom:1cm"
+      container_div.id = elt['name'] + i
+
+      let text_div = document.createElement('div')
+      text_div.className = "rounded p-4 class_info_card"
+
+      let header = document.createElement('h3')
+      header.style = 'color:#A51C30'
+      header.id = 'header' + i
+      header.innerText = elt['name']
+
+      let pDesc = document.createElement('p')
+      let strongDescriptionText = document.createElement('strong')
+      strongDescriptionText.innerText = 'Time Commitment: '
+      pDesc.appendChild(strongDescriptionText)
+      pDesc.innerHTML += elt['description']
+      pDesc.id = 'desc' + i
+
+      let pExam = document.createElement('p')
+      let strongExampleText = document.createElement('strong')
+      strongExampleText.innerText = 'Description: '
+      pExam.appendChild(strongExampleText)
+      pExam.innerHTML += elt['example']
+      pExam.id = 'exam' + i
+
+      let aButton = document.createElement('a')
+      aButton.className = 'arrow'
+      aButton.innerText = "I'm Interested"
+      aButton.addEventListener('click', () => {
+        aButton.style = 'pointer-events: none;'
+        let user;
+        if (sessionStorage.t_ITAeID == undefined){
+          user = localStorage.t_ITAeID
+        } else {
+          user = sessionStorage.t_ITAeID
+        } 
+
+        const action = 'https://script.google.com/macros/s/AKfycbwNF9qsJm7Rc7euc8tbHUJ6_WXCeXf0Adrent_SBs1Jh5pNlTJpC2gqo6Tr92RAgGQq8g/exec';
+        const formdata = new FormData()
+        formdata.append('Tutor Email', user)
+        formdata.append('Course Name', header.innerText)
+        formdata.append('Course Hours', pDesc.innerText)
+        formdata.append('Course Description', pExam.innerText)
+
+        fetch(action, {
+            method: 'POST',
+            body: formdata,
+        }).then(() => aButton.innerText = 'Submitted!')
+      })
+
+      text_div.appendChild(header)
+      text_div.appendChild(pDesc)
+      text_div.appendChild(pExam)
+      text_div.appendChild(aButton)
+      container_div.appendChild(text_div)
+
+      return container_div
+    }
+
+    const sheetId = '18IXllCjkS_tthZ2WQRE7KKZs3SVkN6R0GN56BSCY9a8';
+    const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
+    const sheetName = 'Courses';
+    const query = encodeURIComponent('Select *')
+    const url = `${base}&sheet=${sheetName}&tq=${query}`
+    const data = []
+    const init = new Promise((resolve, reject) => {
+        fetch(url)
+        .then(res => res.text())
+        .then(rep => {
+            const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+            const rowNum = jsonData.table.rows.length;
+            for(let i = 0; i < rowNum; i++)
+            {
+                data.push(jsonData.table.rows[i])
+            }
+            resolve(data);
+        }
+        )
+    })
+
+    init.then(() => {
+      for(let i = 1; i < data.length; i++){
+        document.getElementById('info').appendChild(generateDiv({'name': data[i].c[0].v,'description': data[i].c[1].v,'example': data[i].c[2].v}, i))
+      }
+    });
+
+  </script>
+
+<script>
+  const tsheetId = '1fM7e4Z2U0XC1kP02tMeGkwr5I-CcGOPLjPm3lUgJ4gg';
+  const tbase = `https://docs.google.com/spreadsheets/d/${tsheetId}/gviz/tq?`;
+  const tsheetName = 'TutorLogin';
+  const tquery = encodeURIComponent('Select *')
+  const turl = `${tbase}&sheet=${tsheetName}&tq=${tquery}`
+  const tdata = []
+  const tinit = new Promise((resolve, reject) => {
+      fetch(turl)
+      .then(res => res.text())
+      .then(rep => {
+          const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
+          const rowNum = jsonData.table.rows.length;
+          for(let i = 0; i < rowNum; i++)
+          {
+              tdata.push(jsonData.table.rows[i])
+          }
+          resolve(tdata);
+      }
+      )
+  })
+
+  tinit.then(() => {
+    let dict = {}
+    for(let i = 0; i < tdata.length; i++)
+    {
+        let subdict = {}
+        subdict['ping'] = tdata[i].c[9].v
+        dict[tdata[i].c[3].v] = subdict
+    }
+    let user;
+    if (sessionStorage.t_ITAeID == undefined){
+      user = localStorage.t_ITAeID
+    } else {
+      user = sessionStorage.t_ITAeID
+    } 
+    document.getElementById('text-notif').checked = dict[user]['ping']
+  })
+
+  document.getElementById('text-notif').addEventListener('change', function(){
+    document.getElementById('text-notif').disabled = true
+      tinit.then(() => {
+          let dict = {}
+          for(let i = 0; i < tdata.length; i++)
+          {
+              let subdict = {}
+              subdict['name'] = tdata[i].c[1].v
+              subdict['college'] = tdata[i].c[2].v
+              subdict['email'] = tdata[i].c[3].v
+              subdict['pnum'] = tdata[i].c[4].v
+              subdict['carrier'] = tdata[i].c[5].v
+              subdict['uid'] = tdata[i].c[7].v
+              subdict['pass'] = tdata[i].c[6].v
+              subdict['ping'] = tdata[i].c[9].v
+              subdict['complete'] = tdata[i].c[10].v
+              dict[tdata[i].c[3].v] = subdict
+          }
+
+          let user;
+          if (sessionStorage.t_ITAeID == undefined){
+            user = localStorage.t_ITAeID
+          } else {
+            user = sessionStorage.t_ITAeID
+          }
+
+          const formdata = new FormData()
+          formdata.append('Tutor Name', dict[user]['name'])
+          formdata.append('College', dict[user]['college'])
+          formdata.append('Email Contact', dict[user]['email'])
+          formdata.append('Phone Number', dict[user]['pnum'])
+          formdata.append('Carrier', dict[user]['carrier'])
+          formdata.append('UID', dict[user]['uid'])
+          formdata.append('Country', dict[user]['country'])
+          formdata.append('Password', dict[user]['pass'])
+          formdata.append('Time', new Date().toUTCString())
+          formdata.append('Ping', !dict[user]['ping'])
+          formdata.append('Complete Phone', dict[user]['complete'])
+
+          const action = 'https://script.google.com/macros/s/AKfycbzDAWUKa4nIK-MDOQ7j0pZn97LI9QRqT0kiDyabYiLJWtYE9aA4IxMCbEzOaqbOdkz-xA/exec';
+          fetch(action, {
+              method: 'POST',
+              body: formdata,
+          }).then(() => location.reload())
+              
+          })
+      })
+</script>
+
+
+</body>
+
+</html>
